@@ -18,32 +18,43 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Link as RouterLink } from "react-router-dom";
 
 import NavDrawer from "./drawer/NavDrawer";
+import DirectTechLogo from "../../media/Icon/Direct-Tech-logo.png";
 
 const styles = makeStyles((theme) => ({
   root: {
     color: "white",
     flexGrow: 1,
     width: "100%",
+    backgroundColor: "white",
   },
+  appbar: { opacity: "50%" },
   menuButton: {
     [theme.breakpoints.up(680)]: {
       display: "none",
     },
   },
-  title: { flexGrow: 3, textAlign: "center" },
-  toolbar: { display: "flex", justifyContent: "space-around" },
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-around",
+  },
+  logoContainer: { flexGrow: 3, textAlign: "center", height: "100px" },
+  logo: { height: "100%" },
+
   navContainer: {
-    color: "white",
     flexGrow: 1,
     textAlign: "right",
-    borderRight: "2px solid",
+    borderRight: "2px solid black",
     [theme.breakpoints.down(680)]: {
       display: "none",
     },
   },
-  navbuttons: {},
+  navbuttons: {
+    fontSize: 20,
+    color: "#111",
+  },
   socialMediaContainer: {
-    color: "white",
+    padding: theme.spacing(0, 0, 0, 1),
+    // color: "white",
     flexGrow: 1,
     [theme.breakpoints.down(680)]: {
       display: "none",
@@ -67,7 +78,7 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="absolute" color="transparent">
+      <AppBar position="absolute" color="default" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
@@ -78,38 +89,33 @@ const Header = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            <Link
-              component={RouterLink}
-              underline="none"
-              color="inherit"
-              to="/"
-            >
-              DIRECT TECH
-            </Link>
-          </Typography>
+          <div className={classes.logoContainer}>
+            <img src={DirectTechLogo} alt="logo" className={classes.logo} />
+          </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
           <div className={classes.navContainer}>
-            <Button color="inherit" className={classes.navbuttons}>
-              Home
-            </Button>
-            <Button color="inherit" className={classes.navbuttons}>
-              About Us
-            </Button>
-            <Button color="inherit" className={classes.navbuttons}>
-              Contacts
-            </Button>
-            <Button color="inherit" className={classes.navbuttons}>
-              Gallery
-            </Button>
+            <Button className={classes.navbuttons}>Home</Button>
+            <Button className={classes.navbuttons}>About Us</Button>
+            <Button className={classes.navbuttons}>Contacts</Button>
+            <Button className={classes.navbuttons}>Gallery</Button>
           </div>
           <div className={classes.socialMediaContainer}>
-            <IconButton color="inherit">
-              <FacebookIcon />
-            </IconButton>
-            <IconButton color="inherit">
-              <InstagramIcon />
-            </IconButton>
+            <Link
+              href="https://www.facebook.com/directtechnepal/"
+              color="inherit"
+            >
+              <IconButton color="inherit">
+                <FacebookIcon />
+              </IconButton>
+            </Link>
+            <Link
+              href="https://www.instagram.com/directtechnepal/"
+              color="inherit"
+            >
+              <IconButton color="inherit">
+                <InstagramIcon />
+              </IconButton>
+            </Link>
             <IconButton color="inherit">
               <WhatsAppIcon />
             </IconButton>

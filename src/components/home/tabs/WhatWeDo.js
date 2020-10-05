@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Tab, Tabs, Paper, Typography, CardActions } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import webDev from "../../../media/logo/webdev.png";
-import logoDesign from "../../../media/logo/logoDesign.png";
-import socialMediaMarketing from "../../../media/logo/socialMediaMarketing.png";
-import graphicDesign from "../../../media/logo/graphicDesign.png";
+import webDev from "../../../media/Icon/Web-Development-icon.png";
+import logoDesign from "../../../media/Icon/Logo-icon.png";
+import socialMediaMarketing from "../../../media/Icon/Digital-Marketing-icon.png";
+import graphicDesign from "../../../media/Icon/Graphic-Design-icon.png";
 import TabPanel from "./TabPanel";
 
 const styles = makeStyles((theme) => ({

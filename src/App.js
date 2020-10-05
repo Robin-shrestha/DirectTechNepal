@@ -14,7 +14,6 @@ function App() {
         </Route>
       </Switch>
       <Foorter />
-      <div style={{ marginTop: "2000px" }}></div>
     </div>
   );
 }
