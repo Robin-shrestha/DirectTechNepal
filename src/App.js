@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Foorter from "./components/footer/Footer";
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
       <Header />
       <Switch>
         <Route to="/" component={Home} />
+        <Route exact path="/DirectTechNepal">
+          <Redirect to="/" />
+        </Route>
       </Switch>
       <Foorter />
       <div style={{ marginTop: "2000px" }}></div>
