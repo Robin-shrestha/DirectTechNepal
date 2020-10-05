@@ -31,7 +31,7 @@ const TabPanel = (props) => {
   return (
     <Paper
       className={classes.root}
-      elevation={0}
+      elevation={2}
       role="tabpanel"
       hidden={value !== index}
       id={`scrollable-force-tabpanel-${index}`}

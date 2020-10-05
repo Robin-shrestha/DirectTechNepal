@@ -10,7 +10,7 @@ import TabPanel from "./TabPanel";
 
 const styles = makeStyles((theme) => ({
   root: {
-    margin: theme.spacing(5, 0, 5, 0),
+    margin: theme.spacing(5, 0, 0, 0),
     backgroundColor: "#eee",
     padding: theme.spacing(2),
   },
@@ -72,7 +72,7 @@ const WhatWeDo = () => {
   };
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root} elevation={2}>
       <Typography align="center" variant="h3" gutterBottom>
         WHAT WE DO
       </Typography>
