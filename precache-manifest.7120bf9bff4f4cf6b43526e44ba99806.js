@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19d2b662159b38eafacd222bd03120a9",
+    "revision": "2c14b01e76d748228ee1db6aeb608879",
     "url": "/DirectTechNepal/index.html"
   },
   {
-    "revision": "86d3de7af58fe57c34f2",
+    "revision": "7c5169383f73ba7dd5ba",
     "url": "/DirectTechNepal/static/css/2.445b666f.chunk.css"
   },
   {
-    "revision": "7591d68f66c77fdd3226",
+    "revision": "7f98da34b9fc9e380631",
     "url": "/DirectTechNepal/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "86d3de7af58fe57c34f2",
-    "url": "/DirectTechNepal/static/js/2.82aa982b.chunk.js"
+    "revision": "7c5169383f73ba7dd5ba",
+    "url": "/DirectTechNepal/static/js/2.807c704c.chunk.js"
   },
   {
     "revision": "0bf38cf6c0b51ec69d7a52e8875a6dbf",
-    "url": "/DirectTechNepal/static/js/2.82aa982b.chunk.js.LICENSE.txt"
+    "url": "/DirectTechNepal/static/js/2.807c704c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7591d68f66c77fdd3226",
-    "url": "/DirectTechNepal/static/js/main.679fc5d4.chunk.js"
+    "revision": "7f98da34b9fc9e380631",
+    "url": "/DirectTechNepal/static/js/main.90a624db.chunk.js"
   },
   {
     "revision": "aebc197befdcb8188f35",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DirectTechNepal/static/media/3.945ba71e.jpg"
   },
   {
-    "revision": "4ae03807d31260c46faa28cb7643b8d8",
-    "url": "/DirectTechNepal/static/media/logoDesign.4ae03807.png"
+    "revision": "d368f4d077c2b84c62267d866547a526",
+    "url": "/DirectTechNepal/static/media/Direct-Tech-logo.d368f4d0.png"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
@@ -58,9 +58,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/DirectTechNepal/static/media/slick.f97e3bbf.svg"
-  },
-  {
-    "revision": "9e7cf8977d788ace61b4ac0b3be68e01",
-    "url": "/DirectTechNepal/static/media/webdev.9e7cf897.png"
   }
 ]);
