@@ -18,7 +18,7 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Link as RouterLink } from "react-router-dom";
 
 import NavDrawer from "./drawer/NavDrawer";
-import DirectTechLogo from "../../media/Icon/Direct-Tech-logo.png";
+import DirectTechLogo from "../../media/Icon/DT-logo.png";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -37,7 +37,7 @@ const styles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
   },
-  logoContainer: { flexGrow: 3, textAlign: "center", height: "100px" },
+  logoContainer: { flexGrow: 3, textAlign: "center", height: "90px" },
   logo: { height: "100%" },
 
   navContainer: {
