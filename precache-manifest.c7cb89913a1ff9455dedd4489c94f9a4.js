@@ -1,39 +1,51 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba957258eb74cdb148e658833fa23f12",
+    "revision": "e4307e23fe8382467a1a2a46aee5f203",
     "url": "/DirectTechNepal/index.html"
   },
   {
-    "revision": "471d7820431eef031080",
+    "revision": "c38f00d04e2998381280",
     "url": "/DirectTechNepal/static/css/2.445b666f.chunk.css"
   },
   {
-    "revision": "ad416e98c62e7851b134",
+    "revision": "987d541c5b12d538b694",
     "url": "/DirectTechNepal/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "471d7820431eef031080",
-    "url": "/DirectTechNepal/static/js/2.d36e2056.chunk.js"
+    "revision": "c38f00d04e2998381280",
+    "url": "/DirectTechNepal/static/js/2.94a5ea73.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/DirectTechNepal/static/js/2.d36e2056.chunk.js.LICENSE.txt"
+    "url": "/DirectTechNepal/static/js/2.94a5ea73.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad416e98c62e7851b134",
-    "url": "/DirectTechNepal/static/js/main.6a26bc60.chunk.js"
+    "revision": "987d541c5b12d538b694",
+    "url": "/DirectTechNepal/static/js/main.61b67b9f.chunk.js"
   },
   {
     "revision": "aebc197befdcb8188f35",
     "url": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js"
   },
   {
-    "revision": "945ba71e3f96a7d07bc3ff28359a3cec",
-    "url": "/DirectTechNepal/static/media/3.945ba71e.jpg"
-  },
-  {
     "revision": "b66728081c8d8edcaec76f3c20c8fb5d",
     "url": "/DirectTechNepal/static/media/Boat.b6672808.jpg"
+  },
+  {
+    "revision": "36f5fb145fda005fd721c4d7d0d8f1e6",
+    "url": "/DirectTechNepal/static/media/DT-CAROUSEL-1.36f5fb14.jpg"
+  },
+  {
+    "revision": "a0638e39849e7494cfc8457fb73d4db1",
+    "url": "/DirectTechNepal/static/media/DT-CAROUSEL-2.a0638e39.jpg"
+  },
+  {
+    "revision": "bd374b6b4f84ab3c7c735a3673192858",
+    "url": "/DirectTechNepal/static/media/DT-logo-1.bd374b6b.png"
+  },
+  {
+    "revision": "b42714aaf7e3a537401c428afcd0e651",
+    "url": "/DirectTechNepal/static/media/DT-logo-2.b42714aa.png"
   },
   {
     "revision": "eadff8b2492713c4b1398f2a662e4196",
