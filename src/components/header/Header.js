@@ -22,12 +22,16 @@ import DirectTechLogo from "../../media/Icon/DT-logo.png";
 
 const styles = makeStyles((theme) => ({
   root: {
-    color: "white",
     flexGrow: 1,
     width: "100%",
-    backgroundColor: "white",
   },
-  appbar: { opacity: "50%" },
+  appbar: {
+    // opacity: "25%",
+
+    [theme.breakpoints.down(680)]: {
+      height: "90px",
+    },
+  },
   menuButton: {
     [theme.breakpoints.up(680)]: {
       display: "none",
@@ -38,7 +42,10 @@ const styles = makeStyles((theme) => ({
     justifyContent: "space-around",
   },
   logoContainer: { flexGrow: 3, textAlign: "center", height: "90px" },
-  logo: { height: "100%" },
+  logo: {
+    height: "100%",
+    opacity: "100%",
+  },
 
   navContainer: {
     flexGrow: 1,
@@ -78,7 +85,11 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="default" className={classes.appbar}>
+      <AppBar
+        position="absolute"
+        color="transparent"
+        className={classes.appbar}
+      >
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
