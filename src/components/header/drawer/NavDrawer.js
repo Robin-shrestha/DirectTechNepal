@@ -24,6 +24,8 @@ import { Link as RouterLink } from "react-router-dom";
 const useStyles = makeStyles({
   list: {
     width: 250,
+    backgroundColor: "rgba(238,238,238,1)",
+    height: "100%",
   },
   fullList: {
     width: "auto",

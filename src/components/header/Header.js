@@ -27,13 +27,17 @@ const styles = makeStyles((theme) => ({
   },
   appbar: {
     // opacity: "25%",
-
-    [theme.breakpoints.down(680)]: {
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    [theme.breakpoints.down(780)]: {
       height: "90px",
+    },
+    [theme.breakpoints.down(500)]: {
+      backgroundColor: "rgba(238, 238, 238, 1)",
+      position: "static",
     },
   },
   menuButton: {
-    [theme.breakpoints.up(680)]: {
+    [theme.breakpoints.up(780)]: {
       display: "none",
     },
   },
@@ -44,14 +48,13 @@ const styles = makeStyles((theme) => ({
   logoContainer: { flexGrow: 3, textAlign: "center", height: "90px" },
   logo: {
     height: "100%",
-    opacity: "100%",
   },
 
   navContainer: {
     flexGrow: 1,
     textAlign: "right",
     borderRight: "2px solid black",
-    [theme.breakpoints.down(680)]: {
+    [theme.breakpoints.down(780)]: {
       display: "none",
     },
   },
@@ -63,7 +66,7 @@ const styles = makeStyles((theme) => ({
     padding: theme.spacing(0, 0, 0, 1),
     // color: "white",
     flexGrow: 1,
-    [theme.breakpoints.down(680)]: {
+    [theme.breakpoints.down(780)]: {
       display: "none",
     },
   },
