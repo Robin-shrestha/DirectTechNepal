@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "22652bc53507c078556ec09252517cea",
+    "revision": "867a19216a7e4b8755d055378e81db6f",
     "url": "/DirectTechNepal/index.html"
   },
   {
-    "revision": "5c37afc8aca537ca1940",
+    "revision": "9e298b41e28b5818619f",
     "url": "/DirectTechNepal/static/css/2.445b666f.chunk.css"
   },
   {
-    "revision": "94c219b9b11834393e58",
+    "revision": "6fe95dd83a0e2ef61213",
     "url": "/DirectTechNepal/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "5c37afc8aca537ca1940",
-    "url": "/DirectTechNepal/static/js/2.15118351.chunk.js"
+    "revision": "9e298b41e28b5818619f",
+    "url": "/DirectTechNepal/static/js/2.71cd3c95.chunk.js"
   },
   {
-    "revision": "0bf38cf6c0b51ec69d7a52e8875a6dbf",
-    "url": "/DirectTechNepal/static/js/2.15118351.chunk.js.LICENSE.txt"
+    "revision": "5e9b6f5c16b720e8a86875f97734673e",
+    "url": "/DirectTechNepal/static/js/2.71cd3c95.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "94c219b9b11834393e58",
-    "url": "/DirectTechNepal/static/js/main.21cf58c6.chunk.js"
+    "revision": "6fe95dd83a0e2ef61213",
+    "url": "/DirectTechNepal/static/js/main.628637a4.chunk.js"
   },
   {
     "revision": "aebc197befdcb8188f35",
     "url": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js"
   },
   {
-    "revision": "b6793510d0ef108c7ee185213f0d2ea6",
-    "url": "/DirectTechNepal/static/media/2.b6793510.jpg"
-  },
-  {
     "revision": "945ba71e3f96a7d07bc3ff28359a3cec",
     "url": "/DirectTechNepal/static/media/3.945ba71e.jpg"
   },
   {
-    "revision": "33cbc6d69fb3ad71d61321f64e67e17e",
-    "url": "/DirectTechNepal/static/media/penguins.33cbc6d6.jpg"
+    "revision": "b66728081c8d8edcaec76f3c20c8fb5d",
+    "url": "/DirectTechNepal/static/media/Boat.b6672808.jpg"
+  },
+  {
+    "revision": "eadff8b2492713c4b1398f2a662e4196",
+    "url": "/DirectTechNepal/static/media/penguins.eadff8b2.jpg"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
