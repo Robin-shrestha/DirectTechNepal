@@ -8,34 +8,18 @@ import {
   Slide,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Carousel from "react-material-ui-carousel";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import image1 from "../../../media/image/1.jpeg";
-import image2 from "../../../media/image/2.jpg";
+import image2 from "../../../media/image/Boat.jpg";
 import image3 from "../../../media/image/3.jpg";
 import image1 from "../../../media/image/penguins.jpg";
+import { red } from "@material-ui/core/colors";
 
 const styles = makeStyles((theme) => ({
-  carousel: { marginBottom: theme.spacing(4) },
-  paper: {},
-  cardMedia: {
-    height: "600px",
-    display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "flex-end",
-  },
-  carouselDesc: {
-    margin: theme.spacing(0, 0, 5, 5),
-    color: "white",
-    padding: theme.spacing(2),
-  },
-  button: {
-    color: "white",
-    borderColor: "#eee",
-    justifySelf: "center",
-  },
+  root: { width: "100%" },
+  image: { height: 600 },
 }));
 
 const HomeCarousel = () => {
@@ -56,7 +40,7 @@ const HomeCarousel = () => {
     {
       id: 3,
       title: "title 3",
-      image: image3,
+      image: image1,
       description: "description of the image 1",
     },
   ];
@@ -64,43 +48,39 @@ const HomeCarousel = () => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 650,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    autoplaySpeed: 6000,
+    autoplay: true,
+    centerPadding: "60px",
   };
   return (
-    <Slider
-      {...settings}
-      arrows={false}
-      autoplaySpeed={10000}
-      autoplay
-      centerPadding="100px"
-      // fade
-      focusOnSelect
-      pauseOnDotsHover
-    >
-      {carouselData.map((item, index) => {
-        return (
-          <Paper key={index} className={classes.paper}>
-            <CardMedia image={item.image} className={classes.cardMedia}>
-              <div className={classes.carouselDesc}>
-                <Typography variant="h4" gutterBottom align="left">
-                  {item.title}
-                </Typography>
-                <Box pl={2}>
-                  <Typography varialn="body1" align="left" paragraph>
-                    {item.description}
-                  </Typography>
-                </Box>
-                <Button variant="outlined" className={classes.button}>
-                  Check it out!
-                </Button>
-              </div>
-            </CardMedia>
-          </Paper>
-        );
-      })}
-    </Slider>
+    <div className={classes.root}>
+      <Slider {...settings}>
+        {carouselData.map((item) => {
+          return (
+            <div
+              key={item.id}
+              style={{
+                height: "inherit",
+                width: "100%",
+              }}
+            >
+              <img
+                src={item.image}
+                style={{
+                  height: "inherit",
+                  width: "100%",
+                  backgroundSize: "contain",
+                }}
+              />
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
   );
 };
 

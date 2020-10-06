@@ -78,7 +78,7 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="absolute" color="default" className={classes.appbar}>
+      <AppBar position="fixed" color="default" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
