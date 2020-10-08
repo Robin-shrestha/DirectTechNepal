@@ -18,7 +18,7 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Link as RouterLink } from "react-router-dom";
 
 import NavDrawer from "./drawer/NavDrawer";
-import DirectTechLogo from "../../media/Icon/DT-logo.png";
+import DirectTechLogo from "../../media/Icon/Logo-icon.png";
 
 const styles = makeStyles((theme) => ({
   root: {
