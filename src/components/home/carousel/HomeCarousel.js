@@ -12,9 +12,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import image1 from "../../../media/image/1.jpeg";
-import image2 from "../../../media/image/2.jpg";
-import image3 from "../../../media/image/3.jpg";
-import image1 from "../../../media/image/2.jpg";
+import carousel1 from "../../../media/image/Carousel-1.jpg";
+import carousel2 from "../../../media/image/Carousel-2.jpg";
+import carousel3 from "../../../media/image/DT-CAROUSEL-1.jpg";
+import carousel4 from "../../../media/image/DT-CAROUSEL-2.jpg";
+
 import { red } from "@material-ui/core/colors";
 
 const styles = makeStyles((theme) => ({
@@ -28,19 +30,25 @@ const HomeCarousel = () => {
     {
       id: 1,
       title: "title 1",
-      image: image2,
+      image: carousel1,
       description: "description of the image 1",
     },
     {
       id: 2,
       title: "title 2",
-      image: image1,
+      image: carousel2,
       description: "description of the image 2",
     },
     {
       id: 3,
       title: "title 3",
-      image: image1,
+      image: carousel3,
+      description: "description of the image 1",
+    },
+    {
+      id: 4,
+      title: "title 4",
+      image: carousel4,
       description: "description of the image 1",
     },
   ];

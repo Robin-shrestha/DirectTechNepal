@@ -11,7 +11,7 @@ import TabPanel from "./TabPanel";
 const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(5, 0, 0, 0),
-    backgroundColor: "#eee",
+    backgroundColor: "#fff",
     padding: theme.spacing(2),
   },
   tabs: { display: "flex", justifyContent: "center" },

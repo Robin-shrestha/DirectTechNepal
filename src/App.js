@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // import Footer from "./components/footer/Footer";
 function App() {
   return (
-    <div style={{ backgroundColor: "#eee" }}>
+    <div style={{ backgroundColor: "#fff" }}>
       <Header />
       <Switch>
         <Route to="/" component={Home} />

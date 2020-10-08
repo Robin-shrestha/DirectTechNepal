@@ -11,14 +11,18 @@ import {
 } from "@material-ui/core";
 
 const styles = makeStyles((theme) => ({
-  root: { background: "#eee", margin: theme.spacing(3, 1, 3, 1) },
+  root: {
+    background: "rgba(245,245,245,.5)",
+    margin: theme.spacing(3, 1, 3, 1),
+    border: "white 5px solid",
+  },
   container: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
   },
-  imageContainer: { padding: theme.spacing(2) },
+  imageContainer: { padding: theme.spacing(2, 0, 0, 0) },
   image: { width: "100%", objectFit: "fit" },
   content: {
     padding: theme.spacing(2),
@@ -42,12 +46,12 @@ const TabPanel = (props) => {
         <Grid item xs={1} />
         <Grid item xs={10}>
           <Grid container spacing={2} alignItems="center">
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={12} md={5}>
               <div className={classes.imageContainer}>
                 <img src={image} className={classes.image} />
               </div>
             </Grid>
-            <Grid item xs={12} sm={7}>
+            <Grid item xs={12} md={7}>
               <div className={classes.content}>
                 <Typography variant="h4" align="center" gutterBottom>
                   {title}
