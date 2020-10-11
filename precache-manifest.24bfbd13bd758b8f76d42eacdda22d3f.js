@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f5df4fcb5fba8e6f45a6a51368ca6d5",
+    "revision": "d55bfa6859ecb6de187fb01cb14ccb6e",
     "url": "/DirectTechNepal/index.html"
   },
   {
-    "revision": "e41f8a59e27bac79e679",
+    "revision": "c997dc5edcf80caca584",
     "url": "/DirectTechNepal/static/css/2.445b666f.chunk.css"
   },
   {
-    "revision": "d17cea516be3235737c8",
+    "revision": "a94fba0a19fcbe8afc4d",
     "url": "/DirectTechNepal/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "e41f8a59e27bac79e679",
-    "url": "/DirectTechNepal/static/js/2.f4781ba8.chunk.js"
+    "revision": "c997dc5edcf80caca584",
+    "url": "/DirectTechNepal/static/js/2.71b31510.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/DirectTechNepal/static/js/2.f4781ba8.chunk.js.LICENSE.txt"
+    "url": "/DirectTechNepal/static/js/2.71b31510.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d17cea516be3235737c8",
-    "url": "/DirectTechNepal/static/js/main.5f8e6139.chunk.js"
+    "revision": "a94fba0a19fcbe8afc4d",
+    "url": "/DirectTechNepal/static/js/main.d3096e4f.chunk.js"
   },
   {
     "revision": "aebc197befdcb8188f35",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1068093dde5b7e34b57fe5d7bb66b237",
     "url": "/DirectTechNepal/static/media/DT-logo-1.1068093d.png"
+  },
+  {
+    "revision": "d368f4d077c2b84c62267d866547a526",
+    "url": "/DirectTechNepal/static/media/Direct-Tech-logo.d368f4d0.png"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
