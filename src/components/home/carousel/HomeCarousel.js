@@ -1,12 +1,5 @@
-import React, { useState } from "react";
-import {
-  Paper,
-  Button,
-  CardMedia,
-  Typography,
-  Box,
-  Slide,
-} from "@material-ui/core";
+import React from "react";
+import {} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,8 +9,6 @@ import carousel1 from "../../../media/image/Carousel-1.jpg";
 import carousel2 from "../../../media/image/Carousel-2.jpg";
 import carousel3 from "../../../media/image/DT-CAROUSEL-1.jpg";
 import carousel4 from "../../../media/image/DT-CAROUSEL-2.jpg";
-
-import { red } from "@material-ui/core/colors";
 
 const styles = makeStyles((theme) => ({
   root: { width: "100%" },
@@ -78,6 +69,7 @@ const HomeCarousel = () => {
             >
               <img
                 src={item.image}
+                alt="carousel img"
                 style={{
                   height: "inherit",
                   width: "100%",

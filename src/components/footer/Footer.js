@@ -1,18 +1,7 @@
 import React from "react";
-import {
-  Paper,
-  Grid,
-  Typography,
-  TextField,
-  Button,
-  TextareaAutosize,
-  Link,
-} from "@material-ui/core";
+import { Paper, Grid, Typography, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { lightBlue } from "@material-ui/core/colors";
-import logo from "../../media/logo/logo.png";
 
-import { Link as RouterLink } from "react-router-dom";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import PhoneIcon from "@material-ui/icons/Phone";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -33,7 +22,11 @@ const Footer = () => {
         <Grid item xs={10}>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6} className={classes.contactsContainer}>
-              <img src={DirectTechLogo} className={classes.image} />
+              <img
+                src={DirectTechLogo}
+                className={classes.image}
+                alt="direct tech logo"
+              />
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div className={classes.contacts}>
                   <PhoneIcon />

@@ -1,14 +1,7 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Paper,
-  Grid,
-  Card,
-  CardActions,
-  CardHeader,
-  Typography,
-} from "@material-ui/core";
+import { Paper, Grid, Typography } from "@material-ui/core";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -48,7 +41,7 @@ const TabPanel = (props) => {
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={5}>
               <div className={classes.imageContainer}>
-                <img src={image} className={classes.image} />
+                <img src={image} className={classes.image} alt="tab panel " />
               </div>
             </Grid>
             <Grid item xs={12} md={7}>

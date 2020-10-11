@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import clsx from "clsx";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Drawer,
@@ -14,7 +13,6 @@ import {
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
 import ContactsIcon from "@material-ui/icons/Contacts";
-import PersonIcon from "@material-ui/icons/Person";
 import GalleryIcon from "@material-ui/icons/Image";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -37,7 +35,7 @@ const useStyles = makeStyles({
 
 const NavDrawer = (props) => {
   const classes = useStyles();
-  const { drawerState, setDrawerState, toggleDrawer } = props;
+  const { drawerState, toggleDrawer } = props;
 
   const list = () => (
     <div
@@ -55,7 +53,7 @@ const NavDrawer = (props) => {
         Content
       </Typography>
       <List>
-        <ListItem button>
+        <ListItem button component={RouterLink} to="/">
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
