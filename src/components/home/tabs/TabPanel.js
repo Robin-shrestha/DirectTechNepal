@@ -5,9 +5,9 @@ import { Paper, Grid, Typography } from "@material-ui/core";
 
 const styles = makeStyles((theme) => ({
   root: {
-    background: "rgba(245,245,245,.5)",
+    background: "rgba(245,245,245,.15)",
     margin: theme.spacing(3, 1, 3, 1),
-    border: "white 5px solid",
+    border: "white 1px solid",
   },
   container: {
     display: "flex",

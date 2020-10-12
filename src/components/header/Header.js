@@ -53,6 +53,12 @@ const styles = makeStyles((theme) => ({
   navbuttons: {
     fontSize: 20,
     color: "#111",
+    "&active": {
+      borderBottom: "solid red 5px",
+    },
+    "&:hover, &:focus": {
+      borderBottom: "solid red 3px",
+    },
   },
   socialMediaContainer: {
     padding: theme.spacing(0, 0, 0, 1),

@@ -13,20 +13,25 @@ import { useSpring, animated } from "react-spring";
 const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(5, 0, 0, 0),
-    backgroundColor: "rgba(254,254,254,.5)",
+    backgroundColor: "inherit",
     padding: theme.spacing(2),
   },
-  tabs: { display: "flex", justifyContent: "center" },
+  tabs: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+  },
   card: {
-    width: "250px",
-    height: "250px",
+    width: "180px",
+    height: "180px",
     background: "rgba(250,250,250,1)",
     border: "15px solid white",
     borderRadius: "10px",
     boxShadow: "10px 10px 30px -5px rgba(0, 0, 0, 0.3)",
     backgroundPosition: "center center",
     backgroundSize: "cover",
-    transition: "box-shadow .9s",
+    transition: "box-shadow .5s",
     "&hover": { boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)" },
   },
 }));

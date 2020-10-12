@@ -5,18 +5,18 @@ import { makeStyles } from "@material-ui/core/styles";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import PhoneIcon from "@material-ui/icons/Phone";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import DirectTechLogo from "../../media/Icon/Direct-Tech-logo.png";
+import DirectTechLogo from "../../media/Icon/DT-logo-1.png";
 
 const styles = makeStyles((theme) => ({
-  root: { padding: theme.spacing(3), backgroundColor: "#e5e3de" },
-  image: { height: "200px", width: "200px", marginBottom: theme.spacing(2) },
+  root: { padding: theme.spacing(3), backgroundColor: "inherit" },
+  image: { height: "100px", marginBottom: theme.spacing(5) },
   contactsContainer: { textAlign: "left" },
   contacts: { display: "flex", alignSelf: "flex-start" },
 }));
 const Footer = () => {
   const classes = styles();
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root} elevation={0}>
       <Grid container>
         <Grid item xs={1} />
         <Grid item xs={10}>
