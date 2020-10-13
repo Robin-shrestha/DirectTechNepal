@@ -108,8 +108,20 @@ const Header = (props) => {
           </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
           <div className={classes.navContainer}>
-            <Button className={classes.navbuttons}>Home</Button>
-            <Button className={classes.navbuttons}>About Us</Button>
+            <Button
+              className={classes.navbuttons}
+              component={RouterLink}
+              to="/"
+            >
+              Home
+            </Button>
+            <Button
+              className={classes.navbuttons}
+              component={RouterLink}
+              to="/about"
+            >
+              About Us
+            </Button>
             <Button className={classes.navbuttons}>Contacts</Button>
             <Button className={classes.navbuttons}>Gallery</Button>
           </div>
