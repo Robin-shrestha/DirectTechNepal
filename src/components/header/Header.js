@@ -21,6 +21,7 @@ import NavDrawer from "./drawer/NavDrawer";
 import DirectTechLogo from "../../media/logo/DT-logo-1.png";
 import DirectTechLogo1 from "../../media/logo/DT-logo-2.png";
 import DirectTechLogo2 from "../../media/logo/DT-logo-3.png";
+import DirectTechLogo3 from "../../media/logo/DT-logo-4.png";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -29,18 +30,20 @@ const styles = makeStyles((theme) => ({
   },
   appbar: {
     // opacity: "25%",
-    backgroundColor: "#E5E3DE",
+    backgroundColor: "black",
     height: 60,
     [theme.breakpoints.down(780)]: {
       height: "60px",
     },
     [theme.breakpoints.down(500)]: {
-      backgroundColor: "rgba(238, 238, 238, 1)",
       position: "static",
     },
   },
   menuButton: {
+    color: "white",
     [theme.breakpoints.up(780)]: {
+      color: "white",
+
       display: "none",
     },
   },
@@ -48,13 +51,17 @@ const styles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
   },
-  logoContainer: { flexGrow: 3, textAlign: "center" },
+  logoContainer: { flexGrow: 2, textAlign: "left" },
   logo: {
     height: "50px",
     padding: "4px",
+    [theme.breakpoints.up(780)]: {
+      paddingLeft: 60,
+    },
   },
 
   navContainer: {
+    color: "white",
     flexGrow: 1,
     textAlign: "right",
     borderRight: "2px solid black",
@@ -64,10 +71,18 @@ const styles = makeStyles((theme) => ({
   },
   navbuttons: {
     fontSize: 20,
-    color: "#111",
+    color: "inherit",
+    "&:hover": {
+      borderBottom: "solid 2px red",
+    },
+    "&:focus": {
+      borderBottom: "solid 2px red",
+    },
   },
   socialMediaContainer: {
     padding: theme.spacing(0, 0, 0, 1),
+    color: "white",
+
     // color: "white",
     flexGrow: 1,
     [theme.breakpoints.down(780)]: {
@@ -92,21 +107,18 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent" className={classes.appbar}>
+      <AppBar position="fixed" color="transparent" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
             aria-label="open drawer"
             onClick={toggleDrawer(true)}
           >
             <MenuIcon />
           </IconButton>
           <div className={classes.logoContainer}>
-            <img src={DirectTechLogo} alt="logo" className={classes.logo} />
-            <img src={DirectTechLogo1} alt="logo" className={classes.logo} />
-            <img src={DirectTechLogo2} alt="logo" className={classes.logo} />
+            <img src={DirectTechLogo3} alt="logo" className={classes.logo} />
           </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
           <div className={classes.navContainer}>
