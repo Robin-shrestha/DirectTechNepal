@@ -64,7 +64,7 @@ const styles = makeStyles((theme) => ({
     color: "white",
     flexGrow: 1,
     textAlign: "right",
-    borderRight: "2px solid black",
+    borderRight: "2px solid white",
     [theme.breakpoints.down(780)]: {
       display: "none",
     },
