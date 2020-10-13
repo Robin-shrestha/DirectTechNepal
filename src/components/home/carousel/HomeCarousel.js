@@ -17,8 +17,6 @@ import carousel2 from "../../../media/image/Carousel-2.jpg";
 import carousel3 from "../../../media/image/DT-CAROUSEL-1.jpg";
 import carousel4 from "../../../media/image/DT-CAROUSEL-2.jpg";
 
-import { red } from "@material-ui/core/colors";
-
 const styles = makeStyles((theme) => ({
   root: { width: "100%" },
   image: { height: 600 },
@@ -60,9 +58,11 @@ const HomeCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 3500,
     autoplay: true,
     centerPadding: "60px",
+    pauseOnHover: false,
+    pauseOnDotsHover: true,
   };
   return (
     <div className={classes.root}>

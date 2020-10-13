@@ -8,7 +8,7 @@ function App() {
     <div style={{ backgroundColor: "#fff" }}>
       <Header />
       <Switch>
-        <Route to="/" component={Home} />
+        <Route path="/" component={Home} />
         <Route exact path="/DirectTechNepal">
           <Redirect to="/" />
         </Route>
