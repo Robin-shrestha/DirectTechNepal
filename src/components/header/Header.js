@@ -18,7 +18,9 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Link as RouterLink } from "react-router-dom";
 
 import NavDrawer from "./drawer/NavDrawer";
-import DirectTechLogo from "../../media/Icon/DT-logo-1.png";
+import DirectTechLogo from "../../media/logo/DT-logo-1.png";
+import DirectTechLogo1 from "../../media/logo/DT-logo-2.png";
+import DirectTechLogo2 from "../../media/logo/DT-logo-3.png";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -27,9 +29,10 @@ const styles = makeStyles((theme) => ({
   },
   appbar: {
     // opacity: "25%",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "#E5E3DE",
+    height: 60,
     [theme.breakpoints.down(780)]: {
-      height: "90px",
+      height: "60px",
     },
     [theme.breakpoints.down(500)]: {
       backgroundColor: "rgba(238, 238, 238, 1)",
@@ -45,9 +48,10 @@ const styles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
   },
-  logoContainer: { flexGrow: 3, textAlign: "center", height: "90px" },
+  logoContainer: { flexGrow: 3, textAlign: "center" },
   logo: {
-    height: "100%",
+    height: "50px",
+    padding: "4px",
   },
 
   navContainer: {
@@ -88,11 +92,7 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar
-        position="absolute"
-        color="transparent"
-        className={classes.appbar}
-      >
+      <AppBar position="static" color="transparent" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
@@ -105,6 +105,8 @@ const Header = (props) => {
           </IconButton>
           <div className={classes.logoContainer}>
             <img src={DirectTechLogo} alt="logo" className={classes.logo} />
+            <img src={DirectTechLogo1} alt="logo" className={classes.logo} />
+            <img src={DirectTechLogo2} alt="logo" className={classes.logo} />
           </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
           <div className={classes.navContainer}>
