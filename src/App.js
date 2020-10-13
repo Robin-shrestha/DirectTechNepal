@@ -6,11 +6,13 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <div
-      style={{
-        background: "rgb(9,9,121)",
-        background:
-          "linear-gradient(90deg, rgba(9,9,121,0.5046393557422969) 7%, rgba(255,0,0,0.3113620448179272) 51%, rgba(9,9,121,0.5046393557422969) 93%)",
-      }}
+      style={
+        {
+          // background: "rgb(9,9,121)",
+          // background:
+          //   "linear-gradient(90deg, rgba(9,9,121,0.5046393557422969) 7%, rgba(255,0,0,0.3113620448179272) 51%, rgba(9,9,121,0.5046393557422969) 93%)",
+        }
+      }
     >
       <Header />
       <Switch>
