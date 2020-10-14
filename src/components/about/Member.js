@@ -20,6 +20,9 @@ const style = makeStyles((theme) => ({
     backgroundColor: "inherit",
     alignItems: "center",
     minHeight: "30ch",
+    [theme.breakpoints.down(450)]: {
+      flexDirection: "column",
+    },
   },
   cardEven: {
     backgroundColor: "darkred",

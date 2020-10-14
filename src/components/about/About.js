@@ -7,6 +7,7 @@ import kailash from "../../media/members/kailash.jpg";
 import robin from "../../media/members/robin.jpg";
 import suju from "../../media/members/suju.jpg";
 import dipesh from "../../media/members/dipesh.jpg";
+import us from "../../media/image/about-us.png";
 
 const members = [
   {
@@ -46,22 +47,47 @@ const members = [
 const styles = makeStyles((theme) => ({
   root: { padding: theme.spacing(5), marginTop: theme.spacing(8) },
   memberCard: {},
+  aboutUsImgContainer: {
+    marginBottom: theme.spacing(3),
+    height: 400,
+    width: "100%",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+  },
+  aboutUsPara: {
+    padding: theme.spacing(0, 3, 0, 3),
+  },
 }));
+const we = us;
 const About = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
+      <div
+        className={classes.aboutUsImgContainer}
+        style={{ backgroundImage: `url(${us})` }}
+      ></div>
       <Paper elevation={0}>
         <Typography variant="h3" align="center" gutterBottom>
           WHO ARE WE
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph className={classes.aboutUsPara}>
           The ambitious team startup with fresh insights in the field of Website
           Development, Social media marketing, Graphics Designing and Logo
           Designing. We opt to satisfy the customer needs by providing
           flexibility in their challenging projects with decision making
           procedures. Helping you effortlessly manage your demands without any
           delay.
+        </Typography>
+      </Paper>
+      <Paper elevation={0}>
+        <Typography variant="h3" align="center" gutterBottom>
+          WHAT WE DO
+        </Typography>
+        <Typography variant="body1" paragraph className={classes.aboutUsPara}>
+          we do the usual shit and stuff regarding web development, logo and
+          graphics design and social media marketting
         </Typography>
       </Paper>
       <Typography variant="h4" align="center" gutterBottom>
