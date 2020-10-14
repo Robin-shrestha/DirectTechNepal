@@ -31,10 +31,10 @@ const styles = makeStyles((theme) => ({
     [theme.breakpoints.down(780)]: {
       height: "90px",
     },
-    [theme.breakpoints.down(500)]: {
-      backgroundColor: "rgba(238, 238, 238, 1)",
-      position: "static",
-    },
+    // [theme.breakpoints.down(500)]: {
+    //   backgroundColor: "rgba(238, 238, 238, 1)",
+    //   position: "static",
+    // },
   },
   menuButton: {
     [theme.breakpoints.up(780)]: {

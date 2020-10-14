@@ -1,7 +1,6 @@
 import React from "react";
-import { Box, Paper, Typography } from "@material-ui/core";
+import { Box, Paper, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import colors from "@material-ui/core/colors";
 import Member from "./Member";
 //members
 import kailash from "../../media/members/kailash.jpg";
@@ -13,28 +12,32 @@ const members = [
   {
     id: 1,
     name: "Kailash Shrestha",
-    description: "description of kailash",
+    description:
+      " kailash is an electronics engineer graduated from tu. he is skilled in engineering  things and stuff. im just writing this as a filler",
     facebook: "www.facebook.com/",
     image: kailash,
   },
   {
     id: 2,
     name: "Suju Baniya",
-    description: "description of Suju",
+    description:
+      " Suju is an electronics engineer graduated from tu. he is skilled in engineering  things and stuff. im just writing this as a filler",
     facebook: "www.facebook.com/",
     image: suju,
   },
   {
     id: 3,
     name: "Robin Shrestha",
-    description: "description of Robin",
+    description:
+      " Robin is an electronics engineer graduated from tu. he is skilled in engineering  things and stuff. im just writing this as a filler",
     facebook: "www.facebook.com/",
     image: robin,
   },
   {
     id: 4,
     name: "Dipesh Dhamala",
-    description: "description of Dipesh",
+    description:
+      " Dipesh is an electronics engineer graduated from tu. he is skilled in engineering  things and stuff. im just writing this as a filler",
     facebook: "www.facebook.com/",
     image: dipesh,
   },
@@ -53,29 +56,32 @@ const About = () => {
           WHO ARE WE
         </Typography>
         <Typography variant="body1" paragraph>
-          We are an ambitious start up collective willing to satand up for
-          ourselves in this ompetetive and harsh world.We are constantly
-          learning and updating our skills so that we will be able to deliver
-          you with the best results that you hav entrusted to us. Our small
-          group is very intrested in fulfilling your small project in mind
-          regarding graphics, logo or web design.
-        </Typography>
-        <Typography variant="body1" paragraph>
-          We are an ambitious start up collective willing to satand up for
-          ourselves in this ompetetive and harsh world.We are constantly
-          learning and updating our skills so that we will be able to deliver
-          you with the best results that you hav entrusted to us. Our small
-          group is very intrested in fulfilling your small project in mindasdsd
-          regarding graphics, logo or web design.
+          The ambitious team startup with fresh insights in the field of Website
+          Development, Social media marketing, Graphics Designing and Logo
+          Designing. We opt to satisfy the customer needs by providing
+          flexibility in their challenging projects with decision making
+          procedures. Helping you effortlessly manage your demands without any
+          delay.
         </Typography>
       </Paper>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" align="center" gutterBottom>
         OUR LITTLE FAMILY
       </Typography>
-      <div className={classes.memberCard}>
-        {members.map((item, index) => {
-          return <Member key={item.id} member={item} />;
-        })}
+      <div>
+        <Grid container spacing={2}>
+          <Grid item sm={1} />
+          <Grid item container sm={10} spacing={2}>
+            {members.map((item, index) => {
+              return (
+                <Grid key={item.id} item xs={12} lg={6}>
+                  <Member member={item} />
+                </Grid>
+              );
+            })}
+          </Grid>
+
+          <Grid item sm={1} />
+        </Grid>
       </div>
     </div>
   );
