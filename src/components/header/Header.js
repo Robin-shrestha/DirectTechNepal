@@ -35,9 +35,10 @@ const styles = makeStyles((theme) => ({
     [theme.breakpoints.down(780)]: {
       height: "60px",
     },
-    [theme.breakpoints.down(500)]: {
-      position: "static",
-    },
+    // [theme.breakpoints.down(500)]: {
+    //   backgroundColor: "rgba(238, 238, 238, 1)",
+    //   position: "static",
+    // },
   },
   menuButton: {
     color: "white",
@@ -122,8 +123,20 @@ const Header = (props) => {
           </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
           <div className={classes.navContainer}>
-            <Button className={classes.navbuttons}>Home</Button>
-            <Button className={classes.navbuttons}>About Us</Button>
+            <Button
+              className={classes.navbuttons}
+              component={RouterLink}
+              to="/"
+            >
+              Home
+            </Button>
+            <Button
+              className={classes.navbuttons}
+              component={RouterLink}
+              to="/about"
+            >
+              About Us
+            </Button>
             <Button className={classes.navbuttons}>Contacts</Button>
             <Button className={classes.navbuttons}>Gallery</Button>
           </div>
