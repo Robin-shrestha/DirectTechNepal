@@ -119,7 +119,9 @@ const Header = (props) => {
             <MenuIcon />
           </IconButton>
           <div className={classes.logoContainer}>
-            <img src={DirectTechLogo3} alt="logo" className={classes.logo} />
+            <Link component={RouterLink} to="/">
+              <img src={DirectTechLogo3} alt="logo" className={classes.logo} />
+            </Link>
           </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
           <div className={classes.navContainer}>
