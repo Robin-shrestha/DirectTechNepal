@@ -64,15 +64,16 @@ const styles = makeStyles((theme) => ({
   navContainer: {
     color: "white",
     flexGrow: 1,
-    textAlign: "right",
-    borderRight: "2px solid white",
+    textAlign: "center",
+    // borderRight: "2px solid white",
     [theme.breakpoints.down(780)]: {
       display: "none",
     },
   },
   navbuttons: {
-    fontSize: 20,
+    fontSize: 16,
     color: "inherit",
+    padding: theme.spacing(0, 2, 0, 2),
     "&:hover": {
       borderBottom: "solid 2px red",
     },
@@ -142,7 +143,7 @@ const Header = (props) => {
             <Button className={classes.navbuttons}>Contacts</Button>
             <Button className={classes.navbuttons}>Gallery</Button>
           </div>
-          <div className={classes.socialMediaContainer}>
+          {/* <div className={classes.socialMediaContainer}>
             <Link
               href="https://www.facebook.com/directtechnepal/"
               color="inherit"
@@ -162,7 +163,7 @@ const Header = (props) => {
             <IconButton color="inherit">
               <WhatsAppIcon />
             </IconButton>
-          </div>
+          </div> */}
         </Toolbar>
       </AppBar>
       <NavDrawer

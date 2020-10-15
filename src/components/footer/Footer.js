@@ -1,27 +1,21 @@
 import React from "react";
-import {
-  Paper,
-  Grid,
-  Typography,
-  TextField,
-  Button,
-  TextareaAutosize,
-  Link,
-} from "@material-ui/core";
+import { Paper, Grid, Typography, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { lightBlue } from "@material-ui/core/colors";
-import logo from "../../media/logo/logo.png";
 
 import { Link as RouterLink } from "react-router-dom";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import PhoneIcon from "@material-ui/icons/Phone";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import DirectTechLogo from "../../media/Icon/Direct-Tech-logo.png";
+import DirectTechLogo from "../../media/Icon/DT-logo-1.png";
 
 const styles = makeStyles((theme) => ({
-  root: { padding: theme.spacing(3), backgroundColor: "#e5e3de" },
-  image: { height: "200px", width: "200px", marginBottom: theme.spacing(2) },
-  contactsContainer: { textAlign: "left" },
+  root: { padding: theme.spacing(3), backgroundColor: "black" },
+  image: { width: "100%" },
+  contactsContainer: {
+    textAlign: "left",
+    alignSelf: "flex-end",
+    color: "white",
+  },
   contacts: { display: "flex", alignSelf: "flex-start" },
 }));
 const Footer = () => {
@@ -32,9 +26,11 @@ const Footer = () => {
         <Grid item xs={1} />
         <Grid item xs={10}>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6} className={classes.contactsContainer}>
-              <img src={DirectTechLogo} className={classes.image} />
+            <Grid item xs={12} md={4} className={classes.contactsContainer}>
               <div style={{ display: "flex", flexDirection: "column" }}>
+                <Typography align="left" variant="h5" gutterBottom>
+                  CONTACT US:
+                </Typography>
                 <div className={classes.contacts}>
                   <PhoneIcon />
                   <Typography
@@ -78,7 +74,10 @@ const Footer = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12} md={6}></Grid>
+            <Grid item xs={12} md={4}></Grid>
+            <Grid item xs={12} md={4}>
+              <img src={DirectTechLogo} className={classes.image} />
+            </Grid>
           </Grid>
         </Grid>
         <Grid item xs={1} />

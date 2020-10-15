@@ -7,7 +7,8 @@ import kailash from "../../media/members/kailash.jpg";
 import robin from "../../media/members/robin.jpg";
 import suju from "../../media/members/suju.jpg";
 import dipesh from "../../media/members/dipesh.jpg";
-import us from "../../media/image/about-us.png";
+import bunu from "../../media/members/bunu.jpg";
+import dt from "../../media/Icon/DT-logo-1.png";
 
 const members = [
   {
@@ -42,6 +43,14 @@ const members = [
     facebook: "www.facebook.com/",
     image: dipesh,
   },
+  {
+    id: 5,
+    name: "Bunu Baniya",
+    description:
+      " Dipesh is an electronics engineer graduated from tu. he is skilled in engineering  things and stuff. im just writing this as a filler",
+    facebook: "www.facebook.com/",
+    image: bunu,
+  },
 ];
 
 const styles = makeStyles((theme) => ({
@@ -58,18 +67,27 @@ const styles = makeStyles((theme) => ({
   aboutUsPara: {
     padding: theme.spacing(0, 3, 0, 3),
   },
+  topicHeaders: {
+    background: "#eee",
+    // width: "100%",
+    paddingLeft: theme.spacing(6),
+  },
 }));
-const we = us;
 const About = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
       <div
         className={classes.aboutUsImgContainer}
-        style={{ backgroundImage: `url(${us})` }}
+        style={{ backgroundImage: `url(${dt})` }}
       ></div>
       <Paper elevation={0}>
-        <Typography variant="h3" align="center" gutterBottom>
+        <Typography
+          variant="h3"
+          align="left"
+          gutterBottom
+          className={classes.topicHeaders}
+        >
           WHO ARE WE
         </Typography>
         <Typography variant="body1" paragraph className={classes.aboutUsPara}>
@@ -82,15 +100,25 @@ const About = () => {
         </Typography>
       </Paper>
       <Paper elevation={0}>
-        <Typography variant="h3" align="center" gutterBottom>
-          WHAT WE DO
+        <Typography
+          variant="h3"
+          align="left"
+          gutterBottom
+          className={classes.topicHeaders}
+        >
+          OUR GOALS
         </Typography>
         <Typography variant="body1" paragraph className={classes.aboutUsPara}>
           we do the usual shit and stuff regarding web development, logo and
           graphics design and social media marketting
         </Typography>
       </Paper>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography
+        variant="h4"
+        align="left"
+        className={classes.topicHeaders}
+        style={{ marginBottom: 24 }}
+      >
         OUR LITTLE FAMILY
       </Typography>
       <div>

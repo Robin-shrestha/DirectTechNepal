@@ -74,7 +74,10 @@ const WhatWeDo = () => {
   return (
     <Paper className={classes.root} elevation={2}>
       <Typography align="center" variant="h3" gutterBottom>
-        WHAT WE DO
+        GROW YOUR ONLINE PRESENCE WITH US{" "}
+      </Typography>
+      <Typography align="center" variant="h4" gutterBottom>
+        Web development & design services
       </Typography>
       <div className={classes.tabs}>
         <Tabs

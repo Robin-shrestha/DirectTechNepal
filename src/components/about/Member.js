@@ -28,11 +28,13 @@ const style = makeStyles((theme) => ({
     backgroundColor: "darkred",
     // borderRadius: "5px 50px 5px 50px",
     borderRadius: "60px 45px 30px 15px/15px 30px 45px 60px",
+    // borderRadius: "25px",
   },
   cardOdd: {
     backgroundColor: "darkblue",
     // borderRadius: "50px 5px 50px 5px",
     borderRadius: "45px 60px 15px 30px/30px 15px 60px 45px",
+    // borderRadius: "25px",
   },
   circleImageContainer: {
     margin: theme.spacing(1),
