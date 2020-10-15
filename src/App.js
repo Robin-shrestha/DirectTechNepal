@@ -14,7 +14,7 @@ function App() {
         }
       }
     >
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route path="/" component={Home} />
         <Route exact path="/DirectTechNepal">
