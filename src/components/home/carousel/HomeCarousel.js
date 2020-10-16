@@ -87,17 +87,7 @@ const HomeCarousel = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center center",
               }}
-            >
-              {/* <img
-                src={item.image}
-                alt="carousel img"
-                style={{
-                  height: "inherit",
-                  width: "100%",
-                  backgroundSize: "contain",
-                }}
-              /> */}
-            </animated.div>
+            ></animated.div>
           );
         })}
         {/* {slides.map((item) => {
