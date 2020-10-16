@@ -22,10 +22,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< HEAD
-/.netlify
-media/
-=======
 .netlify
-/media
->>>>>>> parent of a86c061... added media to gitignore
