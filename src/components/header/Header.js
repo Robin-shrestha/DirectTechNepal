@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  InputBase,
-  Button,
-  Link,
-} from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Button, Link } from "@material-ui/core";
 
-import { makeStyles, fade } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";

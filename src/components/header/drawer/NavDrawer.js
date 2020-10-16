@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import clsx from "clsx";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Drawer,
@@ -36,7 +35,7 @@ const useStyles = makeStyles({
 
 const NavDrawer = (props) => {
   const classes = useStyles();
-  const { drawerState, setDrawerState, toggleDrawer } = props;
+  const { drawerState, toggleDrawer } = props;
 
   const list = () => (
     <div

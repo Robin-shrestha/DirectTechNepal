@@ -2,7 +2,6 @@ import React from "react";
 import { Paper, Grid, Typography, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { Link as RouterLink } from "react-router-dom";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import PhoneIcon from "@material-ui/icons/Phone";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -21,7 +20,7 @@ const styles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = styles();
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.root} elevation={0}>
       <Grid container>
         <Grid item xs={1} />
         <Grid item xs={10}>

@@ -8,29 +8,59 @@ import socialMediaMarketing from "../../../media/Icon/Digital-Marketing-icon.png
 import graphicDesign from "../../../media/Icon/Graphic-Design-icon.png";
 import TabPanel from "./TabPanel";
 
+import { useSpring, animated } from "react-spring";
+
 const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(5, 0, 0, 0),
-    backgroundColor: "#fff",
+    backgroundColor: "inherit",
     padding: theme.spacing(2),
   },
-  tabs: { display: "flex", justifyContent: "center" },
+  tabs: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+  },
+  card: {
+    width: "180px",
+    height: "180px",
+    background: "rgba(250,250,250,1)",
+    border: "15px solid white",
+    borderRadius: "10px",
+    boxShadow: "10px 10px 30px -5px rgba(0, 0, 0, 0.3)",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    transition: "box-shadow .5s",
+    "&hover": { boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)" },
+  },
 }));
 
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 20,
+  1.1,
+];
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
 const TabComponent = ({ image }) => {
+  const classes = styles();
+  const [spring, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
+
   return (
-    <CardActions style={{ margin: "8px" }}>
-      <img
-        src={image}
-        style={{
-          height: "200px",
-          width: "200px",
-          objectFit: "fit",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}
-      />
-    </CardActions>
+    <animated.div
+      className={classes.card}
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+      onMouseLeave={() => set({ xys: [0, 0, 1] })}
+      style={{
+        transform: spring.xys.interpolate(trans),
+        backgroundImage: `url(${image})`,
+      }}
+    />
   );
 };
 const whatWeDoImages = [
