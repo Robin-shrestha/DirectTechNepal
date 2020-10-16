@@ -45,12 +45,6 @@ const HomeCarousel = () => {
   const classes = styles();
   const [index, setindex] = useState(0);
 
-  const transitions = useTransition(slides[index], (item) => item.id, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-    config: config.molasses,
-  });
   useEffect(
     () => void setInterval(() => setindex((state) => (state + 1) % 4), 3500),
     []
@@ -72,26 +66,7 @@ const HomeCarousel = () => {
   return (
     <div className={classes.root}>
       <Slider {...settings}>
-        {transitions.map(({ item, props, key }) => {
-          console.log(props);
-
-          return (
-            <animated.div
-              key={key}
-              style={{
-                ...props,
-
-                height: "600px",
-                width: "100%",
-                backgroundImage: `url(${item.image})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center center",
-              }}
-            ></animated.div>
-          );
-        })}
-        {/* {slides.map((item) => {
+        {slides.map((item) => {
           return (
             <div
               key={item.id}
@@ -111,7 +86,7 @@ const HomeCarousel = () => {
               />
             </div>
           );
-        })} */}
+        })}
       </Slider>
     </div>
   );

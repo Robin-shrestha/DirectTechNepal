@@ -22,9 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< HEAD
-media/
-/.netlify
-=======
 .netlify
->>>>>>> react-spring
+/media

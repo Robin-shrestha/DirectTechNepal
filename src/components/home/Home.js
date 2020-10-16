@@ -6,7 +6,7 @@ import WhatWeDo from "./tabs/WhatWeDo";
 const Home = () => {
   return (
     <div>
-      <Carousel1 />
+      <Carousel />
       {/* <Carousel3 /> */}
       <WhatWeDo />
     </div>
