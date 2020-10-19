@@ -27,14 +27,14 @@ const styles = makeStyles((theme) => ({
     [theme.breakpoints.down(780)]: {
       height: "60px",
     },
-    // [theme.breakpoints.down(500)]: {
-    //   backgroundColor: "rgba(238, 238, 238, 1)",
-    //   position: "static",
-    // },
+    [theme.breakpoints.down(500)]: {
+      // backgroundColor: "rgba(238, 238, 238, 1)",
+      position: "static",
+    },
   },
   menuButton: {
     color: "white",
-    [theme.breakpoints.up(780)]: {
+    [theme.breakpoints.up(600)]: {
       color: "white",
 
       display: "none",
@@ -48,7 +48,7 @@ const styles = makeStyles((theme) => ({
   logo: {
     height: "50px",
     padding: "4px",
-    [theme.breakpoints.up(780)]: {
+    [theme.breakpoints.up(600)]: {
       paddingLeft: 60,
     },
   },
@@ -58,7 +58,7 @@ const styles = makeStyles((theme) => ({
     flexGrow: 1,
     textAlign: "center",
     // borderRight: "2px solid white",
-    [theme.breakpoints.down(780)]: {
+    [theme.breakpoints.down(600)]: {
       display: "none",
     },
   },

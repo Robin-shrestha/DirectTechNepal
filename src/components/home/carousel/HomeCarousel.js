@@ -11,8 +11,8 @@ import carousel3 from "../../../media/image/DT-CAROUSEL-1.jpg";
 import carousel4 from "../../../media/image/DT-CAROUSEL-2.jpg";
 
 const styles = makeStyles((theme) => ({
-  root: { width: "100%" },
-  image: { height: 600 },
+  root: { backgroundColor: "black", width: "100%" },
+  // image: { height: 400 },
 }));
 
 const slides = [
@@ -51,7 +51,7 @@ const HomeCarousel = () => {
   );
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 650,
     slidesToShow: 1,
@@ -68,11 +68,22 @@ const HomeCarousel = () => {
       <Slider {...settings}>
         {slides.map((item) => {
           return (
+            // <div
+            //   key={item.id}
+            //   style={{
+            //     backgroundImage: `url(${item.image})`,
+            //     height: "400px",
+            //     backgroundSize: "contain",
+            //     backgroundPosition: "center center",
+            //     backgroundRepeat: "no-repeat",
+            //   }}
+            // ></div>
             <div
               key={item.id}
               style={{
-                height: "inherit",
+                // height: "inherit",
                 width: "100%",
+                height: "450px",
               }}
             >
               <img

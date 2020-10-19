@@ -5,9 +5,9 @@ import { Paper, Grid, Typography } from "@material-ui/core";
 
 const styles = makeStyles((theme) => ({
   root: {
-    background: "rgba(245,245,245,.15)",
+    background: "inherit",
     margin: theme.spacing(3, 1, 3, 1),
-    border: "white 1px solid",
+    // border: "white 1px solid",
   },
   container: {
     display: "flex",
@@ -15,10 +15,22 @@ const styles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  imageContainer: { padding: theme.spacing(2, 0, 0, 0) },
-  image: { width: "100%", objectFit: "fit" },
+  imageContainer: {
+    margin: theme.spacing(1, 0, 1, 0),
+    height: "400px",
+    backgroundSize: "contain",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    [theme.breakpoints.down("sm")]: {
+      height: 275,
+    },
+  },
+  // image: { width: "100%", objectFit: "fit" },
   content: {
     padding: theme.spacing(2),
+  },
+  title: {
+    fontWeight: "bolder",
   },
 }));
 const TabPanel = (props) => {
@@ -28,7 +40,7 @@ const TabPanel = (props) => {
   return (
     <Paper
       className={classes.root}
-      elevation={2}
+      elevation={0}
       role="tabpanel"
       hidden={value !== index}
       id={`scrollable-force-tabpanel-${index}`}
@@ -40,13 +52,23 @@ const TabPanel = (props) => {
         <Grid item xs={10}>
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={7}>
-              <div className={classes.imageContainer}>
-                <img src={image} className={classes.image} alt="tab panel " />
+              <div
+                className={classes.imageContainer}
+                style={{
+                  backgroundImage: `url(${image})`,
+                }}
+              >
+                {/* <img src={image} className={classes.image} alt="tab panel " /> */}
               </div>
             </Grid>
             <Grid item xs={12} md={5}>
               <div className={classes.content}>
-                <Typography variant="h4" align="center" gutterBottom>
+                <Typography
+                  variant="h4"
+                  align="center"
+                  gutterBottom
+                  className={classes.title}
+                >
                   {title}
                 </Typography>
                 <Typography variant="body1">{description}</Typography>

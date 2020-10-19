@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { Tab, Tabs, Paper, Typography, CardActions } from "@material-ui/core";
+import { Tab, Tabs, Paper, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+// /tabs/
 import webDevTab from "../../../media/whatwedo/whatwedo-tabs/Web-Development-icon.png";
 import logoDesignTab from "../../../media/whatwedo/whatwedo-tabs/Logo-icon.png";
 import socialMediaMarketingTab from "../../../media/whatwedo/whatwedo-tabs/Digital-Marketing-icon.png";
 import graphicDesignTab from "../../../media/whatwedo/whatwedo-tabs/Graphic-Design-icon.png";
-
+//panel
 import webDevpanel from "../../../media/whatwedo/whatwedo-panel/web-dev.png";
 import logoDesignPanel from "../../../media/whatwedo/whatwedo-panel/logo-design-photo.png";
 import socialMediaMarketingPanel from "../../../media/whatwedo/whatwedo-panel/Social-media-marketing.png";
 import graphicDesignPanel from "../../../media/whatwedo/whatwedo-panel/graphic-design-photo.png";
+//borders
+import waveTop from "../../../media/Wave BG/BG3.png";
+import waveBottom from "../../../media/Wave BG/BG1.png";
 
 import TabPanel from "./TabPanel";
 
@@ -18,9 +21,10 @@ import { useSpring, animated } from "react-spring";
 
 const styles = makeStyles((theme) => ({
   root: {
-    margin: theme.spacing(5, 0, 0, 0),
+    margin: theme.spacing(0, 0, 0, 0),
     backgroundColor: "inherit",
-    padding: theme.spacing(2),
+    // padding: theme.spacing(2),
+    backgroundColor: "#FBA642",
   },
   tabs: {
     display: "flex",
@@ -116,6 +120,13 @@ const WhatWeDo = () => {
 
   return (
     <Paper className={classes.root} elevation={2}>
+      <div
+        style={{
+          backgroundImage: `url(${waveTop})`,
+          height: 140,
+          backgroundSize: "cover",
+        }}
+      ></div>
       <Typography align="center" variant="h3" gutterBottom>
         GROW YOUR ONLINE PRESENCE WITH US{" "}
       </Typography>
@@ -151,6 +162,13 @@ const WhatWeDo = () => {
           />
         );
       })}
+      <div
+        style={{
+          backgroundImage: `url(${waveBottom})`,
+          height: 140,
+          backgroundSize: "cover",
+        }}
+      ></div>
     </Paper>
   );
 };
