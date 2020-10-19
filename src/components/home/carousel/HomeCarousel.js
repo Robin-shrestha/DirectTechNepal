@@ -71,16 +71,6 @@ const HomeCarousel = () => {
       <Slider {...settings}>
         {slides.map((item) => {
           return (
-            // <div
-            //   key={item.id}
-            //   style={{
-            //     backgroundImage: `url(${item.image})`,
-            //     height: "400px",
-            //     backgroundSize: "contain",
-            //     backgroundPosition: "center center",
-            //     backgroundRepeat: "no-repeat",
-            //   }}
-            // ></div>
             <div
               key={item.id}
               style={{

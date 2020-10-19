@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Tab, Tabs, Paper, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 // /tabs/
-import webDevTab from "../../../media/whatwedo/whatwedo-tabs/Web-Development-icon.png";
-import logoDesignTab from "../../../media/whatwedo/whatwedo-tabs/Logo-icon.png";
-import socialMediaMarketingTab from "../../../media/whatwedo/whatwedo-tabs/Digital-Marketing-icon.png";
-import graphicDesignTab from "../../../media/whatwedo/whatwedo-tabs/Graphic-Design-icon.png";
+import webDevTab from "../../../media/whatwedo/whatwedo-tabs/Web-Dev.png";
+import logoDesignTab from "../../../media/whatwedo/whatwedo-tabs/Logo-design.png";
+import socialMediaMarketingTab from "../../../media/whatwedo/whatwedo-tabs/Social-media-marketing.png";
+import graphicDesignTab from "../../../media/whatwedo/whatwedo-tabs/Graphic-Design.png";
 //panel
 import webDevpanel from "../../../media/whatwedo/whatwedo-panel/web-dev.png";
 import logoDesignPanel from "../../../media/whatwedo/whatwedo-panel/logo-design-photo.png";
