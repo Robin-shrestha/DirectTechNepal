@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20499c5a27ed1ed21e552e44521286b2",
+    "revision": "736075df4bbd57b7a69d81b999b26419",
     "url": "/DirectTechNepal/index.html"
   },
   {

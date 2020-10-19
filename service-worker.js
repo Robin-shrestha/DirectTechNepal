@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DirectTechNepal/precache-manifest.f80537c83eb4837cfc0e2c406437c2d1.js"
+  "/DirectTechNepal/precache-manifest.d607ab93b41755d87d1a026a89935aa0.js"
 );
 
 self.addEventListener('message', (event) => {
