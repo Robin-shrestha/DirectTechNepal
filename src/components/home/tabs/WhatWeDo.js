@@ -203,9 +203,7 @@ const WhatWeDo = () => {
       <Typography align="center" variant="h3" gutterBottom color="inherit">
         GROW YOUR ONLINE PRESENCE WITH US{" "}
       </Typography>
-      <Typography align="center" variant="h4" gutterBottom color="inherit">
-        Web development & design services
-      </Typography>
+
       <div className={classes.tabs}>
         <Tabs
           value={value}
