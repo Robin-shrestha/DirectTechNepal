@@ -25,6 +25,7 @@ const styles = makeStyles((theme) => ({
     backgroundColor: "inherit",
     // padding: theme.spacing(2),
     backgroundColor: "#FBA642",
+    color: "white",
   },
   tabs: {
     display: "flex",
@@ -79,8 +80,39 @@ const whatWeDoImages = [
     tabImage: webDevTab,
     panelImage: webDevpanel,
     title: "Web development",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
+    description: () => {
+      return (
+        <div>
+          <Typography variant="body1">
+            Web development is needed for every organization wanting to save
+            time and money on advertising. Owning a website allows much more
+            detailed customizations and an increase in brand awareness. We are
+            here for you with the services mentioned below.
+          </Typography>
+          <Typography variant="body2">
+            1. Our web development strategies work as per your choice.
+          </Typography>
+          <Typography variant="body2">
+            2. You can get a visually interesting page with a user-friendly
+            design and overall a functional site.
+          </Typography>
+          <Typography variant="body2">
+            3. We hold meetings with clients to discuss their needs and
+            requirements for a website.{" "}
+          </Typography>
+          <Typography variant="body2">
+            4. We make sure that we are running with a proper designing process.{" "}
+          </Typography>
+          <Typography variant="body2">
+            5. Fresh and genuine ideas from our developers.{" "}
+          </Typography>
+          <Typography variant="body2">
+            6. We create static, dynamic, custom web designs according to
+            clients and business needs.{" "}
+          </Typography>
+        </div>
+      );
+    },
   },
   {
     id: 1,
@@ -88,8 +120,19 @@ const whatWeDoImages = [
     panelImage: logoDesignPanel,
 
     title: "logo Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
+    description: () => {
+      return (
+        <div>
+          <Typography variant="body1">
+            The logo makes a strong first impression. It is the foundation of
+            brand identity. We make sure our design will foster your business
+            demands. We have a well-specialized person for logo design. We make
+            a logo as per our client’s suggestion and needs. Design is done
+            ensuring consistency, scalability, relevance, and versatility.
+          </Typography>
+        </div>
+      );
+    },
   },
   {
     id: 2,
@@ -97,8 +140,28 @@ const whatWeDoImages = [
     panelImage: socialMediaMarketingPanel,
 
     title: "Social Media Marketing",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
+    description: () => {
+      return (
+        <div>
+          <Typography variant="body1">
+            As social media is the fastest-growing trend in the history of the
+            world, using social media platforms like Facebook, Instagram,
+            Twitter, LinkedIn, Pinterest, YouTube, Snapchat, and so on will
+            boost up the marketing.
+          </Typography>
+          <Typography variant="body2">
+            1. We provide effective plans and strategies.{" "}
+          </Typography>
+          <Typography variant="body2">
+            2. We promote any brands, pages, online stores, products.
+          </Typography>
+          <Typography variant="body2">
+            3. We do marketing at an affordable cost and work with clients in a
+            friendly environment.
+          </Typography>
+        </div>
+      );
+    },
   },
   {
     id: 3,
@@ -106,8 +169,18 @@ const whatWeDoImages = [
     panelImage: graphicDesignPanel,
 
     title: "Graphic Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
+    description: () => {
+      return (
+        <div>
+          <Typography variant="body1">
+            Professional Brochure Design: we make sure our brochure design will
+            have informative and complete content provided by our clients. Since
+            the brochure plays an important role in communications strategy, you
+            will find consistency in our work.
+          </Typography>
+        </div>
+      );
+    },
   },
 ];
 const WhatWeDo = () => {
@@ -127,10 +200,10 @@ const WhatWeDo = () => {
           backgroundSize: "cover",
         }}
       ></div>
-      <Typography align="center" variant="h3" gutterBottom>
+      <Typography align="center" variant="h3" gutterBottom color="inherit">
         GROW YOUR ONLINE PRESENCE WITH US{" "}
       </Typography>
-      <Typography align="center" variant="h4" gutterBottom>
+      <Typography align="center" variant="h4" gutterBottom color="inherit">
         Web development & design services
       </Typography>
       <div className={classes.tabs}>

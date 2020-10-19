@@ -83,7 +83,7 @@ const About = () => {
       ></div>
       <Paper elevation={0}>
         <Typography
-          variant="h3"
+          variant="h4"
           align="left"
           gutterBottom
           className={classes.topicHeaders}
@@ -101,7 +101,7 @@ const About = () => {
       </Paper>
       <Paper elevation={0}>
         <Typography
-          variant="h3"
+          variant="h4"
           align="left"
           gutterBottom
           className={classes.topicHeaders}

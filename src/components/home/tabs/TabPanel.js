@@ -7,6 +7,7 @@ const styles = makeStyles((theme) => ({
   root: {
     background: "inherit",
     margin: theme.spacing(3, 1, 3, 1),
+    color: "inherit",
     // border: "white 1px solid",
   },
   container: {
@@ -71,7 +72,8 @@ const TabPanel = (props) => {
                 >
                   {title}
                 </Typography>
-                <Typography variant="body1">{description}</Typography>
+                {description()}
+                {/* <Typography variant="body1">{description()}</Typography> */}
               </div>
             </Grid>
           </Grid>

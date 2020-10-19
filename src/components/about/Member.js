@@ -73,11 +73,11 @@ const Member = (props) => {
           <Typography variant="h6" align="center" gutterBottom>
             {name}
           </Typography>
-          <Typography variant="body2" paragraph>
+          <Typography variant="body1" paragraph>
             {description}
           </Typography>
           <CardActions>
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle2">
               Find{" "}
               <Link href="#" color="inherit" underline="always">
                 {name}
