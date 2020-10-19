@@ -1,9 +1,11 @@
 import React from "react";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
-import { Switch, Route, Redirect } from "react-router-dom";
 import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
+import Contacts from "./components/contact/Contact";
+import { Switch, Route, Redirect } from "react-router-dom";
+
 function App() {
   return (
     <div
@@ -18,6 +20,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/about" component={About} />
+        <Route path="/contactus" component={Contacts} />
 
         <Route path="/" component={Home} />
         <Route exact path="/DirectTechNepal">

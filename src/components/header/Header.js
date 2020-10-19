@@ -132,7 +132,13 @@ const Header = (props) => {
             >
               About Us
             </Button>
-            <Button className={classes.navbuttons}>Contacts</Button>
+            <Button
+              component={RouterLink}
+              to="/contactus"
+              className={classes.navbuttons}
+            >
+              Contacts
+            </Button>
             <Button className={classes.navbuttons}>Gallery</Button>
           </div>
           {/* <div className={classes.socialMediaContainer}>

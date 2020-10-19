@@ -65,7 +65,7 @@ const NavDrawer = (props) => {
           </ListItemIcon>
           <ListItemText>About Us</ListItemText>
         </ListItem>
-        <ListItem button>
+        <ListItem button component={RouterLink} to="/contactus">
           <ListItemIcon>
             <ContactsIcon />
           </ListItemIcon>

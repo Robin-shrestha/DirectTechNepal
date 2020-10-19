@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { Tab, Tabs, Paper, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+//borders
+import waveTop from "../../../media/Wave BG/BG3.png";
+import waveBottom from "../../../media/Wave BG/BG1.png";
+
+import TabPanel from "./TabPanel";
+
+import { useSpring, animated } from "react-spring";
+
 // /tabs/
 import webDevTab from "../../../media/whatwedo/whatwedo-tabs/Web-Dev.png";
 import logoDesignTab from "../../../media/whatwedo/whatwedo-tabs/Logo-design.png";
@@ -11,70 +20,8 @@ import webDevpanel from "../../../media/whatwedo/whatwedo-panel/web-dev.png";
 import logoDesignPanel from "../../../media/whatwedo/whatwedo-panel/logo-design-photo.png";
 import socialMediaMarketingPanel from "../../../media/whatwedo/whatwedo-panel/Social-media-marketing.png";
 import graphicDesignPanel from "../../../media/whatwedo/whatwedo-panel/graphic-design-photo.png";
-//borders
-import waveTop from "../../../media/Wave BG/BG3.png";
-import waveBottom from "../../../media/Wave BG/BG1.png";
 
-import TabPanel from "./TabPanel";
-
-import { useSpring, animated } from "react-spring";
-
-const styles = makeStyles((theme) => ({
-  root: {
-    margin: theme.spacing(0, 0, 0, 0),
-    backgroundColor: "inherit",
-    // padding: theme.spacing(2),
-    backgroundColor: "#FBA642",
-    color: "white",
-  },
-  tabs: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
-  },
-  card: {
-    width: "180px",
-    height: "180px",
-    background: "rgba(250,250,250,1)",
-    border: "15px solid white",
-    borderRadius: "10px",
-    boxShadow: "10px 10px 30px -5px rgba(0, 0, 0, 0.3)",
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    transition: "box-shadow .5s",
-    "&hover": { boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)" },
-  },
-}));
-
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1,
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
-const TabComponent = ({ image }) => {
-  const classes = styles();
-  const [spring, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: { mass: 5, tension: 350, friction: 40 },
-  }));
-
-  return (
-    <animated.div
-      className={classes.card}
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{
-        transform: spring.xys.interpolate(trans),
-        backgroundImage: `url(${image})`,
-      }}
-    />
-  );
-};
-const whatWeDoImages = [
+const whatWeDoData = [
   {
     id: 0,
     tabImage: webDevTab,
@@ -183,6 +130,63 @@ const whatWeDoImages = [
     },
   },
 ];
+
+const styles = makeStyles((theme) => ({
+  root: {
+    margin: theme.spacing(0, 0, 0, 0),
+    backgroundColor: "inherit",
+    // padding: theme.spacing(2),
+    backgroundColor: "#FBA642",
+    color: "white",
+  },
+  tabs: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+  },
+  card: {
+    width: "180px",
+    height: "180px",
+    background: "rgba(250,250,250,1)",
+    border: "15px solid white",
+    borderRadius: "10px",
+    boxShadow: "10px 10px 30px -5px rgba(0, 0, 0, 0.3)",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    transition: "box-shadow .5s",
+    "&hover": { boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)" },
+  },
+}));
+
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 20,
+  1.1,
+];
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
+const TabComponent = ({ image }) => {
+  const classes = styles();
+  const [spring, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
+
+  return (
+    <animated.div
+      className={classes.card}
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+      onMouseLeave={() => set({ xys: [0, 0, 1] })}
+      style={{
+        transform: spring.xys.interpolate(trans),
+        backgroundImage: `url(${image})`,
+      }}
+    />
+  );
+};
+
 const WhatWeDo = () => {
   const classes = styles();
   const [value, setValue] = useState(0);
@@ -213,7 +217,7 @@ const WhatWeDo = () => {
           variant="scrollable"
           scrollButtons="on"
         >
-          {whatWeDoImages.map((item, index) => {
+          {whatWeDoData.map((item, index) => {
             return (
               <Tab
                 key={item.id}
@@ -223,7 +227,7 @@ const WhatWeDo = () => {
           })}
         </Tabs>
       </div>
-      {whatWeDoImages.map((item, index) => {
+      {whatWeDoData.map((item, index) => {
         return (
           <TabPanel
             index={index}
