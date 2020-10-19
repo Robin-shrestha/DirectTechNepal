@@ -4,7 +4,6 @@ import { formatMs, makeStyles } from "@material-ui/core/styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import image1 from "../../../media/image/1.jpeg";
 import carousel1 from "../../../media/image/Carousel-1.jpg";
 import carousel2 from "../../../media/image/Carousel-2.jpg";
 import carousel3 from "../../../media/image/DT-CAROUSEL-1.jpg";
@@ -12,7 +11,6 @@ import carousel4 from "../../../media/image/DT-CAROUSEL-2.jpg";
 
 const styles = makeStyles((theme) => ({
   root: { backgroundColor: "black", width: "100%" },
-  // image: { height: 400 },
 }));
 
 const slides = [
@@ -92,7 +90,7 @@ const HomeCarousel = () => {
                 style={{
                   height: "inherit",
                   width: "100%",
-                  backgroundSize: "contain",
+                  backgroundSize: "containe",
                 }}
               />
             </div>
