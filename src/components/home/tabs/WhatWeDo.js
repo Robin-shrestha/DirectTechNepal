@@ -98,7 +98,7 @@ const whatWeDoImages = [
           </Typography>
           <Typography variant="body2">
             3. We hold meetings with clients to discuss their needs and
-            requirements for a website.{" "}
+            requirements for a website.
           </Typography>
           <Typography variant="body2">
             4. We make sure that we are running with a proper designing process.{" "}
