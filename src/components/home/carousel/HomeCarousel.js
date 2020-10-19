@@ -43,10 +43,15 @@ const HomeCarousel = () => {
   const classes = styles();
   const [index, setindex] = useState(0);
 
-  useEffect(
-    () => void setInterval(() => setindex((state) => (state + 1) % 4), 3500),
-    []
-  );
+  useEffect(() => {
+    const interval = setInterval(
+      () => setindex((state) => (state + 1) % 4),
+      3500
+    );
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   var settings = {
     dots: false,
