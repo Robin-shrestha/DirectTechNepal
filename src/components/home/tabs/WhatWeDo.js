@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { Tab, Tabs, Paper, Typography, CardActions } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import webDev from "../../../media/Icon/Web-Development-icon.png";
-import logoDesign from "../../../media/Icon/Logo-icon.png";
-import socialMediaMarketing from "../../../media/Icon/Digital-Marketing-icon.png";
-import graphicDesign from "../../../media/Icon/Graphic-Design-icon.png";
+import webDevTab from "../../../media/whatwedo/whatwedo-tabs/Web-Development-icon.png";
+import logoDesignTab from "../../../media/whatwedo/whatwedo-tabs/Logo-icon.png";
+import socialMediaMarketingTab from "../../../media/whatwedo/whatwedo-tabs/Digital-Marketing-icon.png";
+import graphicDesignTab from "../../../media/whatwedo/whatwedo-tabs/Graphic-Design-icon.png";
+
+import webDevpanel from "../../../media/whatwedo/whatwedo-panel/web-dev.png";
+import logoDesignPanel from "../../../media/whatwedo/whatwedo-panel/logo-design-photo.png";
+import socialMediaMarketingPanel from "../../../media/whatwedo/whatwedo-panel/Social-media-marketing.png";
+import graphicDesignPanel from "../../../media/whatwedo/whatwedo-panel/graphic-design-photo.png";
+
 import TabPanel from "./TabPanel";
 
 import { useSpring, animated } from "react-spring";
@@ -66,28 +72,35 @@ const TabComponent = ({ image }) => {
 const whatWeDoImages = [
   {
     id: 0,
-    image: webDev,
+    tabImage: webDevTab,
+    panelImage: webDevpanel,
     title: "Web development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
   },
   {
     id: 1,
-    image: logoDesign,
+    tabImage: logoDesignTab,
+    panelImage: logoDesignPanel,
+
     title: "logo Design",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
   },
   {
     id: 2,
-    image: socialMediaMarketing,
+    tabImage: socialMediaMarketingTab,
+    panelImage: socialMediaMarketingPanel,
+
     title: "Social Media Marketing",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
   },
   {
     id: 3,
-    image: graphicDesign,
+    tabImage: graphicDesignTab,
+    panelImage: graphicDesignPanel,
+
     title: "Graphic Design",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor malesuada tellus vitae finibus. Quisque purus arcu, rhoncus a odio at, pharetra tincidunt mauris. Nulla bibendum dui id elit sodales, at posuere ipsum elementum. Mauris vestibulum augue mi, eget elementum felis pretium at. Nullam non sapien lectus. Nunc et egestas turpis, vel finibus nunc. Nam sed est ac nunc suscipit iaculis faucibus sit amet tellus. Nullam in elit ullamcorper, imperdiet dui sit amet, accumsan arcu. Nam egestas finibus purus, sed rutrum est viverra non. Nulla sit amet quam orci. Curabitur fermentum sodales lacus at cursus. Praesent et placerat velit, in gravida sapien.  ",
@@ -118,7 +131,10 @@ const WhatWeDo = () => {
         >
           {whatWeDoImages.map((item, index) => {
             return (
-              <Tab key={item.id} icon={<TabComponent image={item.image} />} />
+              <Tab
+                key={item.id}
+                icon={<TabComponent image={item.tabImage} />}
+              />
             );
           })}
         </Tabs>
@@ -131,7 +147,7 @@ const WhatWeDo = () => {
             key={item.id}
             description={item.description}
             title={item.title}
-            image={item.image}
+            image={item.panelImage}
           />
         );
       })}

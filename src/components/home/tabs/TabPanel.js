@@ -39,12 +39,12 @@ const TabPanel = (props) => {
         <Grid item xs={1} />
         <Grid item xs={10}>
           <Grid container spacing={2} alignItems="center">
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={7}>
               <div className={classes.imageContainer}>
                 <img src={image} className={classes.image} alt="tab panel " />
               </div>
             </Grid>
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={5}>
               <div className={classes.content}>
                 <Typography variant="h4" align="center" gutterBottom>
                   {title}
