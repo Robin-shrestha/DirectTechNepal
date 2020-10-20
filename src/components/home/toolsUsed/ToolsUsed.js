@@ -33,7 +33,7 @@ const styles = makeStyles((theme) => ({
     backgroundPosition: "center center",
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
-    height: "140px",
+    height: 140,
     width: 140,
     "&:hover": {
       cursor: "help",
