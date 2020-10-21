@@ -9,7 +9,12 @@ import Googlemap from "./GoogleMap";
 
 const styles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(9),
+    marginTop: theme.spacing(7),
+    backgroundColor: "black",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: theme.spacing(0),
+    },
+    color: "white",
   },
 }));
 const Contact = () => {
@@ -27,7 +32,6 @@ const Contact = () => {
           <Grid item xs={12} md={9}>
             <div
               style={{
-                // background: "darkred",
                 backgroundImage: `url(${contactUsImg})`,
                 height: "450px",
                 marginLeft: 16,
@@ -35,6 +39,8 @@ const Contact = () => {
                 backgroundSize: "contain",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
+                backgroundColor: "#FBA642",
+                borderRadius: 35,
               }}
             ></div>
           </Grid>
@@ -52,7 +58,7 @@ const Contact = () => {
             <div
               style={{
                 width: "100%",
-                backgroundColor: "#eee",
+                backgroundColor: "black",
                 // height: 200,
                 margin: 16,
               }}
@@ -64,7 +70,7 @@ const Contact = () => {
             <div
               style={{
                 width: "100%",
-                margin: 16,
+                backgroundColor: "inherit",
               }}
             >
               <Googlemap />
