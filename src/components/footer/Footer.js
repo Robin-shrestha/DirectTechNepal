@@ -6,9 +6,14 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import PhoneIcon from "@material-ui/icons/Phone";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import DirectTechLogo from "../../media/Icon/DT-logo-1.png";
+import waveTop from "../../media/Wave BG/BG3.png";
 
 const styles = makeStyles((theme) => ({
-  root: { padding: theme.spacing(3), backgroundColor: "black" },
+  root: {
+    padding: theme.spacing(0, 0, 3, 0),
+    backgroundColor: "#B71B21",
+    // borderTop: "inherit 3px solid",
+  },
   image: { width: "100%" },
   contactsContainer: {
     textAlign: "left",
@@ -20,7 +25,14 @@ const styles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = styles();
   return (
-    <Paper className={classes.root} elevation={0}>
+    <Paper className={classes.root} elevation={0} square>
+      <div
+        style={{
+          backgroundImage: `url(${waveTop})`,
+          height: 140,
+          backgroundSize: "cover",
+        }}
+      />
       <Grid container>
         <Grid item xs={1} />
         <Grid item xs={10}>
