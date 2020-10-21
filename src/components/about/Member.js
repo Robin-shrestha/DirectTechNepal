@@ -25,13 +25,13 @@ const style = makeStyles((theme) => ({
     },
   },
   cardEven: {
-    backgroundColor: "darkred",
+    backgroundColor: "#4895BB",
     // borderRadius: "5px 50px 5px 50px",
     borderRadius: "60px 45px 30px 15px/15px 30px 45px 60px",
     // borderRadius: "25px",
   },
   cardOdd: {
-    backgroundColor: "darkblue",
+    backgroundColor: "#A7D251",
     // borderRadius: "50px 5px 50px 5px",
     borderRadius: "45px 60px 15px 30px/30px 15px 60px 45px",
     // borderRadius: "25px",

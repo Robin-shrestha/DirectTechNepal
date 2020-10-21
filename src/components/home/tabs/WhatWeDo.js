@@ -199,7 +199,7 @@ const WhatWeDo = () => {
           height: 140,
           backgroundSize: "cover",
         }}
-      ></div>
+      />
       <Typography align="center" variant="h3" gutterBottom color="inherit">
         GROW YOUR ONLINE PRESENCE WITH US{" "}
       </Typography>
