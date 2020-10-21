@@ -3,6 +3,9 @@ import MessageForm from "./MessageForm";
 import ContactInfo from "./ContactInfo";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import contactUsImg from "../../media/contacts/Contact-us.png";
+
+import Googlemap from "./GoogleMap";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -21,19 +24,21 @@ const Contact = () => {
       <Grid container>
         <Grid item xs={1} />
         <Grid container item xs={10}>
-          <Grid item xs={12} md={7} lg={8}>
+          <Grid item xs={12} md={9}>
             <div
               style={{
-                background: "darkred",
-                height: "100%",
+                // background: "darkred",
+                backgroundImage: `url(${contactUsImg})`,
+                height: "450px",
                 marginLeft: 16,
                 marginRight: 16,
+                backgroundSize: "contain",
+                backgroundPosition: "center center",
+                backgroundRepeat: "no-repeat",
               }}
-            >
-              something
-            </div>
+            ></div>
           </Grid>
-          <Grid item xs={12} md={5} lg={4}>
+          <Grid item xs={12} md={3}>
             <div
               style={{
                 marginLeft: 16,
@@ -59,12 +64,10 @@ const Contact = () => {
             <div
               style={{
                 width: "100%",
-                backgroundColor: "orange",
-                height: 200,
                 margin: 16,
               }}
             >
-              google maps
+              <Googlemap />
             </div>
           </Grid>
         </Grid>

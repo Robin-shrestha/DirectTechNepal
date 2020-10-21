@@ -12,12 +12,20 @@ const styles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+    },
   },
   title: { paddingTop: theme.spacing(2), paddingLeft: theme.spacing(2) },
   mediaContainer: {
     padding: theme.spacing(2),
     display: "flex",
     // justifyContent: "space-between",
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(1),
+      margin: theme.spacing(2, 0, 0, 0),
+    },
   },
   infoSpan: {
     paddingRight: theme.spacing(1),
