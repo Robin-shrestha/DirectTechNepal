@@ -17,10 +17,11 @@ const colsSelector = (index) => {
   }
 };
 function importAll(r) {
+  console.log(r);
   return r.keys().map(r);
 }
 const images = importAll(
-  require.context("../../media/gallery/", false, /\.(png|jpe?g|svg)$/)
+  require.context("../../media/gallery/", true, /\.(png|jpe?g|svg)$/)
 );
 
 const useStyles = makeStyles((theme) => ({
