@@ -140,6 +140,7 @@ const styles = makeStyles((theme) => ({
     color: "white",
   },
   tabs: {
+    // padding: theme.spacing(4, 0, 4, 0),
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -157,6 +158,7 @@ const styles = makeStyles((theme) => ({
     transition: "box-shadow .5s",
     "&hover": { boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)" },
   },
+  flexContainer: { display: "flex", height: 250 },
 }));
 
 const calc = (x, y) => [
@@ -214,6 +216,9 @@ const WhatWeDo = () => {
           onChange={handleChange}
           variant="scrollable"
           scrollButtons="on"
+          classes={{
+            flexContainer: classes.flexContainer,
+          }}
         >
           {whatWeDoData.map((item, index) => {
             return (
