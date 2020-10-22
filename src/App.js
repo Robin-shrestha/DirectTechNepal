@@ -4,6 +4,8 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 import Contacts from "./components/contact/Contact";
+import Gallery from "./components/gallery/Gallery";
+
 import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/contactus" component={Contacts} />
+        <Route path="/gallery" component={Gallery} />
 
         <Route path="/" component={Home} />
         <Route exact path="/DirectTechNepal">
