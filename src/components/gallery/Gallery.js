@@ -8,8 +8,6 @@ import {
   // Modal,
   Backdrop,
 } from "@material-ui/core";
-// import { useSpring, animated } from "react-spring";
-// import PropTypes from "prop-types";
 
 const colsSelector = (index) => {
   if (index % 10 === 0 || index % 10 === 6) {
@@ -75,6 +73,7 @@ const Gallery = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
+  console.log(images);
 
   const handleOpen = (tile) => {
     // e.preventDefault();
