@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(7),
     paddingTop: theme.spacing(4),
     backgroundColor: "black",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
+      paddingTop: theme.spacing(3),
+    },
   },
   gridList: {
     width: "100%",
