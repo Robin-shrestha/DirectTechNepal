@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Card,
+  CardHeader,
   CardContent,
   Paper,
   Typography,
@@ -15,8 +16,8 @@ const style = makeStyles((theme) => ({
   card: {
     display: "flex",
     color: "white",
-    flexDirection: "row",
-    padding: theme.spacing(3),
+    flexDirection: "column",
+    // padding: theme.spacing(3),
     backgroundColor: "inherit",
     alignItems: "center",
     minHeight: "30ch",
@@ -37,14 +38,14 @@ const style = makeStyles((theme) => ({
     // borderRadius: "25px",
   },
   circleImageContainer: {
-    margin: theme.spacing(1),
-    minWidth: "200px",
-    minHeight: "200px",
+    // margin: theme.spacing(1),
+    minWidth: "100%",
+    minHeight: "400px",
 
-    maxWidth: "200px",
+    maxWidth: "100%",
     maxHeight: "200px",
-    borderRadius: "50%",
-    WebkitBorderRadius: "50%",
+    // borderRadius: "50%",
+    // WebkitBorderRadius: "50%",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
@@ -69,7 +70,7 @@ const Member = (props) => {
           style={{ backgroundImage: `url(${image})` }}
           className={classes.circleImageContainer}
         />
-        <CardContent className={classes.cardContainer}>
+        {/* <CardContent className={classes.cardContainer}>
           <Typography variant="h6" align="center" gutterBottom>
             {name}
           </Typography>
@@ -85,6 +86,10 @@ const Member = (props) => {
               at facebook
             </Typography>
           </CardActions>
+        </CardContent> */}
+        <CardHeader title={name} />
+        <CardContent>
+          <Typography varinat="body1">{description}</Typography>
         </CardContent>
       </Card>
     </div>

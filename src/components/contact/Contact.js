@@ -32,6 +32,16 @@ const Contact = () => {
           <Grid item xs={12} md={9}>
             <div
               style={{
+                width: "100%",
+                backgroundColor: "black",
+                // height: 200,
+                margin: 16,
+              }}
+            >
+              <MessageForm />
+            </div>
+            {/* <div
+              style={{
                 backgroundImage: `url(${contactUsImg})`,
                 height: "450px",
                 marginLeft: 16,
@@ -42,9 +52,9 @@ const Contact = () => {
                 backgroundColor: "#FBA642",
                 borderRadius: 35,
               }}
-            ></div>
+            ></div> */}
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={3} style={{ alignSelf: "center" }}>
             <div
               style={{
                 marginLeft: 16,
@@ -55,7 +65,7 @@ const Contact = () => {
             </div>
           </Grid>
           <Grid container item xs={12} md={9}>
-            <div
+            {/* <div
               style={{
                 width: "100%",
                 backgroundColor: "black",
@@ -64,7 +74,7 @@ const Contact = () => {
               }}
             >
               <MessageForm />
-            </div>
+            </div> */}
           </Grid>
           <Grid container item xs={12}>
             <div

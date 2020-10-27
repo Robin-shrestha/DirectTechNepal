@@ -29,6 +29,10 @@ const styles = makeStyles((theme) => ({
   },
   infoSpan: {
     paddingRight: theme.spacing(1),
+    fontSize: 24,
+  },
+  icon: {
+    fontSize: "1.9rem",
   },
 }));
 
@@ -43,18 +47,18 @@ const ContactInfo = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
-      <Typography variant="h5" align="left" className={classes.title}>
+      <Typography variant="h4" align="left" className={classes.title}>
         Catch us on
       </Typography>
       <div className={classes.mediaContainer}>
         <span className={classes.infoSpan}>
-          <PhoneIcon />
+          <PhoneIcon className={classes.icon} />
         </span>
         <span className={classes.infoSpan}>{contacts.phoneNo}</span>
       </div>
       <div className={classes.mediaContainer}>
         <span className={classes.infoSpan}>
-          <EmailIcon />
+          <EmailIcon className={classes.icon} />
         </span>
         <span className={classes.infoSpan}>{contacts.email}</span>
       </div>
@@ -64,9 +68,9 @@ const ContactInfo = () => {
         className={classes.mediaContainer}
       >
         <span className={classes.infoSpan}>
-          <FacebookIcon />
+          <FacebookIcon className={classes.icon} />
         </span>
-        <span className={classes.infoSpan}>{"/directtechnepal"}</span>
+        <span className={classes.infoSpan}>{"directtechnepal"}</span>
       </Link>
       <Link
         href={contacts.instagram}
@@ -74,13 +78,13 @@ const ContactInfo = () => {
         className={classes.mediaContainer}
       >
         <span className={classes.infoSpan}>
-          <InstagramIcon />
+          <InstagramIcon className={classes.icon} />
         </span>
         <span className={classes.infoSpan}>{"@directtechnepal"}</span>
       </Link>
       <div className={classes.mediaContainer}>
         <span className={classes.infoSpan}>
-          <WhatsAppIcon />
+          <WhatsAppIcon className={classes.icon} />
         </span>
         <span className={classes.infoSpan}>{"whatsapp"}</span>
       </div>
