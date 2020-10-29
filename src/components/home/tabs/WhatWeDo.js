@@ -135,7 +135,7 @@ const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(0, 0, 0, 0),
     backgroundColor: "inherit",
-    // padding: theme.spacing(2),
+    padding: theme.spacing(5, 0, 0, 0),
     backgroundColor: "#FBA642",
     color: "white",
   },
@@ -199,13 +199,13 @@ const WhatWeDo = () => {
 
   return (
     <Paper className={classes.root} elevation={2}>
-      <div
+      {/* <div
         style={{
           backgroundImage: `url(${waveTop})`,
           height: 140,
           backgroundSize: "cover",
         }}
-      />
+      /> */}
       <Typography align="center" variant="h3" gutterBottom color="inherit">
         GROW YOUR ONLINE PRESENCE WITH US{" "}
       </Typography>
