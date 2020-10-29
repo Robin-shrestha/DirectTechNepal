@@ -44,21 +44,36 @@ const slides = [
   },
 ];
 
+const widthHandler = () => {
+  if (window.innerWidth > 450 * 3) {
+    return 3;
+  } else if (window.innerWidth > 450 * 2) {
+    return 2;
+  } else {
+    return 1;
+  }
+};
 const MultiCarousel = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    console.log(windowWidth);
-  }, [window.innerWidth]);
+  //   useEffect(() => {
+  //     function handleResize() {
+  //       setWindowWidth(window.innerWidth);
+  //     }
+  //     window.addEventListener("resize", handleResize);
+  //     handleResize();
+  //     return () => {
+  //       window.removeEventListener("resize", handleResize);
+  //     };
+  //   }, [window.innerWidth]);
 
   const settings = {
     dots: true,
     infinite: true,
     // centerMode: true,
     speed: 500,
-    slidesToShow: Math.floor(windowWidth / 450),
-    slidesToScroll: Math.floor(windowWidth / 450),
+    slidesToShow: widthHandler(),
+    slidesToScroll: widthHandler(),
   };
   return (
     <div style={{ padding: 32 }}>

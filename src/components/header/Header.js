@@ -4,15 +4,9 @@ import { AppBar, Toolbar, IconButton, Button, Link } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Link as RouterLink } from "react-router-dom";
 
 import NavDrawer from "./drawer/NavDrawer";
-import DirectTechLogo from "../../media/logo/DT-logo-1.png";
-import DirectTechLogo1 from "../../media/logo/DT-logo-2.png";
-import DirectTechLogo2 from "../../media/logo/DT-logo-3.png";
 import DirectTechLogo3 from "../../media/logo/DT-logo-4.png";
 
 const styles = makeStyles((theme) => ({
@@ -21,16 +15,11 @@ const styles = makeStyles((theme) => ({
     width: "100%",
   },
   appbar: {
-    // opacity: "25%",
-    // backgroundColor: "black",
     height: 60,
-    [theme.breakpoints.down(780)]: {
-      height: "60px",
-    },
   },
   menuButton: {
     color: "white",
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up("sm")]: {
       color: "white",
 
       display: "none",
@@ -40,16 +29,17 @@ const styles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
   },
-  logoContainer: { flexGrow: 2, textAlign: "left" },
+  logoContainer: { flexGrow: 5, textAlign: "left" },
   logo: {
     height: "50px",
     padding: "4px",
-    [theme.breakpoints.up(600)]: {
-      paddingLeft: 60,
+    [theme.breakpoints.up("sm")]: {
+      paddingLeft: 160,
     },
   },
 
   navContainer: {
+    display: "flex",
     color: "white",
     flexGrow: 1,
     textAlign: "center",
@@ -69,16 +59,16 @@ const styles = makeStyles((theme) => ({
       borderBottom: "solid 2px red",
     },
   },
-  socialMediaContainer: {
-    padding: theme.spacing(0, 0, 0, 1),
-    color: "white",
+  // socialMediaContainer: {
+  //   padding: theme.spacing(0, 0, 0, 1),
+  //   color: "white",
 
-    // color: "white",
-    flexGrow: 1,
-    [theme.breakpoints.down(780)]: {
-      display: "none",
-    },
-  },
+  //   // color: "white",
+  //   flexGrow: 1,
+  //   [theme.breakpoints.down(780)]: {
+  //     display: "none",
+  //   },
+  // },
 }));
 
 const Header = (props) => {

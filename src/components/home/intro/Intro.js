@@ -23,6 +23,7 @@ const styles = makeStyles((theme) => ({
     animation: `$myEffect 3500ms ${theme.transitions.easing.easeInOut} `,
     [theme.breakpoints.down("sm")]: {
       paddingTop: "25%",
+      // animation: "none !important",
     },
   },
   "@keyframes myEffect ": {
