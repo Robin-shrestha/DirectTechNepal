@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/DirectTechNepal/static/css/main.04f76552.chunk.css",
-    "main.js": "/DirectTechNepal/static/js/main.ac189ea3.chunk.js",
-    "main.js.map": "/DirectTechNepal/static/js/main.ac189ea3.chunk.js.map",
+    "main.js": "/DirectTechNepal/static/js/main.7fe95308.chunk.js",
+    "main.js.map": "/DirectTechNepal/static/js/main.7fe95308.chunk.js.map",
     "runtime-main.js": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js",
     "runtime-main.js.map": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js.map",
     "static/css/2.445b666f.chunk.css": "/DirectTechNepal/static/css/2.445b666f.chunk.css",
-    "static/js/2.e246dccb.chunk.js": "/DirectTechNepal/static/js/2.e246dccb.chunk.js",
-    "static/js/2.e246dccb.chunk.js.map": "/DirectTechNepal/static/js/2.e246dccb.chunk.js.map",
+    "static/js/2.54aa8a82.chunk.js": "/DirectTechNepal/static/js/2.54aa8a82.chunk.js",
+    "static/js/2.54aa8a82.chunk.js.map": "/DirectTechNepal/static/js/2.54aa8a82.chunk.js.map",
     "index.html": "/DirectTechNepal/index.html",
-    "precache-manifest.74b2cb67ace684e5ce7a6afd283b586d.js": "/DirectTechNepal/precache-manifest.74b2cb67ace684e5ce7a6afd283b586d.js",
+    "precache-manifest.23a0a4d29de0398cbb1168be6dd468c2.js": "/DirectTechNepal/precache-manifest.23a0a4d29de0398cbb1168be6dd468c2.js",
     "service-worker.js": "/DirectTechNepal/service-worker.js",
     "static/css/2.445b666f.chunk.css.map": "/DirectTechNepal/static/css/2.445b666f.chunk.css.map",
     "static/css/main.04f76552.chunk.css.map": "/DirectTechNepal/static/css/main.04f76552.chunk.css.map",
-    "static/js/2.e246dccb.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/2.e246dccb.chunk.js.LICENSE.txt",
+    "static/js/2.54aa8a82.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/2.54aa8a82.chunk.js.LICENSE.txt",
     "static/media/ART-1.png": "/DirectTechNepal/static/media/ART-1.7f91bda7.png",
     "static/media/ART-10.png": "/DirectTechNepal/static/media/ART-10.2f52afb6.png",
     "static/media/ART-11.png": "/DirectTechNepal/static/media/ART-11.064dbdf6.png",
@@ -79,8 +79,8 @@
   "entrypoints": [
     "static/js/runtime-main.9875ecd6.js",
     "static/css/2.445b666f.chunk.css",
-    "static/js/2.e246dccb.chunk.js",
+    "static/js/2.54aa8a82.chunk.js",
     "static/css/main.04f76552.chunk.css",
-    "static/js/main.ac189ea3.chunk.js"
+    "static/js/main.7fe95308.chunk.js"
   ]
 }
