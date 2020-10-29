@@ -9,12 +9,23 @@ import Googlemap from "./GoogleMap";
 
 const styles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(7),
-    backgroundColor: "black",
+    // marginTop: theme.spacing(7),
+    backgroundColor: "white",
+
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(0),
     },
     color: "white",
+  },
+  background: {
+    backgroundImage: `url(${contactUsImg})`,
+    backgroundSize: "contain",
+    backgroundColor: "#FBA642",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+    [theme.breakpoints.down("md")]: {
+      backgroundImage: "none",
+    },
   },
 }));
 const Contact = () => {
@@ -23,47 +34,57 @@ const Contact = () => {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h3" gutterBottom align="center">
+      {/* <Typography variant="h3" gutterBottom align="center" >
         contacts
-      </Typography>
+      </Typography> */}
       <Grid container>
-        <Grid item xs={1} />
-        <Grid container item xs={10}>
-          <Grid item xs={12} md={9}>
-            <div
-              style={{
-                width: "100%",
-                backgroundColor: "black",
-                // height: 200,
-                margin: 16,
-              }}
-            >
-              <MessageForm />
-            </div>
-            {/* <div
-              style={{
-                backgroundImage: `url(${contactUsImg})`,
-                height: "450px",
-                marginLeft: 16,
-                marginRight: 16,
-                backgroundSize: "contain",
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
-                backgroundColor: "#FBA642",
-                borderRadius: 35,
-              }}
-            ></div> */}
+        <Grid
+          container
+          item
+          xs={12}
+          style={{ height: 80, backgroundColor: "#FBA642" }}
+        />
+
+        <Grid container item xs={12}>
+          <Grid
+            container
+            item
+            sm={12}
+            className={classes.background}
+            // style={{
+            //   backgroundImage: `url(${contactUsImg})`,
+            //   backgroundSize: "contain",
+            //   backgroundColor: "#FBA642",
+            //   backgroundRepeat: "no-repeat",
+            //   backgroundPosition: "center center",
+            // }}
+          >
+            <Grid item xs={12} md={4}>
+              <div
+                style={{
+                  width: "100%",
+                  // backgroundColor: "black",
+                  // height: 200,
+                  margin: 16,
+                }}
+              >
+                <MessageForm />
+              </div>
+            </Grid>
+            <Grid item xs={0} md={5} />
+
+            <Grid item xs={12} md={3} style={{ alignSelf: "center" }}>
+              <div
+                style={{
+                  marginLeft: 16,
+                  marginRight: 16,
+                }}
+              >
+                <ContactInfo />
+              </div>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={3} style={{ alignSelf: "center" }}>
-            <div
-              style={{
-                marginLeft: 16,
-                marginRight: 16,
-              }}
-            >
-              <ContactInfo />
-            </div>
-          </Grid>
+
           <Grid container item xs={12} md={9}>
             {/* <div
               style={{
@@ -87,8 +108,6 @@ const Contact = () => {
             </div>
           </Grid>
         </Grid>
-
-        <Grid item xs={1} />
       </Grid>
     </div>
   );

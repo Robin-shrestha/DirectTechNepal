@@ -15,9 +15,7 @@ const GoogleMap = () => {
     new google.maps.Marker({ position: xMarksTheSpot, map });
   }
 
-  return (
-    <div ref={ref} style={{ width: "100%", height: 450, borderRadius: 35 }} />
-  );
+  return <div ref={ref} style={{ width: "100%", height: 450 }} />;
 };
 
 export default GoogleMap;

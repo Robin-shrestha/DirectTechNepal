@@ -17,9 +17,13 @@ const styles = makeStyles((theme) => ({
       flexWrap: "wrap",
     },
   },
-  title: { paddingTop: theme.spacing(2), paddingLeft: theme.spacing(2) },
+  title: {
+    paddingTop: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
+    color: "black",
+  },
   mediaContainer: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2, 0, 0, 2),
     display: "flex",
     // justifyContent: "space-between",
     [theme.breakpoints.down("sm")]: {
@@ -28,6 +32,7 @@ const styles = makeStyles((theme) => ({
     },
   },
   infoSpan: {
+    color: "black",
     paddingRight: theme.spacing(1),
     fontSize: 24,
   },

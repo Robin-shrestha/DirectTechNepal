@@ -7,14 +7,15 @@ import mailBig from "../../media/contacts/mail-BIG.png";
 const styles = makeStyles((theme) => ({
   root: {
     // marginTop: theme.spacing(9),
-    backgroundImage: `url(${mailBig})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-    backgroundColor: "black",
+    // backgroundImage: `url(${mailBig})`,
+    // backgroundRepeat: "no-repeat",
+    // backgroundSize: "cover",
+    // backgroundPosition: "center center",
+    // backgroundColor: "white",
+    background: "inherit",
     borderRadius: 30,
   },
-  title: { padding: theme.spacing(3, 3, 0, 3) },
+  title: { padding: theme.spacing(3, 3, 0, 3), fontWeight: "bold" },
   messageForm: {
     padding: theme.spacing(3),
   },
@@ -30,8 +31,7 @@ const styles = makeStyles((theme) => ({
 const MessageForm = () => {
   const classes = styles();
   const [formData, setFormData] = useState({
-    firstName: null,
-    lastName: null,
+    name: null,
     email: null,
     subject: null,
     message: null,
@@ -45,38 +45,24 @@ const MessageForm = () => {
   };
   return (
     <div className={classes.root}>
-      <Typography variant="h5" className={classes.title} color="textPrimary">
-        Any inquiry? send us a message:
+      <Typography variant="h4" className={classes.title} color="textPrimary">
+        Send us a message
       </Typography>
+
       <form className={classes.messageForm} onSubmit={submitHandler}>
-        <div className={classes.nameFields}>
-          <FormControl
-            fullWidth
-            className={clsx(classes.fields)}
-            style={{ marginRight: 16 }}
-            size="medium"
-          >
-            <TextField
-              label="First Name"
-              name="firstName"
-              onChange={formHandler}
-              margin="dense"
-            />
-          </FormControl>
-          <FormControl
-            fullWidth
-            className={clsx(classes.fields)}
-            style={{ marginLeft: 16 }}
-            size="medium"
-          >
-            <TextField
-              name="lastName"
-              onChange={formHandler}
-              label="Last Name"
-              margin="dense"
-            />
-          </FormControl>
-        </div>
+        <FormControl
+          fullWidth
+          className={clsx(classes.fields)}
+          style={{ marginRight: 16 }}
+          size="medium"
+        >
+          <TextField
+            label="Name"
+            name="name"
+            onChange={formHandler}
+            margin="dense"
+          />
+        </FormControl>
 
         <FormControl className={classes.fields} fullWidth>
           <TextField
@@ -110,7 +96,11 @@ const MessageForm = () => {
             size="large"
             variant="outlined"
             color="default"
-            style={{ marginTop: 16 }}
+            style={{
+              marginTop: 16,
+              fontWeight: "bold",
+              border: "2px solid black",
+            }}
             type="submit"
           >
             SUBMIT
