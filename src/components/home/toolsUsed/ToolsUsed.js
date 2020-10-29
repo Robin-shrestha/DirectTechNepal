@@ -9,8 +9,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Tooltip } from "@material-ui/core";
 
 //borders
-import waveTop from "../../../media/Wave BG/BG3.png";
-import waveBottom from "../../../media/Wave BG/BG1.png";
+// import waveTop from "../../../media/Wave BG/BG3.png";
+// import waveBottom from "../../../media/Wave BG/BG1.png";
 
 const tools = [
   { id: 1, name: "adobe illustrator", icon: illustrator },
@@ -23,6 +23,7 @@ const tools = [
 const styles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#EDE3C9",
+    padding: theme.spacing(2),
   },
   iconContainers: {
     display: "flex",
@@ -44,13 +45,6 @@ const ToolsUsed = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
-      <div
-        style={{
-          backgroundImage: `url(${waveTop})`,
-          height: 140,
-          backgroundSize: "cover",
-        }}
-      />
       <div>
         <Grid container>
           <Grid item sm={1} />
@@ -70,14 +64,6 @@ const ToolsUsed = () => {
           <Grid item sm={1} />
         </Grid>
       </div>
-
-      <div
-        style={{
-          backgroundImage: `url(${waveBottom})`,
-          height: 140,
-          backgroundSize: "cover",
-        }}
-      />
     </div>
   );
 };

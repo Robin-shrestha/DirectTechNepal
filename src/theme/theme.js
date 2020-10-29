@@ -3,6 +3,12 @@ import "./fonts.css";
 
 const theme = createMuiTheme({
   typography: {
+    h1: {
+      fontFamily: "'Righteous', cursive, 'Roboto', 'Helvetica', 'Arial'",
+    },
+    h2: {
+      fontFamily: "'Raleway','Roboto', sans-serif;",
+    },
     h3: {
       fontFamily: "'Righteous', cursive, 'Roboto', 'Helvetica', 'Arial'",
     },

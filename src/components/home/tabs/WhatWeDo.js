@@ -199,13 +199,6 @@ const WhatWeDo = () => {
 
   return (
     <Paper className={classes.root} elevation={2}>
-      {/* <div
-        style={{
-          backgroundImage: `url(${waveTop})`,
-          height: 140,
-          backgroundSize: "cover",
-        }}
-      /> */}
       <Typography align="center" variant="h3" gutterBottom color="inherit">
         GROW YOUR ONLINE PRESENCE WITH US{" "}
       </Typography>
@@ -242,13 +235,6 @@ const WhatWeDo = () => {
           />
         );
       })}
-      <div
-        style={{
-          backgroundImage: `url(${waveBottom})`,
-          height: 140,
-          backgroundSize: "cover",
-        }}
-      ></div>
     </Paper>
   );
 };

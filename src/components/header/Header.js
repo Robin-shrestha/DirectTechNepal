@@ -22,14 +22,10 @@ const styles = makeStyles((theme) => ({
   },
   appbar: {
     // opacity: "25%",
-    backgroundColor: "black",
+    // backgroundColor: "black",
     height: 60,
     [theme.breakpoints.down(780)]: {
       height: "60px",
-    },
-    [theme.breakpoints.down(500)]: {
-      // backgroundColor: "rgba(238, 238, 238, 1)",
-      position: "static",
     },
   },
   menuButton: {
@@ -101,7 +97,12 @@ const Header = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" color="transparent" className={classes.appbar}>
+      <AppBar
+        position="absolute"
+        color="transparent"
+        className={classes.appbar}
+        elevation={1}
+      >
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
