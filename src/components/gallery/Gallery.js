@@ -17,7 +17,6 @@ const colsSelector = (index) => {
   }
 };
 function importAll(r) {
-  console.log(r);
   return r.keys().map(r);
 }
 const images = importAll(

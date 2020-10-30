@@ -18,6 +18,8 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Link as RouterLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../actions/authActions";
 
 const useStyles = makeStyles({
   list: {
@@ -34,8 +36,13 @@ const useStyles = makeStyles({
 });
 
 const NavDrawer = (props) => {
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const classes = useStyles();
   const { drawerState, toggleDrawer } = props;
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
 
   const list = () => (
     <div
@@ -109,6 +116,32 @@ const NavDrawer = (props) => {
           <ListItemText>WhatsApp</ListItemText>
         </ListItem>
       </List>
+      <Divider />
+      {auth.isAuthenticated ? (
+        <List>
+          <ListItem button onClick={logoutHandler}>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText>Logout</ListItemText>
+          </ListItem>
+          <ListItem button component={RouterLink} to="/profile">
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText>profile</ListItemText>
+          </ListItem>
+        </List>
+      ) : (
+        <List>
+          <ListItem button component={RouterLink} to="/login">
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText>login</ListItemText>
+          </ListItem>
+        </List>
+      )}
     </div>
   );
 

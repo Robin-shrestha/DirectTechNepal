@@ -5,9 +5,10 @@ import { AppBar, Toolbar, IconButton, Button, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link as RouterLink } from "react-router-dom";
-
 import NavDrawer from "./drawer/NavDrawer";
 import DirectTechLogo3 from "../../media/logo/DT-logo-4.png";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../actions/authActions";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -72,9 +73,14 @@ const styles = makeStyles((theme) => ({
 }));
 
 const Header = (props) => {
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const classes = styles();
   const [drawerState, setDrawerState] = useState(false);
 
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
   const toggleDrawer = (open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -137,6 +143,28 @@ const Header = (props) => {
             >
               Gallery
             </Button>
+            {auth.isAuthenticated ? (
+              <>
+                <Button onClick={logoutHandler} className={classes.navbuttons}>
+                  Logout
+                </Button>
+                <Button
+                  to="/profile"
+                  component={RouterLink}
+                  className={classes.navbuttons}
+                >
+                  Profile
+                </Button>
+              </>
+            ) : (
+              <Button
+                to="/login"
+                component={RouterLink}
+                className={classes.navbuttons}
+              >
+                Login
+              </Button>
+            )}
           </div>
           {/* <div className={classes.socialMediaContainer}>
             <Link
