@@ -23,7 +23,7 @@ const styles = makeStyles((theme) => ({
     backgroundColor: "#FBA642",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       backgroundImage: "none",
     },
   },

@@ -26,9 +26,11 @@ const images = importAll(
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(7),
-    paddingTop: theme.spacing(4),
+    // marginTop: theme.spacing(7),
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(5),
     backgroundColor: "black",
+    // backgroundColor: "#FBA642",
     [theme.breakpoints.down("sm")]: {
       marginTop: 0,
       paddingTop: theme.spacing(3),
@@ -55,20 +57,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
+// function rand() {
+//   return Math.round(Math.random() * 20) - 10;
+// }
 
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
+// function getModalStyle() {
+//   const top = 50 + rand();
+//   const left = 50 + rand();
 
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
+//   return {
+//     top: `${top}%`,
+//     left: `${left}%`,
+//     transform: `translate(-${top}%, -${left}%)`,
+//   };
+// }
 
 const Gallery = () => {
   const classes = useStyles();

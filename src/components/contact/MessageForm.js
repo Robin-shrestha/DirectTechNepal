@@ -14,6 +14,9 @@ const styles = makeStyles((theme) => ({
     // backgroundColor: "white",
     background: "inherit",
     borderRadius: 30,
+    [theme.breakpoints.down("sm")]: {
+      paddingRight: theme.spacing(3),
+    },
   },
   title: { padding: theme.spacing(3, 3, 0, 3), fontWeight: "bold" },
   messageForm: {
