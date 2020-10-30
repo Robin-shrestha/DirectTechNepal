@@ -60,6 +60,10 @@ const MultiCarousel = () => {
     dots: true,
     infinite: true,
     // centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3500,
+
+    pauseOnHover: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
