@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import carousel1 from "../../../media/gallery/ART-1.png";
 import carousel2 from "../../../media/gallery/ART-5.png";
 import carousel3 from "../../../media/gallery/ART-3.png";
@@ -54,26 +56,13 @@ const widthHandler = () => {
   }
 };
 const MultiCarousel = () => {
-  //   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  //   useEffect(() => {
-  //     function handleResize() {
-  //       setWindowWidth(window.innerWidth);
-  //     }
-  //     window.addEventListener("resize", handleResize);
-  //     handleResize();
-  //     return () => {
-  //       window.removeEventListener("resize", handleResize);
-  //     };
-  //   }, [window.innerWidth]);
-
   const settings = {
     dots: true,
     infinite: true,
     // centerMode: true,
     speed: 500,
-    slidesToShow: widthHandler(),
-    slidesToScroll: widthHandler(),
+    slidesToShow: 3,
+    slidesToScroll: 3,
   };
   return (
     <div style={{ padding: 32 }}>
@@ -83,6 +72,7 @@ const MultiCarousel = () => {
             <div key={item.id} style={{ margin: 16 }}>
               <img
                 src={item.image}
+                alt={`${item.id}`}
                 style={{
                   objectFit: "contain",
                   height: "300px",

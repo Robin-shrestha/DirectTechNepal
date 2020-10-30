@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "./carousel/HomeCarousel";
 import MultiCarousel from "./carousel/MultiCarousel";
 import WhatWeDo from "./tabs/WhatWeDo";
 import ToolsUsed from "./toolsUsed/ToolsUsed";
@@ -10,7 +9,6 @@ const Home = () => {
   return (
     <div>
       <Intro />
-      {/* <Carousel /> */}
       <WhatWeDo />
       <MultiCarousel />
       <ToolsUsed />
