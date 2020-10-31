@@ -149,11 +149,11 @@ const Header = (props) => {
                   Logout
                 </Button>
                 <Button
-                  to="/profile"
+                  to="/setting"
                   component={RouterLink}
                   className={classes.navbuttons}
                 >
-                  Profile
+                  Setting
                 </Button>
               </>
             ) : (

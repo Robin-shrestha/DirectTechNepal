@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   GridList,
@@ -8,6 +8,8 @@ import {
   // Modal,
   Backdrop,
 } from "@material-ui/core";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchGallery } from "../../actions/galleryActions";
 
 const colsSelector = (index) => {
   if (index % 10 === 0 || index % 10 === 6) {
@@ -75,7 +77,10 @@ const Gallery = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
-  console.log(images);
+  const galleryItems = useSelector(
+    (state) => state.galleryReducer.galleryItems
+  );
+  const dispatch = useDispatch();
 
   const handleOpen = (tile) => {
     // e.preventDefault();
@@ -87,20 +92,25 @@ const Gallery = () => {
     setCurrentImage("");
   };
 
+  useEffect(() => {
+    dispatch(fetchGallery());
+  }, []);
+  console.log(galleryItems);
+
   return (
     <div className={classes.root}>
       <Grid container>
         <Grid item sm={1} />
         <Grid item xs={12} sm={10}>
           <GridList
-            cellHeight={240}
+            cellHeight={360}
             className={classes.gridList}
             cols={3}
             component="div"
           >
-            {images.map((tile, index) => (
+            {galleryItems.map((tile, index) => (
               <GridListTile
-                key={tile}
+                key={tile.id}
                 component="div"
                 cols={colsSelector(index)}
               >
@@ -108,11 +118,15 @@ const Gallery = () => {
                   className={classes.gridImageContainer}
                   onClick={(e) => {
                     e.preventDefault();
-                    handleOpen(tile);
+                    handleOpen(tile.image);
                   }}
                 >
                   {/* <div style={{ backgroundImage: `url(${tile})` }} /> */}
-                  <img src={tile} alt="asd" className={classes.image} />
+                  <img
+                    src={tile.image}
+                    alt={`${tile.title}`}
+                    className={classes.image}
+                  />
                 </CardActionArea>
                 {/* <img
                   src={tile}

@@ -17,6 +17,10 @@ import GalleryIcon from "@material-ui/icons/Image";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import LoginIcon from "@material-ui/icons/LockOpen";
+import LogoutIcon from "@material-ui/icons/Lock";
+import SettingsIcon from "@material-ui/icons/Settings";
+
 import { Link as RouterLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../../actions/authActions";
@@ -121,22 +125,22 @@ const NavDrawer = (props) => {
         <List>
           <ListItem button onClick={logoutHandler}>
             <ListItemIcon>
-              <HomeIcon />
+              <LogoutIcon />
             </ListItemIcon>
             <ListItemText>Logout</ListItemText>
           </ListItem>
-          <ListItem button component={RouterLink} to="/profile">
+          <ListItem button component={RouterLink} to="/setting">
             <ListItemIcon>
-              <HomeIcon />
+              <SettingsIcon />
             </ListItemIcon>
-            <ListItemText>profile</ListItemText>
+            <ListItemText>Settings</ListItemText>
           </ListItem>
         </List>
       ) : (
         <List>
           <ListItem button component={RouterLink} to="/login">
             <ListItemIcon>
-              <HomeIcon />
+              <LoginIcon />
             </ListItemIcon>
             <ListItemText>login</ListItemText>
           </ListItem>

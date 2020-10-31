@@ -8,6 +8,8 @@ import Footer from "./components/footer/Footer";
 import Contacts from "./components/contact/Contact";
 import Gallery from "./components/gallery/Gallery";
 import Login from "./components/auth/Login";
+import PrivateRoute from "./components/routes/PrivateRoute";
+import Settings from "./components/membersOnly/settings/Settings";
 
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -35,6 +37,7 @@ function App() {
         <Route path="/contactus" component={Contacts} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/login" component={Login} />
+        <PrivateRoute exact path="/setting" component={Settings} />
 
         <Route path="/" component={Home} />
         <Route exact path="/DirectTechNepal">
