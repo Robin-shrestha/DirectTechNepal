@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DirectTechNepal/static/css/main.04f76552.chunk.css",
-    "main.js": "/DirectTechNepal/static/js/main.d9f64862.chunk.js",
-    "main.js.map": "/DirectTechNepal/static/js/main.d9f64862.chunk.js.map",
+    "main.js": "/DirectTechNepal/static/js/main.12fa2bf7.chunk.js",
+    "main.js.map": "/DirectTechNepal/static/js/main.12fa2bf7.chunk.js.map",
     "runtime-main.js": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js",
     "runtime-main.js.map": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js.map",
     "static/css/2.445b666f.chunk.css": "/DirectTechNepal/static/css/2.445b666f.chunk.css",
     "static/js/2.20a36f37.chunk.js": "/DirectTechNepal/static/js/2.20a36f37.chunk.js",
     "static/js/2.20a36f37.chunk.js.map": "/DirectTechNepal/static/js/2.20a36f37.chunk.js.map",
     "index.html": "/DirectTechNepal/index.html",
-    "precache-manifest.f7b2cda87b57c82d4fe722d0eb832731.js": "/DirectTechNepal/precache-manifest.f7b2cda87b57c82d4fe722d0eb832731.js",
+    "precache-manifest.1cda8d904ce03e29776d50a3f4f85651.js": "/DirectTechNepal/precache-manifest.1cda8d904ce03e29776d50a3f4f85651.js",
     "service-worker.js": "/DirectTechNepal/service-worker.js",
     "static/css/2.445b666f.chunk.css.map": "/DirectTechNepal/static/css/2.445b666f.chunk.css.map",
     "static/css/main.04f76552.chunk.css.map": "/DirectTechNepal/static/css/main.04f76552.chunk.css.map",
@@ -39,6 +39,6 @@
     "static/css/2.445b666f.chunk.css",
     "static/js/2.20a36f37.chunk.js",
     "static/css/main.04f76552.chunk.css",
-    "static/js/main.d9f64862.chunk.js"
+    "static/js/main.12fa2bf7.chunk.js"
   ]
 }
