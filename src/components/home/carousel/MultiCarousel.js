@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Backdrop, Button, CardActionArea } from "@material-ui/core";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -56,24 +57,43 @@ const widthHandler = () => {
   }
 };
 const MultiCarousel = () => {
+  const [open, setOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState("");
   const settings = {
     dots: true,
     infinite: true,
     // centerMode: true,
     autoplay: true,
     autoplaySpeed: 3500,
-
     pauseOnHover: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: widthHandler(),
+    slidesToScroll: widthHandler(),
   };
+
+  const handleOpen = (tile) => {
+    // e.preventDefault();
+    setOpen(true);
+    setCurrentImage(tile);
+  };
+  const handleClose = () => {
+    setOpen(false);
+    setCurrentImage("");
+  };
+
   return (
     <div style={{ padding: 32 }}>
       <Slider {...settings}>
         {slides.map((item) => {
           return (
-            <div key={item.id} style={{ margin: 16 }}>
+            <CardActionArea
+              key={item.id}
+              style={{ margin: 0 }}
+              onClick={(e) => {
+                e.preventDefault();
+                handleOpen(item.image);
+              }}
+            >
               <img
                 src={item.image}
                 alt={`${item.id}`}
@@ -83,10 +103,31 @@ const MultiCarousel = () => {
                   width: "100%",
                 }}
               ></img>
-            </div>
+            </CardActionArea>
           );
         })}
       </Slider>
+      <Backdrop
+        style={{
+          zIndex: 5555,
+          color: "#fff",
+        }}
+        open={open}
+        onClick={handleClose}
+      >
+        <div>
+          <img
+            src={currentImage}
+            alt="current"
+            style={{
+              height: "90vh",
+              width: "90vw",
+              objectFit: "contain",
+            }}
+          />
+          {/* <Button onClick={handleClose}>close</Button> */}
+        </div>
+      </Backdrop>
     </div>
   );
 };

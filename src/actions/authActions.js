@@ -21,7 +21,6 @@ export const login = (loginDetail) => (dispatch) => {
     )
     .then((res) => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
-      console.log(res.data);
     })
     .catch((err) => {
       console.log("login error", err.message);

@@ -70,7 +70,7 @@ const Contact = () => {
                 <MessageForm />
               </div>
             </Grid>
-            <Grid item xs="false" md={5} />
+            <Grid item xs={false} md={5} />
 
             <Grid item xs={12} md={3} style={{ alignSelf: "center" }}>
               <div
