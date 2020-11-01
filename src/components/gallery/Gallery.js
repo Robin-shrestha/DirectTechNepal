@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   gridImageContainer: { height: "100%" },
   image: {
     height: "100%",
-    objectFit: "cover",
+    objectFit: "fill",
     cursor: "pointer",
     width: "100%",
   },
@@ -51,21 +51,6 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "contain",
   },
 }));
-
-// function rand() {
-//   return Math.round(Math.random() * 20) - 10;
-// }
-
-// function getModalStyle() {
-//   const top = 50 + rand();
-//   const left = 50 + rand();
-
-//   return {
-//     top: `${top}%`,
-//     left: `${left}%`,
-//     transform: `translate(-${top}%, -${left}%)`,
-//   };
-// }
 
 const Gallery = () => {
   const classes = useStyles();
