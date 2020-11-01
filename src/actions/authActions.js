@@ -15,7 +15,7 @@ export const login = (loginDetail) => (dispatch) => {
   const body = JSON.stringify({ username, password });
   axios
     .post(
-      "http://robinshrestha.pythonanywhere.com/api/auth/login",
+      "https://robinshrestha.pythonanywhere.com/api/auth/login",
       body,
       config
     )
@@ -31,7 +31,7 @@ export const login = (loginDetail) => (dispatch) => {
 export const getUser = () => (dispatch, getState) => {
   const config = tokenConfig(getState);
   axios
-    .get("http://robinshrestha.pythonanywhere.com/api/auth/user", config)
+    .get("https://robinshrestha.pythonanywhere.com/api/auth/user", config)
     .then((res) => {
       dispatch({ type: GET_USER, payload: res.data });
     })
@@ -44,7 +44,7 @@ export const logout = () => (dispatch, getState) => {
   const config = tokenConfig(getState);
   axios
     .post(
-      "http://robinshrestha.pythonanywhere.com/api/auth/logout",
+      "https://robinshrestha.pythonanywhere.com/api/auth/logout",
       null,
       config
     )
