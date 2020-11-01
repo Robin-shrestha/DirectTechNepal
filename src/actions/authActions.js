@@ -14,20 +14,24 @@ export const login = (loginDetail) => (dispatch) => {
   const config = jsonHeader();
   const body = JSON.stringify({ username, password });
   axios
-    .post("/api/auth/login", body, config)
+    .post(
+      "http://robinshrestha.pythonanywhere.com/api/auth/login",
+      body,
+      config
+    )
     .then((res) => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
       console.log(res.data);
     })
     .catch((err) => {
-      console.log(err.message);
+      console.log("login error", err.message);
     });
 };
 
 export const getUser = () => (dispatch, getState) => {
   const config = tokenConfig(getState);
   axios
-    .get("/api/auth/user", config)
+    .get("http://robinshrestha.pythonanywhere.com/api/auth/user", config)
     .then((res) => {
       dispatch({ type: GET_USER, payload: res.data });
     })
@@ -39,7 +43,11 @@ export const getUser = () => (dispatch, getState) => {
 export const logout = () => (dispatch, getState) => {
   const config = tokenConfig(getState);
   axios
-    .post("/api/auth/logout", null, config)
+    .post(
+      "http://robinshrestha.pythonanywhere.com/api/auth/logout",
+      null,
+      config
+    )
     .then((res) => {
       dispatch({ type: LOGOUT_SUCCESS });
     })

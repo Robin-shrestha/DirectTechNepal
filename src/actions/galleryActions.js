@@ -20,7 +20,11 @@ export const uploadImage = (galleryImage) => (dispatch, getState) => {
   formData.append("artist", artist);
 
   axios
-    .post("/api/gallery/", formData, config)
+    .post(
+      "http://robinshrestha.pythonanywhere.com/api/gallery/",
+      formData,
+      config
+    )
     .then((res) => {
       console.log(res);
     })
@@ -31,7 +35,7 @@ export const uploadImage = (galleryImage) => (dispatch, getState) => {
 
 export const fetchGallery = () => (dispatch) => {
   axios
-    .get("/api/gallery/")
+    .get("http://robinshrestha.pythonanywhere.com/api/gallery/")
     .then((res) => {
       dispatch({
         type: FETCH_GALLERY_ITEMS,

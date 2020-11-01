@@ -18,12 +18,6 @@ const colsSelector = (index) => {
     return 1;
   }
 };
-function importAll(r) {
-  return r.keys().map(r);
-}
-const images = importAll(
-  require.context("../../media/gallery/", true, /\.(png|jpe?g|svg)$/)
-);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -95,7 +89,6 @@ const Gallery = () => {
   useEffect(() => {
     dispatch(fetchGallery());
   }, []);
-  console.log(galleryItems);
 
   return (
     <div className={classes.root}>
