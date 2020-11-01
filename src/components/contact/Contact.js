@@ -30,7 +30,6 @@ const styles = makeStyles((theme) => ({
 }));
 const Contact = () => {
   const classes = styles();
-  console.log(process.env.REACT_APP_GOOGLE_API_KEY);
 
   return (
     <div className={classes.root}>
