@@ -9,14 +9,30 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 import { uploadImage } from "../../../actions/galleryActions";
+import { Link as RouterLink } from "react-router-dom";
 
 const style = makeStyles((theme) => ({
-  root: { backgroundColor: "orange", padding: theme.spacing(10, 0, 0, 0) },
-  messageForm: {
+  root: {
+    backgroundColor: "orange",
+    padding: theme.spacing(10, 0, 0, 0),
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+  },
+  galleryInputForm: {
     padding: theme.spacing(3),
   },
   fields: {
     marginBottom: theme.spacing(1),
+  },
+  uploadedImage: {
+    maxHeight: 600,
+    maxWidth: "100%",
+    objectFit: "contain",
+    margin: "0 auto",
+  },
+  msgBtn: {
+    margin: theme.spacing(3),
   },
 }));
 const Settings = () => {
@@ -61,7 +77,7 @@ const Settings = () => {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12} md={6}>
-          <form className={classes.messageForm} onSubmit={submitHandler}>
+          <form className={classes.galleryInputForm} onSubmit={submitHandler}>
             <FormControl
               fullWidth
               className={classes.fields}
@@ -120,11 +136,25 @@ const Settings = () => {
               </Button>
             </FormControl>
           </form>
+          <div>
+            <Button
+              size="large"
+              variant="contained"
+              color="secondary"
+              className={classes.msgBtn}
+              component={RouterLink}
+              to="/members/messages"
+            >
+              View Messages
+            </Button>
+          </div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <img src={uploadedImage} />
+          <Typography variant="h6">Demo of uploaded picture</Typography>
+          <img src={uploadedImage} className={classes.uploadedImage} />
         </Grid>
       </Grid>
+      <div style={{ flexGrow: 1 }} />
     </div>
   );
 };

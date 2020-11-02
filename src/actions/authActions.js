@@ -23,7 +23,7 @@ export const login = (loginDetail) => (dispatch) => {
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     })
     .catch((err) => {
-      console.log("login error", err.message);
+      dispatch({ type: LOGIN_FAIL });
     });
 };
 
@@ -35,7 +35,8 @@ export const getUser = () => (dispatch, getState) => {
       dispatch({ type: GET_USER, payload: res.data });
     })
     .catch((err) => {
-      console.log(err.message);
+      // console.log(err.message);
+      dispatch({ type: AUTH_ERROR });
     });
 };
 

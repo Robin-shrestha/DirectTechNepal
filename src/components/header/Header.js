@@ -145,15 +145,15 @@ const Header = (props) => {
             </Button>
             {auth.isAuthenticated ? (
               <>
-                <Button onClick={logoutHandler} className={classes.navbuttons}>
-                  Logout
-                </Button>
                 <Button
-                  to="/setting"
+                  to="/members/setting"
                   component={RouterLink}
                   className={classes.navbuttons}
                 >
                   Setting
+                </Button>
+                <Button onClick={logoutHandler} className={classes.navbuttons}>
+                  Logout
                 </Button>
               </>
             ) : (
