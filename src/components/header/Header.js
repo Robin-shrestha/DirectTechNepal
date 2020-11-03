@@ -150,7 +150,7 @@ const Header = (props) => {
                   component={RouterLink}
                   className={classes.navbuttons}
                 >
-                  Setting
+                  {auth.user.username}
                 </Button>
                 <Button onClick={logoutHandler} className={classes.navbuttons}>
                   Logout

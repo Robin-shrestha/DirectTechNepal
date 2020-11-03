@@ -133,7 +133,7 @@ const NavDrawer = (props) => {
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
-            <ListItemText>Settings</ListItemText>
+            <ListItemText>{auth.user.username}</ListItemText>
           </ListItem>
         </List>
       ) : (
