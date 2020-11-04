@@ -24,7 +24,14 @@ const TableHeader = (props) => {
     { id: "name", numeric: false, disablePadding: true, label: "Name" },
     { id: "subject", numeric: false, disablePadding: true, label: "Subject" },
     { id: "email", numeric: false, disablePadding: true, label: "Email" },
-    { id: "date_added", numeric: true, disablePadding: true, label: "Date" },
+    {
+      id: "checked",
+      numeric: false,
+      disablePadding: true,
+      label: "Message Read",
+    },
+    { id: "date_added", numeric: false, disablePadding: true, label: "Date" },
+
     // { id: "message", numeric: false, disablePadding: true, label: "Message" },
   ];
 

@@ -38,7 +38,7 @@ export const postMessage = (messageData) => (dispatch) => {
     });
 };
 
-export const deleteMessage = (messageId) => (dispatch, getState) => {
+export const deleteSingleMessage = (messageId) => (dispatch, getState) => {
   const config = tokenConfig(getState);
   axios
     .delete(
@@ -46,22 +46,27 @@ export const deleteMessage = (messageId) => (dispatch, getState) => {
       config
     )
     .then((res) => {
-      console.log(res);
+      dispatch({ type: DELETE_MESSAGES, payload: messageId });
     })
     .catch((err) => {
       console.log(err.messae);
     });
 };
 
-export const checkSingleMessage = (checkedId) => (dispatch, getState) => {
+export const checkSingleMessage = (checkedId, checked) => (
+  dispatch,
+  getState
+) => {
   const config = tokenConfig(getState);
+  const body = JSON.stringify({ checked });
   axios
     .put(
       `https://robinshrestha.pythonanywhere.com/api/message/read/${checkedId}`,
+      body,
       config
     )
     .then((res) => {
-      console.log(res);
+      console.log(res.data);
     })
     .catch((err) => {
       console.log(err.message);

@@ -8,20 +8,29 @@ import {
   TableRow,
   TableCell,
   Checkbox,
+  Link,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link as RouterLink } from "react-router-dom";
 import TableHeader from "./TableHeader";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMessages } from "../../../actions/messageActions";
 
+import MessageReadIcon from "@material-ui/icons/CheckCircle";
+
 const styles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(9, 0, 0, 0),
-    width: "100%",
+    padding: theme.spacing(9, 6, 6, 6),
+    // margin: theme.spacing(9, 6, 6, 6),
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "orange",
   },
   paper: {
-    width: "100%",
-    marginBottom: theme.spacing(2),
+    // width: "100%",
+    // marginBottom: theme.spacing(2),
+    padding: theme.spacing(3),
   },
   table: {
     minWidth: 750,
@@ -160,11 +169,25 @@ const MessageBoard = () => {
                         />
                       </TableCell>
                       <TableCell component="th" scope="row" padding="none">
-                        {row.name}
+                        <Link
+                          to={{
+                            pathname: `/members/messages/${row.id}`,
+                            state: { message: row },
+                          }}
+                          component={RouterLink}
+                        >
+                          {row.name}
+                        </Link>
                       </TableCell>
                       <TableCell align="left">{row.subject}</TableCell>
                       <TableCell align="left">{row.email}</TableCell>
-                      <TableCell align="right">{row.date_added}</TableCell>
+                      <TableCell align="left">
+                        {row.checked ? (
+                          <MessageReadIcon style={{ color: "green" }} />
+                        ) : null}
+                      </TableCell>
+
+                      <TableCell align="left">{row.date_added}</TableCell>
                       {/* <TableCell align="right">{row.message}</TableCell> */}
                     </TableRow>
                   );
@@ -182,6 +205,7 @@ const MessageBoard = () => {
           page={page}
         />
       </Paper>
+      <div style={{ flexGrow: 1 }} />
     </div>
   );
 };

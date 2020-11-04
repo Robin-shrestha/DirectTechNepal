@@ -1,7 +1,7 @@
 import {
   FETCH_ALL_MESSAGES,
   //   CHECKED_MESSAGES,
-  //   DELETE_MESSAGES,
+  DELETE_MESSAGES,
 } from "../constants";
 
 const initialState = {
@@ -11,6 +11,12 @@ const messageReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ALL_MESSAGES: {
       return { ...state, messages: action.payload };
+    }
+    case DELETE_MESSAGES: {
+      const newMessages = state.messages.filter(
+        (message) => message.id !== action.payload
+      );
+      return { ...state, messages: newMessages };
     }
 
     default:

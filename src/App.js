@@ -11,6 +11,7 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/routes/PrivateRoute";
 import Settings from "./components/membersOnly/settings/Settings";
 import MessageBoard from "./components/membersOnly/messageboard/MessageBoard";
+import MessageReader from "./components/membersOnly/messageboard/MessageReader";
 
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -40,6 +41,11 @@ function App() {
         <Route path="/login" component={Login} />
         <PrivateRoute exact path="/members/setting" component={Settings} />
         <PrivateRoute exact path="/members/messages" component={MessageBoard} />
+        <PrivateRoute
+          exact
+          path="/members/messages/:messageID"
+          component={MessageReader}
+        />
 
         <Route path="/" component={Home} />
         <Route exact path="/DirectTechNepal">

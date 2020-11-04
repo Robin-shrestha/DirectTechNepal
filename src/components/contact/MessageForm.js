@@ -37,10 +37,10 @@ const MessageForm = () => {
   const classes = styles();
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
-    name: null,
-    email: null,
-    subject: null,
-    message: null,
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const formHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -86,6 +86,7 @@ const MessageForm = () => {
             label="Email"
             margin="dense"
             value={formData.email}
+            type="email"
           />
         </FormControl>
         <FormControl className={classes.fields} fullWidth>
