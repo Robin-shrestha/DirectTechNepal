@@ -1,8 +1,7 @@
 import {
   FETCH_ALL_MESSAGES,
-  CHECKED_MESSAGES,
   DELETE_MESSAGES,
-  POST_MESSAGE,
+  DELETE_MULTIPLE_MESSAGES,
 } from "../constants";
 import axios from "axios";
 import { tokenConfig, jsonHeader } from "../utils/postHeaders";
@@ -53,6 +52,24 @@ export const deleteSingleMessage = (messageId) => (dispatch, getState) => {
     });
 };
 
+export const deleteMultipleMessages = (ids) => (dispatch, getState) => {
+  const token = getState().auth.token;
+  axios
+    .delete("https://robinshrestha.pythonanywhere.com/api/message/read", {
+      headers: {
+        authorization: `token ${token}`,
+        "content-type": "application/json",
+      },
+      data: { ids },
+    })
+    .then((res) => {
+      dispatch({ type: DELETE_MULTIPLE_MESSAGES, payload: ids });
+    })
+    .catch((err) => {
+      console.log(err.messae);
+    });
+};
+
 export const checkSingleMessage = (checkedId, checked) => (
   dispatch,
   getState
@@ -65,9 +82,7 @@ export const checkSingleMessage = (checkedId, checked) => (
       body,
       config
     )
-    .then((res) => {
-      console.log(res.data);
-    })
+    .then((res) => {})
     .catch((err) => {
       console.log(err.message);
     });

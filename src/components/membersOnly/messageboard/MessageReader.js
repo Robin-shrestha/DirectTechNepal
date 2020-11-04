@@ -1,5 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Typography, Checkbox, Button, Paper } from "@material-ui/core";
+import {
+  Typography,
+  Checkbox,
+  Button,
+  Paper,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 // import { Link as RouterLink } from "react-router-dom";
@@ -38,8 +48,17 @@ const MessageReader = (props) => {
     checked,
   } = props.location.state.message;
   const [markAsRead, setMarkAsRead] = useState(checked);
+  const [open, setOpen] = useState(false);
   const isInitialMount = useRef(true);
   const dispatch = useDispatch();
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const onChange = (e) => {
     setMarkAsRead(!markAsRead);
@@ -69,9 +88,33 @@ const MessageReader = (props) => {
         <Checkbox checked={markAsRead} onChange={onChange} />{" "}
         <span>mark as read</span>
         <Typography variant="body1">{message}</Typography>
-        <Button variant="contained" color="secondary" onClick={handleDelete}>
+        <Button variant="contained" color="secondary" onClick={handleClickOpen}>
           Delete
         </Button>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="form-dialog-title"
+        >
+          <DialogTitle id="form-dialog-title">Delete</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Are you sure you wnat to delete this emssage
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Cancel
+            </Button>
+            <Button
+              onClick={handleDelete}
+              color="secondary"
+              variant="contained"
+            >
+              Delete
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Paper>
     </div>
   );

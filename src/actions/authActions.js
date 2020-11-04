@@ -24,6 +24,7 @@ export const login = (loginDetail) => (dispatch) => {
     })
     .catch((err) => {
       dispatch({ type: LOGIN_FAIL });
+      console.log(err.message);
     });
 };
 

@@ -13,24 +13,30 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { Link as RouterLink } from "react-router-dom";
 import TableHeader from "./TableHeader";
+import TableToolbar from "./TableToolbar";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchMessages } from "../../../actions/messageActions";
+import {
+  fetchMessages,
+  deleteMultipleMessages,
+} from "../../../actions/messageActions";
 
 import MessageReadIcon from "@material-ui/icons/CheckCircle";
 
 const styles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(9, 6, 6, 6),
-    // margin: theme.spacing(9, 6, 6, 6),
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
     backgroundColor: "orange",
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(9, 0, 0, 0),
+    },
   },
   paper: {
     // width: "100%",
     // marginBottom: theme.spacing(2),
-    padding: theme.spacing(3),
+    // padding: theme.spacing(3),
   },
   table: {
     minWidth: 750,
@@ -88,6 +94,11 @@ const MessageBoard = () => {
     dispatch(fetchMessages());
   }, []);
 
+  const handleMultipleDelete = () => {
+    dispatch(deleteMultipleMessages(selected));
+    setSelected([]);
+  };
+
   const handleRequestSort = (e, property) => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
@@ -137,6 +148,10 @@ const MessageBoard = () => {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
+        <TableToolbar
+          numSelected={selected.length}
+          deleteHandler={handleMultipleDelete}
+        />
         <TableContainer>
           <Table className={classes.table} size="medium">
             <TableHeader
