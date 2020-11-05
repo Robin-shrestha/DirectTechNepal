@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/DirectTechNepal/static/css/main.04f76552.chunk.css",
-    "main.js": "/DirectTechNepal/static/js/main.375497ef.chunk.js",
-    "main.js.map": "/DirectTechNepal/static/js/main.375497ef.chunk.js.map",
+    "main.js": "/DirectTechNepal/static/js/main.4b75f58b.chunk.js",
+    "main.js.map": "/DirectTechNepal/static/js/main.4b75f58b.chunk.js.map",
     "runtime-main.js": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js",
     "runtime-main.js.map": "/DirectTechNepal/static/js/runtime-main.9875ecd6.js.map",
     "static/css/2.445b666f.chunk.css": "/DirectTechNepal/static/css/2.445b666f.chunk.css",
-    "static/js/2.713d3ba6.chunk.js": "/DirectTechNepal/static/js/2.713d3ba6.chunk.js",
-    "static/js/2.713d3ba6.chunk.js.map": "/DirectTechNepal/static/js/2.713d3ba6.chunk.js.map",
+    "static/js/2.4f0f5175.chunk.js": "/DirectTechNepal/static/js/2.4f0f5175.chunk.js",
+    "static/js/2.4f0f5175.chunk.js.map": "/DirectTechNepal/static/js/2.4f0f5175.chunk.js.map",
     "index.html": "/DirectTechNepal/index.html",
-    "precache-manifest.bea0a76d74c75ecffbba2f721f92ca92.js": "/DirectTechNepal/precache-manifest.bea0a76d74c75ecffbba2f721f92ca92.js",
+    "precache-manifest.aecf0fa9ac7a105ba5e2762554b0dbc6.js": "/DirectTechNepal/precache-manifest.aecf0fa9ac7a105ba5e2762554b0dbc6.js",
     "service-worker.js": "/DirectTechNepal/service-worker.js",
     "static/css/2.445b666f.chunk.css.map": "/DirectTechNepal/static/css/2.445b666f.chunk.css.map",
     "static/css/main.04f76552.chunk.css.map": "/DirectTechNepal/static/css/main.04f76552.chunk.css.map",
-    "static/js/2.713d3ba6.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/2.713d3ba6.chunk.js.LICENSE.txt",
+    "static/js/2.4f0f5175.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/2.4f0f5175.chunk.js.LICENSE.txt",
     "static/media/ART-1.png": "/DirectTechNepal/static/media/ART-1.7f91bda7.png",
     "static/media/ART-3.png": "/DirectTechNepal/static/media/ART-3.fd903152.png",
     "static/media/ART-5.png": "/DirectTechNepal/static/media/ART-5.b4f2111e.png",
@@ -36,8 +36,8 @@
   "entrypoints": [
     "static/js/runtime-main.9875ecd6.js",
     "static/css/2.445b666f.chunk.css",
-    "static/js/2.713d3ba6.chunk.js",
+    "static/js/2.4f0f5175.chunk.js",
     "static/css/main.04f76552.chunk.css",
-    "static/js/main.375497ef.chunk.js"
+    "static/js/main.4b75f58b.chunk.js"
   ]
 }
