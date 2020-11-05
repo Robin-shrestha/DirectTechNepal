@@ -22,10 +22,10 @@ const colsSelector = (index) => {
 const useStyles = makeStyles((theme) => ({
   root: {
     // marginTop: theme.spacing(7),
-    paddingTop: theme.spacing(10),
+    paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
-    backgroundColor: "black",
-    // backgroundColor: "#FBA642",
+    // backgroundColor: "black",
+    backgroundColor: "white",
     [theme.breakpoints.down("sm")]: {
       marginTop: 0,
       paddingTop: theme.spacing(3),
@@ -76,57 +76,65 @@ const Gallery = () => {
   }, [galleryItems]);
 
   return (
-    <div className={classes.root}>
-      <Grid container>
-        <Grid item sm={1} />
-        <Grid item xs={12} sm={10}>
-          <GridList
-            cellHeight={360}
-            className={classes.gridList}
-            cols={3}
-            component="div"
-          >
-            {galleryItems.map((tile, index) => (
-              <GridListTile
-                key={tile.id}
-                component="div"
-                cols={colsSelector(index)}
-              >
-                <CardActionArea
-                  className={classes.gridImageContainer}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleOpen(tile.image);
-                  }}
+    <>
+      <div style={{ height: 60, backgroundColor: "black" }}></div>
+
+      <div className={classes.root}>
+        <Grid container>
+          <Grid item sm={1} />
+          <Grid item xs={12} sm={10}>
+            <GridList
+              cellHeight={360}
+              className={classes.gridList}
+              cols={3}
+              component="div"
+            >
+              {galleryItems.map((tile, index) => (
+                <GridListTile
+                  key={tile.id}
+                  component="div"
+                  cols={colsSelector(index)}
                 >
-                  {/* <div style={{ backgroundImage: `url(${tile})` }} /> */}
-                  <img
-                    src={tile.image}
-                    alt={`${tile.title}`}
-                    className={classes.image}
-                  />
-                </CardActionArea>
-                {/* <img
+                  <CardActionArea
+                    className={classes.gridImageContainer}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleOpen(tile.image);
+                    }}
+                  >
+                    {/* <div style={{ backgroundImage: `url(${tile})` }} /> */}
+                    <img
+                      src={tile.image}
+                      alt={`${tile.title}`}
+                      className={classes.image}
+                    />
+                  </CardActionArea>
+                  {/* <img
                   src={tile}
                   alt={`illustration-${index}`}
                   className={classes.image}
                 /> */}
-              </GridListTile>
-            ))}
-          </GridList>
+                </GridListTile>
+              ))}
+            </GridList>
+          </Grid>
+          <Grid item sm={1} />
         </Grid>
-        <Grid item sm={1} />
-      </Grid>
-      <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-        <div>
-          <img
-            src={currentImage}
-            alt="current"
-            className={classes.modalImage}
-          />
-        </div>
-      </Backdrop>
-    </div>
+        <Backdrop
+          className={classes.backdrop}
+          open={open}
+          onClick={handleClose}
+        >
+          <div>
+            <img
+              src={currentImage}
+              alt="current"
+              className={classes.modalImage}
+            />
+          </div>
+        </Backdrop>
+      </div>
+    </>
   );
 };
 

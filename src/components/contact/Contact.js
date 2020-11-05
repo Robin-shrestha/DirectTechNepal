@@ -10,12 +10,13 @@ import Googlemap from "./GoogleMap";
 const styles = makeStyles((theme) => ({
   root: {
     // marginTop: theme.spacing(7),
-    backgroundColor: "white",
+    backgroundColor: "rgba(251,166,66,.9)",
 
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(0),
     },
     color: "white",
+    minHeight: "100vh",
   },
   background: {
     backgroundImage: `url(${contactUsImg})`,
@@ -32,71 +33,40 @@ const Contact = () => {
   const classes = styles();
 
   return (
-    <div className={classes.root}>
-      {/* <Typography variant="h3" gutterBottom align="center" >
-        contacts
-      </Typography> */}
-      <Grid container>
-        <Grid
-          container
-          item
-          xs={12}
-          style={{ height: 80, backgroundColor: "#FBA642" }}
-        />
+    <>
+      <div style={{ height: 60, backgroundColor: "black" }}></div>
 
-        <Grid container item xs={12}>
-          <Grid
-            container
-            item
-            sm={12}
-            className={classes.background}
-            // style={{
-            //   backgroundImage: `url(${contactUsImg})`,
-            //   backgroundSize: "contain",
-            //   backgroundColor: "#FBA642",
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundPosition: "center center",
-            // }}
-          >
-            <Grid item xs={12} md={4}>
-              <div
-                style={{
-                  width: "100%",
-                  // backgroundColor: "black",
-                  // height: 200,
-                  margin: 16,
-                }}
-              >
-                <MessageForm />
-              </div>
-            </Grid>
-            <Grid item xs={false} md={5} />
-
-            <Grid item xs={12} md={3} style={{ alignSelf: "center" }}>
-              <div
-                style={{
-                  marginLeft: 16,
-                  marginRight: 16,
-                }}
-              >
-                <ContactInfo />
-              </div>
-            </Grid>
-          </Grid>
-
-          <Grid container item xs={12} md={9}>
-            {/* <div
-              style={{
-                width: "100%",
-                backgroundColor: "black",
-                // height: 200,
-                margin: 16,
-              }}
-            >
-              <MessageForm />
-            </div> */}
-          </Grid>
+      <div className={classes.root}>
+        <Grid container>
           <Grid container item xs={12}>
+            <Grid container item sm={12} className={classes.background}>
+              <Grid item xs={12} md={4}>
+                <div
+                  style={{
+                    width: "100%",
+                    // backgroundColor: "black",
+                    // height: 200,
+                    margin: 16,
+                  }}
+                >
+                  <MessageForm />
+                </div>
+              </Grid>
+              <Grid item xs={false} md={5} />
+
+              <Grid item xs={12} md={3} style={{ alignSelf: "center" }}>
+                <div
+                  style={{
+                    marginLeft: 16,
+                    marginRight: 16,
+                  }}
+                >
+                  <ContactInfo />
+                </div>
+              </Grid>
+            </Grid>
+
+            {/* <Grid container item xs={12}>
             <div
               style={{
                 width: "100%",
@@ -105,10 +75,11 @@ const Contact = () => {
             >
               <Googlemap />
             </div>
+          </Grid> */}
           </Grid>
         </Grid>
-      </Grid>
-    </div>
+      </div>
+    </>
   );
 };
 

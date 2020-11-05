@@ -23,9 +23,11 @@ const theme = createMuiTheme({
     },
     body1: {
       fontFamily: "'Baloo Bhai 2', cursive, 'Roboto','Arial'",
+      fontSize: "1.25rem",
     },
     body2: {
       fontFamily: "'Source Sans Pro', sans-serif, 'Roboto','Arial'",
+      fontSize: "1rem",
     },
   },
 });

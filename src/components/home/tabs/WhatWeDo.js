@@ -34,28 +34,8 @@ const whatWeDoData = [
             Web development is needed for every organization wanting to save
             time and money on advertising. Owning a website allows much more
             detailed customizations and an increase in brand awareness. We are
-            here for you with the services mentioned below.
-          </Typography>
-          <Typography variant="body2">
-            1. Our web development strategies work as per your choice.
-          </Typography>
-          <Typography variant="body2">
-            2. You can get a visually interesting page with a user-friendly
-            design and overall a functional site.
-          </Typography>
-          <Typography variant="body2">
-            3. We hold meetings with clients to discuss their needs and
-            requirements for a website.
-          </Typography>
-          <Typography variant="body2">
-            4. We make sure that we are running with a proper designing process.{" "}
-          </Typography>
-          <Typography variant="body2">
-            5. Fresh and genuine ideas from our developers.{" "}
-          </Typography>
-          <Typography variant="body2">
-            6. We create static, dynamic, custom web designs according to
-            clients and business needs.{" "}
+            here for you to create static, dynamic, custom web designs according
+            to you and your business needs.
           </Typography>
         </div>
       );
@@ -94,17 +74,9 @@ const whatWeDoData = [
             As social media is the fastest-growing trend in the history of the
             world, using social media platforms like Facebook, Instagram,
             Twitter, LinkedIn, Pinterest, YouTube, Snapchat, and so on will
-            boost up the marketing.
-          </Typography>
-          <Typography variant="body2">
-            1. We provide effective plans and strategies.{" "}
-          </Typography>
-          <Typography variant="body2">
-            2. We promote any brands, pages, online stores, products.
-          </Typography>
-          <Typography variant="body2">
-            3. We do marketing at an affordable cost and work with clients in a
-            friendly environment.
+            boost up the marketing. We promote any brands, pages, online stores,
+            products at an affordable cost and work with clients in a friendly
+            environment.
           </Typography>
         </div>
       );
@@ -135,7 +107,7 @@ const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(0, 0, 0, 0),
     backgroundColor: "inherit",
-    padding: theme.spacing(5, 0, 0, 0),
+    padding: theme.spacing(5, 0, 2, 0),
     backgroundColor: "#FBA642",
     color: "white",
   },

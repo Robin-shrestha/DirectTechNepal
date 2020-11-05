@@ -80,7 +80,7 @@ const LatestBlog = () => {
                     <img src={item.image} className={classes.image} />
                   </CardActionArea>
                   <CardContent>
-                    <Typography gutterBottom variant="body1">
+                    <Typography gutterBottom variant="body2">
                       {item.content}
                     </Typography>
                   </CardContent>
