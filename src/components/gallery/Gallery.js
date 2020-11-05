@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   GridList,
@@ -11,20 +12,10 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { fetchGallery } from "../../actions/galleryActions";
 
-const colsSelector = (index) => {
-  if (index % 10 === 0 || index % 10 === 6) {
-    return 2;
-  } else {
-    return 1;
-  }
-};
-
 const useStyles = makeStyles((theme) => ({
   root: {
-    // marginTop: theme.spacing(7),
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
-    // backgroundColor: "black",
     backgroundColor: "white",
     [theme.breakpoints.down("sm")]: {
       marginTop: 0,
@@ -41,6 +32,12 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     width: "100%",
   },
+  image2Cols: {
+    height: "100%",
+    objectFit: "cover",
+    cursor: "pointer",
+    width: "100%",
+  },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: "#fff",
@@ -51,6 +48,13 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "contain",
   },
 }));
+const colsSelector = (index) => {
+  if (index % 10 === 0 || index % 10 === 6) {
+    return 2;
+  } else {
+    return 1;
+  }
+};
 
 const Gallery = () => {
   const classes = useStyles();
@@ -94,6 +98,7 @@ const Gallery = () => {
                   key={tile.id}
                   component="div"
                   cols={colsSelector(index)}
+                  // rows={colsSelector(index)}
                 >
                   <CardActionArea
                     className={classes.gridImageContainer}
@@ -106,7 +111,10 @@ const Gallery = () => {
                     <img
                       src={tile.image}
                       alt={`${tile.title}`}
-                      className={classes.image}
+                      className={clsx({
+                        [classes.image]: colsSelector(index) === 1,
+                        [classes.image2Cols]: colsSelector(index) === 2,
+                      })}
                     />
                   </CardActionArea>
                   {/* <img

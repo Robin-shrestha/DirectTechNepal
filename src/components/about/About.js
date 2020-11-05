@@ -55,8 +55,8 @@ const members = [
 
 const styles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(9),
-    backgroundColor: "#FBA642",
+    paddingTop: theme.spacing(5),
+    backgroundColor: "white",
     padding: theme.spacing(2),
     color: "white",
     [theme.breakpoints.down("sm")]: {
@@ -67,7 +67,7 @@ const styles = makeStyles((theme) => ({
     minHeight: "100vh",
   },
   topContainer: {
-    backgroundColor: "white",
+    backgroundColor: "#FBA642",
     borderRadius: "25px/35px",
     border: "1px solid inherit ",
     [theme.breakpoints.down("sm")]: {
@@ -98,7 +98,7 @@ const styles = makeStyles((theme) => ({
     // background: "#eee",
     // width: "100%",
     color: "black",
-    paddingLeft: theme.spacing(6),
+    fontWeight: "bold",
   },
 }));
 const About = () => {
