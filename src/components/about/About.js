@@ -55,9 +55,9 @@ const members = [
 
 const styles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(5),
+    // paddingTop: theme.spacing(5),
     backgroundColor: "white",
-    padding: theme.spacing(2, 0, 2, 0),
+    // padding: theme.spacing(2, 0, 2, 0),
     color: "white",
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(0),

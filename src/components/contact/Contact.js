@@ -16,6 +16,8 @@ const styles = makeStyles((theme) => ({
     },
   },
   background: {
+    margin: 24,
+    boxShadow: "10px 10px 10px grey",
     backgroundImage: `url(${contactUsImg})`,
     backgroundSize: "contain",
     backgroundColor: "#FBA642",
