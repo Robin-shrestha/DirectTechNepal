@@ -129,11 +129,11 @@ const NavDrawer = (props) => {
             </ListItemIcon>
             <ListItemText>Logout</ListItemText>
           </ListItem>
-          <ListItem button component={RouterLink} to="/setting">
+          <ListItem button component={RouterLink} to="/members/setting">
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
-            <ListItemText>Settings</ListItemText>
+            <ListItemText>{auth.user.username}</ListItemText>
           </ListItem>
         </List>
       ) : (

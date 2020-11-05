@@ -73,7 +73,7 @@ const Gallery = () => {
 
   useEffect(() => {
     dispatch(fetchGallery());
-  }, []);
+  }, [galleryItems]);
 
   return (
     <div className={classes.root}>

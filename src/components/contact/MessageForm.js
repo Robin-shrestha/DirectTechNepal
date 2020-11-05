@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { TextField, FormControl, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-import mailBig from "../../media/contacts/mail-BIG.png";
+// import mailBig from "../../media/contacts/mail-BIG.png";
+import { useDispatch } from "react-redux";
+import { postMessage } from "../../actions/messageActions";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -33,18 +35,27 @@ const styles = makeStyles((theme) => ({
 
 const MessageForm = () => {
   const classes = styles();
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
-    name: null,
-    email: null,
-    subject: null,
-    message: null,
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const formHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
+    dispatch(postMessage(formData));
+    setFormData({
+      ...formData,
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
   return (
     <div className={classes.root}>
@@ -64,6 +75,7 @@ const MessageForm = () => {
             name="name"
             onChange={formHandler}
             margin="dense"
+            value={formData.name}
           />
         </FormControl>
 
@@ -73,6 +85,8 @@ const MessageForm = () => {
             onChange={formHandler}
             label="Email"
             margin="dense"
+            value={formData.email}
+            type="email"
           />
         </FormControl>
         <FormControl className={classes.fields} fullWidth>
@@ -81,6 +95,7 @@ const MessageForm = () => {
             onChange={formHandler}
             label="Subject"
             margin="dense"
+            value={formData.subject}
           />
         </FormControl>
         <FormControl className={classes.fields} fullWidth>
@@ -92,6 +107,7 @@ const MessageForm = () => {
             rows={5}
             margin="dense"
             size="medium"
+            value={formData.message}
           />
         </FormControl>
         <FormControl className={classes.fields}>
