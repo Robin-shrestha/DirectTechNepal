@@ -12,6 +12,7 @@ import PrivateRoute from "./components/routes/PrivateRoute";
 import Settings from "./components/membersOnly/settings/Settings";
 import MessageBoard from "./components/membersOnly/messageboard/MessageBoard";
 import MessageReader from "./components/membersOnly/messageboard/MessageReader";
+import ScrollHandler from "./components/home/ScrollHandler/ScrollHandler";
 
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -34,9 +35,10 @@ function App() {
       }
     >
       <Header />
+      <ScrollHandler />
       <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/contactus" component={Contacts} />
+        {/* <Route path="/about" component={About} /> */}
+        {/* <Route path="/contactus" component={Contacts} /> */}
         <Route path="/gallery" component={Gallery} />
         <Route path="/login" component={Login} />
         <PrivateRoute exact path="/members/setting" component={Settings} />

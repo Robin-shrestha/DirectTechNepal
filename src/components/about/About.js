@@ -57,18 +57,15 @@ const styles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(5),
     backgroundColor: "white",
-    padding: theme.spacing(2),
+    padding: theme.spacing(2, 0, 2, 0),
     color: "white",
     [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(0),
     },
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh",
   },
   topContainer: {
+    padding: theme.spacing(3, 0, 3, 0),
     backgroundColor: "#FBA642",
-    borderRadius: "25px/35px",
     border: "1px solid inherit ",
     [theme.breakpoints.down("sm")]: {
       display: "flex",
@@ -91,13 +88,13 @@ const styles = makeStyles((theme) => ({
   },
   aboutUsPara: {
     backgroundColor: "inherit",
-    color: "black",
+    color: "white",
     padding: theme.spacing(0, 3, 0, 3),
   },
   topicHeaders: {
     // background: "#eee",
     // width: "100%",
-    color: "black",
+    color: "white",
     fontWeight: "bold",
   },
 }));
@@ -105,9 +102,7 @@ const About = () => {
   const classes = styles();
   return (
     <>
-      <div style={{ height: 60, backgroundColor: "black" }}></div>
-
-      <div className={classes.root}>
+      <div className={classes.root} id="#about">
         <Grid container>
           <Grid item container sm={12} className={classes.topContainer}>
             <Grid item sm={12} md={6} className={classes.aboutUsContainer}>
