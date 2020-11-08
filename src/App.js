@@ -50,9 +50,7 @@ function App() {
         />
 
         <Route path="/" component={Home} />
-        <Route exact path="/DirectTechNepal">
-          <Redirect to="/" />
-        </Route>
+        <Route exact path="/"></Route>
       </Switch>
       <Footer />
     </div>
