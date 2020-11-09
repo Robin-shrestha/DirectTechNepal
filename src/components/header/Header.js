@@ -127,7 +127,7 @@ const Header = (props) => {
               component={RouterLink}
               to="/about"
             >
-              About Us
+              About
             </Button>
             {/* <Button
               component={RouterLink}
