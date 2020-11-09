@@ -37,7 +37,7 @@ function App() {
       <Header />
       <ScrollHandler />
       <Switch>
-        {/* <Route path="/about" component={About} /> */}
+        <Route path="/about" component={About} />
         {/* <Route path="/contactus" component={Contacts} /> */}
         <Route path="/gallery" component={Gallery} />
         <Route path="/login" component={Login} />
@@ -50,7 +50,7 @@ function App() {
         />
 
         <Route path="/" component={Home} />
-        <Route exact path="/"></Route>
+        {/* <Route exact path="/"></Route> */}
       </Switch>
       <Footer />
     </div>

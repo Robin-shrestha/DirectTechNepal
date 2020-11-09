@@ -76,12 +76,12 @@ const NavDrawer = (props) => {
           </ListItemIcon>
           <ListItemText>About Us</ListItemText>
         </ListItem>
-        <ListItem button component={RouterLink} to="/contactus">
+        {/* <ListItem button component={RouterLink} to="/contactus">
           <ListItemIcon>
             <ContactsIcon />
           </ListItemIcon>
           <ListItemText>Contact Us</ListItemText>
-        </ListItem>
+        </ListItem> */}
         <ListItem button component={RouterLink} to="/gallery">
           <ListItemIcon>
             <GalleryIcon />
