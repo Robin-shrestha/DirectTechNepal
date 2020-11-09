@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "//directtechnepal.com/static/css/main.04f76552.chunk.css",
+    "main.js": "//directtechnepal.com/static/js/main.6ace396e.chunk.js",
+    "main.js.map": "//directtechnepal.com/static/js/main.6ace396e.chunk.js.map",
+    "runtime-main.js": "//directtechnepal.com/static/js/runtime-main.2624fabf.js",
+    "runtime-main.js.map": "//directtechnepal.com/static/js/runtime-main.2624fabf.js.map",
+    "static/css/2.6548fb15.chunk.css": "//directtechnepal.com/static/css/2.6548fb15.chunk.css",
+    "static/js/2.4f0f5175.chunk.js": "//directtechnepal.com/static/js/2.4f0f5175.chunk.js",
+    "static/js/2.4f0f5175.chunk.js.map": "//directtechnepal.com/static/js/2.4f0f5175.chunk.js.map",
+    "index.html": "//directtechnepal.com/index.html",
+    "precache-manifest.40e4926719cb30a2e9252654acf02713.js": "//directtechnepal.com/precache-manifest.40e4926719cb30a2e9252654acf02713.js",
+    "service-worker.js": "//directtechnepal.com/service-worker.js",
+    "static/css/2.6548fb15.chunk.css.map": "//directtechnepal.com/static/css/2.6548fb15.chunk.css.map",
+    "static/css/main.04f76552.chunk.css.map": "//directtechnepal.com/static/css/main.04f76552.chunk.css.map",
+    "static/js/2.4f0f5175.chunk.js.LICENSE.txt": "//directtechnepal.com/static/js/2.4f0f5175.chunk.js.LICENSE.txt",
+    "static/media/ART-1.png": "//directtechnepal.com/static/media/ART-1.7f91bda7.png",
+    "static/media/ART-3.png": "//directtechnepal.com/static/media/ART-3.fd903152.png",
+    "static/media/ART-5.png": "//directtechnepal.com/static/media/ART-5.b4f2111e.png",
+    "static/media/ART-8.png": "//directtechnepal.com/static/media/ART-8.29c24146.png",
+    "static/media/Carousel-1.jpg": "//directtechnepal.com/static/media/Carousel-1.b6672808.jpg",
+    "static/media/Contact-us.png": "//directtechnepal.com/static/media/Contact-us.b2da40d9.png",
+    "static/media/DT-logo-1.png": "//directtechnepal.com/static/media/DT-logo-1.1068093d.png",
+    "static/media/Social-media-marketing.png": "//directtechnepal.com/static/media/Social-media-marketing.c7367188.png",
+    "static/media/bunu.jpg": "//directtechnepal.com/static/media/bunu.aa726833.jpg",
+    "static/media/dipesh.jpg": "//directtechnepal.com/static/media/dipesh.f67be546.jpg",
+    "static/media/graphic-design-photo.png": "//directtechnepal.com/static/media/graphic-design-photo.445d3ed6.png",
+    "static/media/kailash.jpg": "//directtechnepal.com/static/media/kailash.07b0bf2f.jpg",
+    "static/media/logo-design-photo.png": "//directtechnepal.com/static/media/logo-design-photo.97e85afe.png",
+    "static/media/react.png": "//directtechnepal.com/static/media/react.24a9043b.png",
+    "static/media/robin.jpg": "//directtechnepal.com/static/media/robin.cc81e93c.jpg",
+    "static/media/slick-theme.css": "//directtechnepal.com/static/media/slick.f97e3bbf.svg",
+    "static/media/suju.jpg": "//directtechnepal.com/static/media/suju.30bfcbea.jpg",
+    "static/media/web-dev.png": "//directtechnepal.com/static/media/web-dev.cb8db6d9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2624fabf.js",
+    "static/css/2.6548fb15.chunk.css",
+    "static/js/2.4f0f5175.chunk.js",
+    "static/css/main.04f76552.chunk.css",
+    "static/js/main.6ace396e.chunk.js"
+  ]
+}
