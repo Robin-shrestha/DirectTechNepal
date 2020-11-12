@@ -1,15 +1,14 @@
 import React from "react";
-import { Paper, Typography, Grid } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import dt from "../../media/Icon/DT-logo-1.png";
-import Contact from "../contact/Contact";
-import ScrollHandler from "../home/ScrollHandler/ScrollHandler";
 
 const styles = makeStyles((theme) => ({
   root: {
     // paddingTop: theme.spacing(5),
     backgroundColor: "white",
+    minHeight: "100vh",
     // padding: theme.spacing(2, 0, 2, 0),
     color: "white",
     [theme.breakpoints.down("sm")]: {
@@ -97,7 +96,7 @@ const About = () => {
           </Grid>
         </Grid>
       </div>
-      <Contact />
+      <dib style={{ flexGrow: 1 }} />
     </>
   );
 };

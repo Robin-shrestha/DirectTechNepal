@@ -129,13 +129,13 @@ const Header = (props) => {
             >
               About
             </Button>
-            {/* <Button
+            <Button
               component={RouterLink}
               to="/#contact"
               className={classes.navbuttons}
             >
               Contacts
-            </Button> */}
+            </Button>
             <Button
               to="/gallery"
               component={RouterLink}

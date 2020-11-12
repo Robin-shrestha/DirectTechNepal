@@ -13,6 +13,7 @@ import Settings from "./components/membersOnly/settings/Settings";
 import MessageBoard from "./components/membersOnly/messageboard/MessageBoard";
 import MessageReader from "./components/membersOnly/messageboard/MessageReader";
 import ScrollHandler from "./components/home/ScrollHandler/ScrollHandler";
+import CreateBlog from "./components/home/blog/CreateBlog";
 
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -48,6 +49,7 @@ function App() {
           path="/members/messages/:messageID"
           component={MessageReader}
         />
+        <PrivateRoute exact path="/blog/createblog" component={CreateBlog} />
 
         <Route path="/" component={Home} />
         {/* <Route exact path="/"></Route> */}
