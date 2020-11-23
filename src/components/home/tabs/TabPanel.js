@@ -1,7 +1,8 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Paper, Grid, Typography } from "@material-ui/core";
+import { Paper, Grid, Typography, Button } from "@material-ui/core";
+import { Link as RouterLink } from "react-router-dom";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -33,6 +34,7 @@ const styles = makeStyles((theme) => ({
   title: {
     fontWeight: "bolder",
   },
+  button: { marginTop: theme.spacing(2) },
 }));
 const TabPanel = (props) => {
   const { value, image, title, description, index, ...other } = props;
@@ -73,6 +75,15 @@ const TabPanel = (props) => {
                   {title}
                 </Typography>
                 {description()}
+                <Button
+                  color="inherit"
+                  variant="outlined"
+                  className={classes.button}
+                  component={RouterLink}
+                  to="/#contact"
+                >
+                  contact us
+                </Button>
                 {/* <Typography variant="body1">{description()}</Typography> */}
               </div>
             </Grid>

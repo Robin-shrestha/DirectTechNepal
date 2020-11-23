@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 import { uploadImage } from "../../../actions/galleryActions";
 import { Link as RouterLink } from "react-router-dom";
+import * as routes from "../../../constants/routes";
 
 const style = makeStyles((theme) => ({
   root: {
@@ -143,7 +144,7 @@ const Settings = () => {
               color="secondary"
               className={classes.msgBtn}
               component={RouterLink}
-              to="/members/messages"
+              to={routes.messages}
             >
               View Messages
             </Button>
@@ -151,7 +152,11 @@ const Settings = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6">Demo of uploaded picture</Typography>
-          <img src={uploadedImage} className={classes.uploadedImage} />
+          <img
+            src={uploadedImage}
+            alt={galleryImage.title}
+            className={classes.uploadedImage}
+          />
         </Grid>
       </Grid>
       <div style={{ flexGrow: 1 }} />

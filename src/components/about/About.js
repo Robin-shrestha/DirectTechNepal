@@ -96,7 +96,7 @@ const About = () => {
           </Grid>
         </Grid>
       </div>
-      <dib style={{ flexGrow: 1 }} />
+      <div style={{ flexGrow: 1 }} />
     </>
   );
 };

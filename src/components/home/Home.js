@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MultiCarousel from "./carousel/MultiCarousel";
 import WhatWeDo from "./tabs/WhatWeDo";
 import ToolsUsed from "./toolsUsed/ToolsUsed";

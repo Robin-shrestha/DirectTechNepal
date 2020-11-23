@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
-import Contacts from "./components/contact/Contact";
+// import Contacts from "./components/contact/Contact";
 import Gallery from "./components/gallery/Gallery";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/routes/PrivateRoute";
@@ -13,9 +13,11 @@ import Settings from "./components/membersOnly/settings/Settings";
 import MessageBoard from "./components/membersOnly/messageboard/MessageBoard";
 import MessageReader from "./components/membersOnly/messageboard/MessageReader";
 import ScrollHandler from "./components/home/ScrollHandler/ScrollHandler";
-import CreateBlog from "./components/home/blog/CreateBlog";
+import CreateBlog from "./components/blog/CreateBlog";
+import BrowseBlog from "./components/blog/BrowseBlog";
 
-import { Switch, Route, Redirect } from "react-router-dom";
+import * as routes from "./constants/routes";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,18 +40,20 @@ function App() {
       <Header />
       <ScrollHandler />
       <Switch>
-        <Route path="/about" component={About} />
+        <Route path={routes.about} component={About} />
         {/* <Route path="/contactus" component={Contacts} /> */}
-        <Route path="/gallery" component={Gallery} />
-        <Route path="/login" component={Login} />
-        <PrivateRoute exact path="/members/setting" component={Settings} />
-        <PrivateRoute exact path="/members/messages" component={MessageBoard} />
+        <Route path={routes.gallery} component={Gallery} />
+        <Route path={routes.login} component={Login} />
+        <Route exact path={routes.browseBlogs} component={BrowseBlog} />
+
+        <PrivateRoute exact path={routes.setting} component={Settings} />
+        <PrivateRoute exact path={routes.messages} component={MessageBoard} />
         <PrivateRoute
           exact
-          path="/members/messages/:messageID"
+          path={routes.readMessage}
           component={MessageReader}
         />
-        <PrivateRoute exact path="/blog/createblog" component={CreateBlog} />
+        <PrivateRoute exact path={routes.createBlog} component={CreateBlog} />
 
         <Route path="/" component={Home} />
         {/* <Route exact path="/"></Route> */}

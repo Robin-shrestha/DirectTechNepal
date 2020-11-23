@@ -20,6 +20,8 @@ import {
   deleteMultipleMessages,
 } from "../../../actions/messageActions";
 
+import * as routes from "../../../constants/routes";
+
 import MessageReadIcon from "@material-ui/icons/CheckCircle";
 
 const styles = makeStyles((theme) => ({
@@ -186,7 +188,7 @@ const MessageBoard = () => {
                       <TableCell component="th" scope="row" padding="none">
                         <Link
                           to={{
-                            pathname: `/members/messages/${row.id}`,
+                            pathname: routes.readMessage,
                             state: { message: row },
                           }}
                           component={RouterLink}

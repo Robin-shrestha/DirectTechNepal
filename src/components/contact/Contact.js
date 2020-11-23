@@ -1,11 +1,11 @@
 import React from "react";
 import MessageForm from "./MessageForm";
 import ContactInfo from "./ContactInfo";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import contactUsImg from "../../media/contacts/Contact-us.png";
 
-import Googlemap from "./GoogleMap";
+// import Googlemap from "./GoogleMap";
 
 const styles = makeStyles((theme) => ({
   root: {

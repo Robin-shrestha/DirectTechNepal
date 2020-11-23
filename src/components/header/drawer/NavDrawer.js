@@ -12,7 +12,7 @@ import {
 
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
-import ContactsIcon from "@material-ui/icons/Contacts";
+// import ContactsIcon from "@material-ui/icons/Contacts";
 import GalleryIcon from "@material-ui/icons/Image";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -24,6 +24,7 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import { Link as RouterLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../../actions/authActions";
+import * as routes from "../../../constants/routes";
 
 const useStyles = makeStyles({
   list: {
@@ -64,13 +65,13 @@ const NavDrawer = (props) => {
         Content
       </Typography>
       <List>
-        <ListItem button component={RouterLink} to="/">
+        <ListItem button component={RouterLink} to={routes.home}>
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
           <ListItemText>Home</ListItemText>
         </ListItem>
-        <ListItem button component={RouterLink} to="/about">
+        <ListItem button component={RouterLink} to={routes.about}>
           <ListItemIcon>
             <InfoIcon />
           </ListItemIcon>
@@ -82,7 +83,7 @@ const NavDrawer = (props) => {
           </ListItemIcon>
           <ListItemText>Contact Us</ListItemText>
         </ListItem> */}
-        <ListItem button component={RouterLink} to="/gallery">
+        <ListItem button component={RouterLink} to={routes.gallery}>
           <ListItemIcon>
             <GalleryIcon />
           </ListItemIcon>
@@ -129,7 +130,7 @@ const NavDrawer = (props) => {
             </ListItemIcon>
             <ListItemText>Logout</ListItemText>
           </ListItem>
-          <ListItem button component={RouterLink} to="/members/setting">
+          <ListItem button component={RouterLink} to={routes.setting}>
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
@@ -138,7 +139,7 @@ const NavDrawer = (props) => {
         </List>
       ) : (
         <List>
-          <ListItem button component={RouterLink} to="/login">
+          <ListItem button component={RouterLink} to={routes.login}>
             <ListItemIcon>
               <LoginIcon />
             </ListItemIcon>

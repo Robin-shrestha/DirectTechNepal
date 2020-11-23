@@ -77,7 +77,11 @@ const LatestBlog = () => {
                 ></div> */}
                 <Card raised className={classes.card}>
                   <CardActionArea>
-                    <img src={item.image} className={classes.image} />
+                    <img
+                      src={item.image}
+                      alt="blog "
+                      className={classes.image}
+                    />
                   </CardActionArea>
                   <CardContent>
                     <Typography gutterBottom variant="body2">

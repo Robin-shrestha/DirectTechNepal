@@ -6,7 +6,6 @@ import {
   GridListTile,
   Grid,
   CardActionArea,
-  // Modal,
   Backdrop,
 } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";

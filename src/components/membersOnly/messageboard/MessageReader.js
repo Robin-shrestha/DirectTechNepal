@@ -12,11 +12,13 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
-// import { Link as RouterLink } from "react-router-dom";
 import {
   checkSingleMessage,
   deleteSingleMessage,
 } from "../../../actions/messageActions";
+import { Link as RouterLink } from "react-router-dom";
+
+import * as routes from "../../../constants/routes";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -90,6 +92,14 @@ const MessageReader = (props) => {
         <Typography variant="body1">{message}</Typography>
         <Button variant="contained" color="secondary" onClick={handleClickOpen}>
           Delete
+        </Button>
+        <Button
+          component={RouterLink}
+          to={routes.messages}
+          color="primary"
+          variant="contained"
+        >
+          Back
         </Button>
         <Dialog
           open={open}

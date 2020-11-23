@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Backdrop, Button, CardActionArea } from "@material-ui/core";
+import React, { useState } from "react";
+import { Backdrop, CardActionArea } from "@material-ui/core";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

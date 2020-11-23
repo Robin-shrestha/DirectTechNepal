@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import { AppBar, Toolbar, IconButton, Button, Link } from "@material-ui/core";
-
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link as RouterLink } from "react-router-dom";
@@ -9,6 +7,7 @@ import NavDrawer from "./drawer/NavDrawer";
 import DirectTechLogo3 from "../../media/logo/DT-logo-4.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../actions/authActions";
+import * as routes from "../../constants/routes";
 
 const styles = makeStyles((theme) => ({
   root: {
@@ -118,14 +117,14 @@ const Header = (props) => {
             <Button
               className={classes.navbuttons}
               component={RouterLink}
-              to="/"
+              to={routes.home}
             >
               Home
             </Button>
             <Button
               className={classes.navbuttons}
               component={RouterLink}
-              to="/about"
+              to={routes.about}
             >
               About
             </Button>
@@ -137,7 +136,7 @@ const Header = (props) => {
               Contacts
             </Button>
             <Button
-              to="/gallery"
+              to={routes.gallery}
               component={RouterLink}
               className={classes.navbuttons}
             >
@@ -146,11 +145,18 @@ const Header = (props) => {
             {auth.isAuthenticated ? (
               <>
                 <Button
-                  to="/members/setting"
+                  to={routes.setting}
                   component={RouterLink}
                   className={classes.navbuttons}
                 >
                   {auth.user.username}
+                </Button>
+                <Button
+                  to={routes.browseBlogs}
+                  component={RouterLink}
+                  className={classes.navbuttons}
+                >
+                  blogs
                 </Button>
                 <Button onClick={logoutHandler} className={classes.navbuttons}>
                   Logout
@@ -158,7 +164,7 @@ const Header = (props) => {
               </>
             ) : (
               <Button
-                to="/login"
+                to={routes.login}
                 component={RouterLink}
                 className={classes.navbuttons}
               >

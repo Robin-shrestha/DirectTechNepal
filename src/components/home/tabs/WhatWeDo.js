@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import { Tab, Tabs, Paper, Typography, Grid } from "@material-ui/core";
+import { Tab, Tabs, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
-//borders
-import waveTop from "../../../media/Wave BG/BG3.png";
-import waveBottom from "../../../media/Wave BG/BG1.png";
 
 import TabPanel from "./TabPanel";
 
@@ -106,7 +102,6 @@ const whatWeDoData = [
 const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(0, 0, 0, 0),
-    backgroundColor: "inherit",
     padding: theme.spacing(5, 0, 2, 0),
     backgroundColor: "#FBA642",
     color: "white",
