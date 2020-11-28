@@ -7,7 +7,11 @@ const Footer1 = () => {
       cariant="body1"
       align="center"
       style={{
+        position: "relative",
+        left: 0,
+        bottom: 0,
         height: 50,
+        width: "100%",
         marginTop: "0px",
         backgroundColor: "#ccc",
         paddingTop: 16,

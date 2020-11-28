@@ -148,6 +148,16 @@ const Settings = () => {
             >
               View Messages
             </Button>
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              className={classes.msgBtn}
+              component={RouterLink}
+              to={routes.createBlog}
+            >
+              Create Blog
+            </Button>
           </div>
         </Grid>
         <Grid item xs={12} md={6}>

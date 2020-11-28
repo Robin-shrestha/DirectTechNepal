@@ -96,7 +96,7 @@ const Header = (props) => {
         position="absolute"
         color="transparent"
         className={classes.appbar}
-        elevation={1}
+        elevation={0}
       >
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -142,6 +142,13 @@ const Header = (props) => {
             >
               Gallery
             </Button>
+            <Button
+              to={routes.browseBlogs}
+              component={RouterLink}
+              className={classes.navbuttons}
+            >
+              blogs
+            </Button>
             {auth.isAuthenticated ? (
               <>
                 <Button
@@ -151,13 +158,7 @@ const Header = (props) => {
                 >
                   {auth.user.username}
                 </Button>
-                <Button
-                  to={routes.browseBlogs}
-                  component={RouterLink}
-                  className={classes.navbuttons}
-                >
-                  blogs
-                </Button>
+
                 <Button onClick={logoutHandler} className={classes.navbuttons}>
                   Logout
                 </Button>
