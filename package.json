@@ -20,9 +20,9 @@
     "react-scripts": "3.4.3",
     "react-slick": "^0.27.11",
     "react-spring": "^8.0.27",
-    "react-use-gesture": "^7.0.16",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "showdown": "^1.9.1",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

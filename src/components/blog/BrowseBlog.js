@@ -32,10 +32,22 @@ const styles = makeStyles((theme) => ({
     top: "35%",
     left: 100,
     width: "60vw",
+    animation: `$introEffect 3500ms ${theme.transitions.easing.easeInOut} `,
+
     [theme.breakpoints.down("sm")]: {
       top: "80px",
       left: 10,
       width: "90vw",
+    },
+  },
+  "@keyframes introEffect ": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(-200%)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateX(0)",
     },
   },
   arrowContainer: {},
@@ -43,8 +55,7 @@ const styles = makeStyles((theme) => ({
     position: "relative",
     color: "white",
     fontSize: "2.5rem",
-    animation: `$arrowMotion 1500ms ${theme.transitions.easing.easeInOut} infinite`,
-    animationDirection: "alternate",
+    animation: `$arrowMotion 1500ms ${theme.transitions.easing.easeInOut} infinite alternate`,
   },
   "@keyframes arrowMotion": {
     "0%": {
@@ -178,7 +189,7 @@ const BrowseBlog = () => {
           {blogs.map((item) => (
             <Grid container key={item.id} className={classes.blogItems}>
               <Grid item sm={12} lg={8}>
-                <CardActionArea component={RouterLink} to="#">
+                <CardActionArea component={RouterLink} to={`/blog/${item.id}`}>
                   <div
                     style={{ backgroundImage: `url(${item.image})` }}
                     className={classes.blogImage}
@@ -188,7 +199,13 @@ const BrowseBlog = () => {
               <Grid item sm={12} lg={4}>
                 <div className={classes.blogInfo}>
                   <Typography variant="h2" gutterBottom>
-                    <Link className={classes.blogTitle}>{item.title}</Link>
+                    <Link
+                      component={RouterLink}
+                      to={`/blog/${item.id}`}
+                      className={classes.blogTitle}
+                    >
+                      {item.title}
+                    </Link>
                   </Typography>
                   <div className={classes.dateAndAuthorContainer}>
                     <Typography variant="subtitle1">
