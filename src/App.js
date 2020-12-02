@@ -16,6 +16,7 @@ import ScrollHandler from "./components/home/ScrollHandler/ScrollHandler";
 import CreateBlog from "./components/blog/CreateBlog";
 import BrowseBlog from "./components/blog/BrowseBlog";
 import BlogPost from "./components/blog/BlogPost";
+import GallerySetting from "./components/membersOnly/galleryImages/GalleryImages";
 
 import * as routes from "./constants/routes";
 import { Switch, Route } from "react-router-dom";
@@ -56,6 +57,11 @@ function App() {
           component={MessageReader}
         />
         <PrivateRoute exact path={routes.createBlog} component={CreateBlog} />
+        <PrivateRoute
+          exact
+          path={routes.gallerySettings}
+          component={GallerySetting}
+        />
 
         <Route path="/" component={Home} />
         {/* <Route exact path="/"></Route> */}

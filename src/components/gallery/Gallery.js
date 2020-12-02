@@ -88,7 +88,7 @@ const Gallery = () => {
           <Grid item sm={1} />
           <Grid item xs={12} sm={10}>
             <GridList
-              cellHeight={360}
+              cellHeight={window.innerWidth < 550 ? 180 : 360}
               className={classes.gridList}
               cols={3}
               component="div"

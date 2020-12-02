@@ -9,6 +9,7 @@ export const AUTH_ERROR = "AUTH_ERROR";
 export const FETCH_GALLERY_ITEMS = "FETCH_GALLERY_ITEMS";
 export const FETCH_ERROR = "FETCH_ERROR";
 export const UPLOAD_IMAGE = "UPLOAD_IMAGE";
+export const DELETE_IMAGE = "DELETE_IMAGE";
 
 //messages
 export const FETCH_ALL_MESSAGES = "FETCH_ALL_MESSAGES";

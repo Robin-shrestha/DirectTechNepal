@@ -13,6 +13,7 @@ import image from "../../media/gallery/ART-1.png";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import { Link as RouterLink } from "react-router-dom";
 
 const otherBlogs = [
   {
@@ -51,11 +52,11 @@ const styles = makeStyles((theme) => ({
   "@keyframes introEffect ": {
     "0%": {
       opacity: 0,
-      transform: "translateX(200%)",
+      transform: "translateY(-200%)",
     },
     "100%": {
       opacity: 1,
-      transform: "translateX(0)",
+      transform: "translateY(0)",
     },
   },
 }));
@@ -124,7 +125,7 @@ const BlogPost = () => {
                   widht: "100%",
                 }}
               >
-                <CardActionArea>
+                <CardActionArea component={RouterLink} to={`/blog/${item.id}`}>
                   <div
                     style={{
                       backgroundImage: `url(${item.image})`,
