@@ -63,7 +63,7 @@ const ContactInfo = () => {
       </div>
       <div className={classes.mediaContainer}>
         <span className={classes.infoSpan}>
-          <EmailIcon className={classes.icon} />
+          <EmailIcon className={classes.icon} style={{ color: "#fff" }} />
         </span>
         <span className={classes.infoSpan}>{contacts.email}</span>
       </div>
@@ -73,7 +73,7 @@ const ContactInfo = () => {
         className={classes.mediaContainer}
       >
         <span className={classes.infoSpan}>
-          <FacebookIcon className={classes.icon} />
+          <FacebookIcon className={classes.icon} style={{ color: "3b5998" }} />
         </span>
         <span className={classes.infoSpan}>{"directtechnepal"}</span>
       </Link>
@@ -83,13 +83,16 @@ const ContactInfo = () => {
         className={classes.mediaContainer}
       >
         <span className={classes.infoSpan}>
-          <InstagramIcon className={classes.icon} />
+          <InstagramIcon
+            className={classes.icon}
+            style={{ color: "#bc2a8d" }}
+          />
         </span>
         <span className={classes.infoSpan}>{"@directtechnepal"}</span>
       </Link>
       <div className={classes.mediaContainer}>
         <span className={classes.infoSpan}>
-          <WhatsAppIcon className={classes.icon} />
+          <WhatsAppIcon className={classes.icon} style={{ color: "#4fce5d" }} />
         </span>
         <span className={classes.infoSpan}>{"whatsapp"}</span>
       </div>

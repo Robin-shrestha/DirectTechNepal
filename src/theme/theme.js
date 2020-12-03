@@ -30,6 +30,7 @@ const theme = createMuiTheme({
       fontSize: "1rem",
     },
   },
+  palette: {},
 });
 
 export default theme;
