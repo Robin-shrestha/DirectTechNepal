@@ -1,1 +1,1 @@
-## http://directtechnepal.com
+## https://robin-shrestha.github.io/DirectTechNepal/
