@@ -1,6 +1,6 @@
 export const home = "/";
 export const about = "/about";
-export const contact = "/contact";
+export const contact = "/#contact";
 export const gallery = "/gallery";
 export const login = "/login";
 export const setting = "/members/setting";
@@ -11,3 +11,9 @@ export const readMessage = "/members/messages/:messageID";
 export const createBlog = "/createblog";
 export const browseBlogs = "/blog/browseblogs";
 export const readBlog = "/blog/:blogID";
+
+export const services = "/#services";
+export const webDevelopment = "/#webDevelopment";
+export const logoDesign = "/#logoDesign";
+export const socialMedialMarketing = "/#socialMedialMarketing";
+export const graphicDesign = "/#graphicDesign";

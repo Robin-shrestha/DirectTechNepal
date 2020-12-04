@@ -37,7 +37,15 @@ const styles = makeStyles((theme) => ({
   button: { marginTop: theme.spacing(2) },
 }));
 const TabPanel = (props) => {
-  const { value, image, title, description, index, ...other } = props;
+  const {
+    value,
+    image,
+    title,
+    description,
+    index,
+    elementId,
+    ...other
+  } = props;
   const classes = styles();
 
   return (
@@ -46,7 +54,7 @@ const TabPanel = (props) => {
       elevation={0}
       role="tabpanel"
       hidden={value !== index}
-      id={`scrollable-force-tabpanel-${index}`}
+      id={elementId}
       aria-labelledby={`scrollable-force-tab-${index}`}
       {...other}
     >

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Tab, Tabs, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
 import TabPanel from "./TabPanel";
-
 import { useSpring, animated } from "react-spring";
 
 // /tabs/
@@ -22,6 +20,7 @@ const whatWeDoData = [
     id: 0,
     tabImage: webDevTab,
     panelImage: webDevpanel,
+    elementId: "#webDevelopment",
     title: "Web development",
     description: () => {
       return (
@@ -41,7 +40,7 @@ const whatWeDoData = [
     id: 1,
     tabImage: logoDesignTab,
     panelImage: logoDesignPanel,
-
+    elementId: "#logoDesign",
     title: "logo Design",
     description: () => {
       return (
@@ -61,7 +60,7 @@ const whatWeDoData = [
     id: 2,
     tabImage: socialMediaMarketingTab,
     panelImage: socialMediaMarketingPanel,
-
+    elementId: "#socialMedialMarketing",
     title: "Social Media Marketing",
     description: () => {
       return (
@@ -82,7 +81,7 @@ const whatWeDoData = [
     id: 3,
     tabImage: graphicDesignTab,
     panelImage: graphicDesignPanel,
-
+    elementId: "#graphicDesign",
     title: "Graphic Design",
     description: () => {
       return (
@@ -165,9 +164,9 @@ const WhatWeDo = () => {
   };
 
   return (
-    <Paper className={classes.root} elevation={2}>
+    <Paper className={classes.root} elevation={2} id="#services">
       <Typography align="center" variant="h3" gutterBottom color="inherit">
-        GROW YOUR ONLINE PRESENCE WITH US{" "}
+        GROW YOUR ONLINE PRESENCE WITH US
       </Typography>
 
       <div className={classes.tabs}>
@@ -199,6 +198,7 @@ const WhatWeDo = () => {
             description={item.description}
             title={item.title}
             image={item.panelImage}
+            elementId={item.elementId}
           />
         );
       })}
