@@ -102,7 +102,9 @@ const styles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(0, 0, 0, 0),
     padding: theme.spacing(5, 0, 2, 0),
-    backgroundColor: "#FBA642",
+    background: "rgb(1,109,119)",
+    background:
+      "linear-gradient(160deg, rgba(1,109,119,1) 0%, rgba(0,212,255,1) 100%)",
     color: "white",
   },
   tabs: {

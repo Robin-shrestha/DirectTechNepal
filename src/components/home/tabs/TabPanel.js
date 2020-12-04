@@ -6,7 +6,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const styles = makeStyles((theme) => ({
   root: {
-    background: "inherit",
+    background: "none",
     margin: theme.spacing(3, 1, 3, 1),
     color: "inherit",
     // border: "white 1px solid",

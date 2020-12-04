@@ -30,7 +30,10 @@ const theme = createMuiTheme({
       fontSize: "1rem",
     },
   },
-  palette: {},
+  palette: {
+    color1: "#016d77",
+    color2: "#00c3ff",
+  },
 });
 
 export default theme;
