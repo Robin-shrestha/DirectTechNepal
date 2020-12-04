@@ -104,7 +104,8 @@ const styles = makeStyles((theme) => ({
     padding: theme.spacing(5, 0, 2, 0),
     background: "rgb(1,109,119)",
     background:
-      "linear-gradient(160deg, rgba(1,109,119,1) 0%, rgba(0,212,255,1) 100%)",
+      " linear-gradient(160deg, rgba(1,109,119,1) 0%, rgba(1,109,119,1) 30%, rgba(0,206,247,1) 100%)",
+
     color: "white",
   },
   tabs: {

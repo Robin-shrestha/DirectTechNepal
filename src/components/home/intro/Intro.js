@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import image from "../../../media/image/Carousel-1.jpg";
+import image from "../../../media/image/DT-homepage.png";
 import { makeStyles } from "@material-ui/core/styles";
 
 const styles = makeStyles((theme) => ({

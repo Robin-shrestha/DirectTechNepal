@@ -13,9 +13,11 @@ import { fetchGallery } from "../../actions/galleryActions";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(12),
     paddingBottom: theme.spacing(5),
-    backgroundColor: "white",
+    background: "rgb(1,109,119)",
+    background:
+      "linear-gradient(180deg, rgba(1,109,119,1) 0%, rgba(1,109,119,.15) 15%, rgba(255,255,255,1) 100%)",
     minHeight: "100vh",
     [theme.breakpoints.down("sm")]: {
       marginTop: 0,
@@ -81,7 +83,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div style={{ height: 60, backgroundColor: "black" }}></div>
+      {/* <div style={{ height: 60, backgroundColor: "black" }}></div> */}
 
       <div className={classes.root}>
         <Grid container>

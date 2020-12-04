@@ -6,7 +6,7 @@ import dt from "../../media/Icon/DT-logo-1.png";
 import CoreValues from "./CoreValues";
 
 const styles = makeStyles((theme) => ({
-  root: { marginTop: theme.spacing(8) },
+  root: { marginTop: theme.spacing(0) },
   aboutus: {
     background: "rgb(9,9,121)",
     background:
@@ -15,7 +15,7 @@ const styles = makeStyles((theme) => ({
     color: "white",
     textAlign: "center",
     placeItems: "center",
-    padding: theme.spacing(2, 0, 2, 0),
+    padding: theme.spacing(12, 0, 4, 0),
   },
   aboutUsImgContainer: {
     height: "100%",
