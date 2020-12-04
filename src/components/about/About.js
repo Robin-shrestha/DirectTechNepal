@@ -3,13 +3,14 @@ import { Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import dt from "../../media/Icon/DT-logo-1.png";
+import CoreValues from "./CoreValues";
 
 const styles = makeStyles((theme) => ({
   root: { marginTop: theme.spacing(8) },
   aboutus: {
     background: "rgb(9,9,121)",
     background:
-      " linear-gradient(90deg, rgba(9,9,121,1) 9%, rgba(255,5,5,1) 49%, rgba(9,9,121,1) 91%)",
+      " linear-gradient(90deg, rgba(9,9,121,.81) 9%, rgba(255,5,5,.71) 49%, rgba(9,9,121,.81) 91%)",
     // height: theme.spacing(10),
     color: "white",
     textAlign: "center",
@@ -31,11 +32,11 @@ const About = () => {
   return (
     <div className={classes.root}>
       <div className={classes.aboutus}>
-        <h1>About Us</h1>
+        <Typography variant="h2">About Us</Typography>
       </div>
       <Grid container>
-        <Grid item sm={1} />
-        <Grid container item sm={10}>
+        <Grid item xs={1} />
+        <Grid container item xs={10}>
           <Grid item md={6} style={{ alignSelf: "center" }}>
             <div className={classes.aboutUsImgContainer}>
               <img src={dt} alt="dt-logo" className={classes.aboutUsImg} />
@@ -43,7 +44,7 @@ const About = () => {
           </Grid>
           <Grid item md={6}>
             <div className={classes.aboutUsParaContainer}>
-              <Typography variant="h3" gutterBottom align="left">
+              <Typography variant="h4" gutterBottom align="left">
                 Smart and Ambitious team of developers and designers
               </Typography>
               <Typography variant="body1" gutterBottom>
@@ -71,8 +72,9 @@ const About = () => {
             </div>
           </Grid>
         </Grid>
-        <Grid item sm={1} />
+        <Grid item xs={1} />
       </Grid>
+      <CoreValues />
     </div>
   );
 };

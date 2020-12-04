@@ -12,6 +12,7 @@
     "@uiw/react-md-editor": "^1.14.5",
     "axios": "^0.21.0",
     "clsx": "^1.1.1",
+    "framer-motion": "^2.9.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-google-maps": "0.0.3",
