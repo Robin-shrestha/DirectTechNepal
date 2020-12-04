@@ -91,7 +91,7 @@ const Header = (props) => {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="#header">
       <AppBar
         position="absolute"
         color="transparent"

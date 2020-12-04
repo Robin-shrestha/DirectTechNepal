@@ -17,6 +17,7 @@ import CreateBlog from "./components/blog/CreateBlog";
 import BrowseBlog from "./components/blog/BrowseBlog";
 import BlogPost from "./components/blog/BlogPost";
 import GallerySetting from "./components/membersOnly/galleryImages/GalleryImages";
+import ToHeadersticky from "./components/sticky/toHeader";
 
 import * as routes from "./constants/routes";
 import { Switch, Route } from "react-router-dom";
@@ -66,6 +67,7 @@ function App() {
         <Route path="/" component={Home} />
         {/* <Route exact path="/"></Route> */}
       </Switch>
+      <ToHeadersticky />
       <Footer />
     </div>
   );
