@@ -42,6 +42,7 @@ const styles = makeStyles((theme) => ({
   logo: {
     // height: "100%",
     padding: "4px",
+    paddingLeft: theme.spacing(7),
     [theme.breakpoints.down(700)]: {
       paddingLeft: theme.spacing(5),
     },
