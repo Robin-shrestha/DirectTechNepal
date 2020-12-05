@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, IconButton, Button, Link } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -16,11 +16,20 @@ const styles = makeStyles((theme) => ({
   },
   appbar: {
     height: 60,
+    transition: ".5s",
+    color: "white",
+  },
+  appbarScroll: {
+    height: 80,
+    transition: ".5s",
+    backgroundColor: "rgba(255,255,255,.85)",
+    padding: theme.spacing(2, 0, 2, 0),
+    color: "black",
   },
   menuButton: {
-    color: "white",
-    [theme.breakpoints.up("sm")]: {
-      color: "white",
+    color: "inherit",
+    [theme.breakpoints.up(700)]: {
+      color: "inherit",
 
       display: "none",
     },
@@ -31,20 +40,22 @@ const styles = makeStyles((theme) => ({
   },
   logoContainer: { flexGrow: 5, textAlign: "left" },
   logo: {
-    height: "50px",
+    // height: "100%",
     padding: "4px",
-    [theme.breakpoints.up("sm")]: {
-      paddingLeft: 160,
+    [theme.breakpoints.down(700)]: {
+      paddingLeft: theme.spacing(5),
     },
   },
 
   navContainer: {
     display: "flex",
-    color: "white",
+    color: "inherit",
     flexGrow: 1,
     textAlign: "center",
-    // borderRight: "2px solid white",
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(860)]: {
+      flexWrap: "wrap",
+    },
+    [theme.breakpoints.down(700)]: {
       display: "none",
     },
   },
@@ -59,16 +70,6 @@ const styles = makeStyles((theme) => ({
       borderBottom: "solid 2px red",
     },
   },
-  // socialMediaContainer: {
-  //   padding: theme.spacing(0, 0, 0, 1),
-  //   color: "white",
-
-  //   // color: "white",
-  //   flexGrow: 1,
-  //   [theme.breakpoints.down(780)]: {
-  //     display: "none",
-  //   },
-  // },
 }));
 
 const Header = (props) => {
@@ -76,6 +77,23 @@ const Header = (props) => {
   const dispatch = useDispatch();
   const classes = styles();
   const [drawerState, setDrawerState] = useState(false);
+  const [scrollOnTop, setScrollOnTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 65) {
+        setScrollOnTop(false);
+      } else {
+        setScrollOnTop(true);
+      }
+    };
+    console.log(scrollOnTop);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [window.scrollY]);
 
   const logoutHandler = () => {
     dispatch(logout());
@@ -93,10 +111,10 @@ const Header = (props) => {
   return (
     <div className={classes.root} id="#header">
       <AppBar
-        position="absolute"
+        position={scrollOnTop ? "absolute" : "fixed"}
         color="transparent"
-        className={classes.appbar}
-        elevation={0}
+        className={scrollOnTop ? classes.appbar : classes.appbarScroll}
+        elevation={scrollOnTop ? 0 : 2}
       >
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -109,7 +127,12 @@ const Header = (props) => {
           </IconButton>
           <div className={classes.logoContainer}>
             <Link component={RouterLink} to="/">
-              <img src={DirectTechLogo3} alt="logo" className={classes.logo} />
+              <img
+                src={DirectTechLogo3}
+                alt="logo"
+                className={classes.logo}
+                height={scrollOnTop ? 50 : 80}
+              />
             </Link>
           </div>
           {/* <div style={{ display: "hidden", flexGrow: 1 }}></div> */}
@@ -173,27 +196,6 @@ const Header = (props) => {
               </Button>
             )}
           </div>
-          {/* <div className={classes.socialMediaContainer}>
-            <Link
-              href="https://www.facebook.com/directtechnepal/"
-              color="inherit"
-            >
-              <IconButton color="inherit">
-                <FacebookIcon />
-              </IconButton>
-            </Link>
-            <Link
-              href="https://www.instagram.com/directtechnepal/"
-              color="inherit"
-            >
-              <IconButton color="inherit">
-                <InstagramIcon />
-              </IconButton>
-            </Link>
-            <IconButton color="inherit">
-              <WhatsAppIcon />
-            </IconButton>
-          </div> */}
         </Toolbar>
       </AppBar>
       <NavDrawer

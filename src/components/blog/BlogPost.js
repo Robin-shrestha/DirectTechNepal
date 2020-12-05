@@ -46,13 +46,32 @@ const otherBlogs = [
 ];
 
 const styles = makeStyles((theme) => ({
+  root: {
+    paddingTop: theme.spacing(12),
+    paddingBottom: theme.spacing(5),
+
+    minHeight: "100vh",
+    [theme.breakpoints.down("md")]: {
+      marginTop: 0,
+      paddingTop: theme.spacing(13),
+    },
+  },
+  topBorder: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    height: 120,
+    width: "100%",
+    background:
+      "linear-gradient(180deg, rgba(1,109,119,1) 0%, rgba(1,109,119,.75) 50%, rgba(255,255,255,1) 100%)",
+  },
   readMore: {
     animation: `$introEffect 3500ms ${theme.transitions.easing.easeInOut} `,
   },
   "@keyframes introEffect ": {
     "0%": {
       opacity: 0,
-      transform: "translateY(-200%)",
+      transform: "translateX(20%)",
     },
     "100%": {
       opacity: 1,
@@ -73,8 +92,8 @@ const BlogPost = () => {
   }, []);
 
   return (
-    <div>
-      <div style={{ backgroundColor: "black", height: 60 }} />
+    <div className={classes.root}>
+      <div className={classes.topBorder} />
       <Grid container>
         <Grid item md={1} />
         <Grid item xs={12} md={8}>

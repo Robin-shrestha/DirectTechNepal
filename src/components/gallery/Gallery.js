@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
     background:
       "linear-gradient(180deg, rgba(1,109,119,1) 0%, rgba(1,109,119,.15) 15%, rgba(255,255,255,1) 100%)",
     minHeight: "100vh",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       marginTop: 0,
-      paddingTop: theme.spacing(3),
+      paddingTop: theme.spacing(13),
     },
   },
   gridList: {
