@@ -905,19 +905,19 @@
     "static/js/451.232be0a4.chunk.js": "/DirectTechNepal/static/js/451.232be0a4.chunk.js",
     "static/js/451.232be0a4.chunk.js.map": "/DirectTechNepal/static/js/451.232be0a4.chunk.js.map",
     "main.css": "/DirectTechNepal/static/css/main.04f76552.chunk.css",
-    "main.js": "/DirectTechNepal/static/js/main.69e51c21.chunk.js",
-    "main.js.map": "/DirectTechNepal/static/js/main.69e51c21.chunk.js.map",
+    "main.js": "/DirectTechNepal/static/js/main.6ae6aaa4.chunk.js",
+    "main.js.map": "/DirectTechNepal/static/js/main.6ae6aaa4.chunk.js.map",
     "runtime-main.js": "/DirectTechNepal/static/js/runtime-main.919a8a29.js",
     "runtime-main.js.map": "/DirectTechNepal/static/js/runtime-main.919a8a29.js.map",
     "static/css/454.5b4b5fd2.chunk.css": "/DirectTechNepal/static/css/454.5b4b5fd2.chunk.css",
-    "static/js/454.5a5b36ad.chunk.js": "/DirectTechNepal/static/js/454.5a5b36ad.chunk.js",
-    "static/js/454.5a5b36ad.chunk.js.map": "/DirectTechNepal/static/js/454.5a5b36ad.chunk.js.map",
+    "static/js/454.c4454cf0.chunk.js": "/DirectTechNepal/static/js/454.c4454cf0.chunk.js",
+    "static/js/454.c4454cf0.chunk.js.map": "/DirectTechNepal/static/js/454.c4454cf0.chunk.js.map",
     "index.html": "/DirectTechNepal/index.html",
-    "precache-manifest.a46e8e24a467b585658498b52e4d6e29.js": "/DirectTechNepal/precache-manifest.a46e8e24a467b585658498b52e4d6e29.js",
+    "precache-manifest.a1f11fc387ca729dfa5d8d4b87137f0b.js": "/DirectTechNepal/precache-manifest.a1f11fc387ca729dfa5d8d4b87137f0b.js",
     "service-worker.js": "/DirectTechNepal/service-worker.js",
     "static/css/454.5b4b5fd2.chunk.css.map": "/DirectTechNepal/static/css/454.5b4b5fd2.chunk.css.map",
     "static/css/main.04f76552.chunk.css.map": "/DirectTechNepal/static/css/main.04f76552.chunk.css.map",
-    "static/js/454.5a5b36ad.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/454.5a5b36ad.chunk.js.LICENSE.txt",
+    "static/js/454.c4454cf0.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/454.c4454cf0.chunk.js.LICENSE.txt",
     "static/js/68.7d2d53ad.chunk.js.LICENSE.txt": "/DirectTechNepal/static/js/68.7d2d53ad.chunk.js.LICENSE.txt",
     "static/media/ART-1.png": "/DirectTechNepal/static/media/ART-1.7f91bda7.png",
     "static/media/ART-3.png": "/DirectTechNepal/static/media/ART-3.fd903152.png",
@@ -938,8 +938,8 @@
   "entrypoints": [
     "static/js/runtime-main.919a8a29.js",
     "static/css/454.5b4b5fd2.chunk.css",
-    "static/js/454.5a5b36ad.chunk.js",
+    "static/js/454.c4454cf0.chunk.js",
     "static/css/main.04f76552.chunk.css",
-    "static/js/main.69e51c21.chunk.js"
+    "static/js/main.6ae6aaa4.chunk.js"
   ]
 }
